@@ -1,14 +1,20 @@
-## Important Changes from Upstream Muledump
+## Welcome
 
-Muledump has traditionally used Yahoo's YQL service to process account data. This no longer works as Deca rate limits IPs making those requests.
+This is a fork of Atomizer's [Muledump](https://github.com/atomizer) made to address the required changes since the most recent upstream release.
 
-This version of Muledump removed YQL and replaces it with the less graceful direct request.
+##  Important Changes from Upstream Muledump
+
+Muledump has traditionally used Yahoo's YQL service to process account data. This no longer working as Deca rate limits IPs blocking those requests.
+
+This version of Muledump removes YQL and replaces it with the less graceful direct request.
 
 #### Why is this "less graceful"?
 
-In a nutshell, browsers don't like it when a website requests a URL on another website via Javascript. Yahoo YQL explicitly approves this sort of request, so it is fine. But ROTMG's servers do not.
+In a nutshell, browsers don't like it when a website requests a URL to another website via Javascript. Yahoo YQL explicitly approves this sort of request, so it is fine. But ROTMG's servers do not.
 
-In order to use this version of Muledump you need to be using Chrome with [this extension](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi) to disable CORS. This extension when enabled will disable this security feature to enable Muledump to work.
+In order to use this version of Muledump you need to be using Chrome with [this extension](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi) to disable CORS. This extension when enabled will disable this security feature to enable Muledump to work. 
+
+Just remember to turn it off when not using Muledump!
 
 ## Synopsis
 
@@ -18,13 +24,14 @@ The point of playing the game is to have fun. Muling is not fun. I am trying to 
 
 ## Download
 
-All released versions are [here](https://github.com/atomizer/muledump/releases).
+All released versions are [here](https://github.com/jakcodex/muledump/releases).
 
 ## Howto
 
 - unpack
 - edit **`accounts_sample.js`**
 - rename it to **`accounts.js`**
+- add chrome extension **[Allow-Control-Allow-Origin: *](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi)**
 - open **`muledump.html`**
 
 ## Not so obvious features

@@ -1,3 +1,9 @@
+**2017-08-20** version 0.7.0
+
+- X16.0.0 items
+- Yahoo YQL removed due to Deca blocking
+- Requires Chrome extension to get around CORS (not ideal, I know)
+
 **2016-10-16** version 0.6.7
 
 - 27.7.X6 items

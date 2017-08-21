@@ -1,3 +1,15 @@
+## Important Changes from Upstream Muledump
+
+Muledump has traditionally used Yahoo's YQL service to process account data. This no longer works as Deca rate limits IPs making those requests.
+
+This version of Muledump removed YQL and replaces it with the less graceful direct request.
+
+#### Why is this "less graceful"?
+
+In a nutshell, browsers don't like it when a website requests a URL on another website via Javascript. Yahoo YQL explicitly approves this sort of request, so it is fine. But ROTMG's servers do not.
+
+In order to use this version of Muledump you need to be using Chrome with [this extension](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi) to disable CORS. This extension when enabled will disable this security feature to enable Muledump to work.
+
 ## Synopsis
 
 This tool allows you to list contents of all your accounts in a single page (characters, their stats and items, items in vaults). Also it generates a summary of all the items - you probably saw screenshots of these in trading forum ([example](http://i755.photobucket.com/albums/xx195/Ind3sisiv3/Ilovemuledump.png)).

@@ -16,6 +16,18 @@ In order to use this version of Muledump you need to be using Chrome with [this 
 
 Just remember to turn it off when not using Muledump!
 
+## Account Load Rate Limiting
+
+Deca servers will now block you for 10 minutes if you make too many requests at once. Users with many accounts are finding themselves unable to use Muledump because of this.
+
+This version of Muledump now rate limits how fast you hit Deca's servers in an attempt to prevent you getting blocked. You can fine-tune this setting by adding/changing in accounts.js:
+
+```
+accountLoadDelay = 5
+```
+
+In this example, and by default, there is a 5-second delay between loading each account.
+
 ## Synopsis
 
 This tool allows you to list contents of all your accounts in a single page (characters, their stats and items, items in vaults). Also it generates a summary of all the items - you probably saw screenshots of these in trading forum ([example](http://i755.photobucket.com/albums/xx195/Ind3sisiv3/Ilovemuledump.png)).

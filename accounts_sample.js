@@ -29,3 +29,9 @@ mulelogin = 0
 // 0 = use smart layout (fill empty spaces)
 // 1 = show account boxes row by row
 nomasonry = 0
+
+//  seconds to delay between loading separate accounts
+accountLoadDelay = 5
+
+//  whether or not to enable debug console logging
+debugging = false

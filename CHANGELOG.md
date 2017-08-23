@@ -1,3 +1,9 @@
+**2017-08-2?** version 0.7.1
+
+- Loading multiple accounts now slowed down to try and avoid Deca rate limiting
+- Updated pseudo-yql response to include created,updated keys
+- Version check now uses jakcodex/muledump repo
+
 **2017-08-20** version 0.7.0
 
 - X16.0.0 items

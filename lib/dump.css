@@ -76,11 +76,24 @@ body {
 	padding: 5px;
 }
 
+#techreport {
+	color: white;
+	display: inline-block;
+	font: 12px/24px sans-serif;
+	width: 80%;
+	height: 300px;
+	overflow: scroll;
+	background-color: inherit;
+	text-overflow: ellipsis;
+}
+
+#techreport:empty { display: none; }
+
 #errors {
 	color: pink;
 	display: inline-block;
-	font: 16px/28px sans-serif;
-	max-width: 600px;
+	font: 14px/26px sans-serif;
+	max-width: 780px;
 }
 
 #errors:empty { display: none; }

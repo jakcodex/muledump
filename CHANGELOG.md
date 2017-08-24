@@ -1,4 +1,10 @@
-**2017-08-2?** version 0.7.1
+**2017-08-23** version 0.7.2
+
+- RealmApi errors now understood and reported properly (rate limiting, banned, etc)
+- Enable Debugging button added which toggles displaying a tech report (with usernames, passwords, etc removed)
+- Sha256 library added
+
+**2017-08-23** version 0.7.1
 
 - Loading multiple accounts now slowed down to try and avoid Deca rate limiting
 - Updated pseudo-yql response to include created,updated keys

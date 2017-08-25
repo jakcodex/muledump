@@ -1,3 +1,8 @@
+**2017-08-25** version 0.7.3
+
+- Fixed bug in mule localStorage throwing errors when loading chests
+- Updated home button
+
 **2017-08-23** version 0.7.2
 
 - RealmApi errors now understood and reported properly (rate limiting, banned, etc)

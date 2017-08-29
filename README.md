@@ -26,7 +26,7 @@ This version of Muledump now rate limits how fast you hit Deca's servers in an a
 accountLoadDelay = 5
 ```
 
-In this example, and by default, there is a 5-second delay between loading each account.
+In this example, and by default, there is a 5-second delay between loading each account. Setting to 0 will disable the limiter.
 
 ## Synopsis
 
@@ -44,6 +44,7 @@ All released versions are [here](https://github.com/jakcodex/muledump/releases).
 - edit **`accounts_sample.js`**
 - rename it to **`accounts.js`**
 - add chrome extension **[Allow-Control-Allow-Origin: *](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi)**
+- in CORS settings clear any existing Intercepted URLs and add: https://realmofthemadgodhrd.appspot.com/*
 - open **`muledump.html`**
 
 ## Not so obvious features
@@ -52,6 +53,7 @@ All released versions are [here](https://github.com/jakcodex/muledump/releases).
 - click on account name for individual options menu
 - ctrl-click account name to temporarily hide it from totals
 - read the `accounts.js` file, it has some variables to play with
+- logins thru muledump count towards daily login calendar
 
 ## Head to the [wiki](https://github.com/atomizer/muledump/wiki) for more information!
 

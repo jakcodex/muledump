@@ -1,3 +1,9 @@
+**2017-08-29** version 0.7.4
+
+- Vault chests null data bug fixed
+- Gift chests empty bug fixed
+- Updated recommended CORS settings 
+
 **2017-08-25** version 0.7.3
 
 - Fixed bug in mule localStorage throwing errors when loading chests

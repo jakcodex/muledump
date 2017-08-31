@@ -1,8 +1,8 @@
-**2017-08-30** version 0.7.5-vaultorder1
+**2017-08-31** version 0.7.5-vaultorder1
 
 - VAULTORDER object restructured to support multiple layouts
-- Complete vault layout in full and compact views now available
-- Compact view is default
+- Complete vault layout in full and compact views now available (default: compact)
+- Options menu updated to support switching between layouts
 
 **2017-08-29** version 0.7.4
 

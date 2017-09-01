@@ -1,8 +1,10 @@
-**2017-08-31** version 0.7.5-vaultorder1
+**2017-09-01** version 0.7.5-vaultorder1
 
-- VAULTORDER object restructured to support multiple layouts
+- VAULTORDER array restructured to support multiple layouts and moved to lib/staticvars.js
 - Complete vault layout in full and compact views now available (default: compact)
 - Options menu updated to support switching between layouts
+- Adding custom vault layouts will automatically update the options menu
+- Updated lib/pcstats.js (thanks to [/u/Prof3ssor_Ice's](https://www.reddit.com/user/Prof3ssor_Ice) previous [update](https://www.reddit.com/r/RotMG/comments/61giew/muledump_update_for_277x12/))
 
 **2017-08-29** version 0.7.4
 

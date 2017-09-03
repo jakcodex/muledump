@@ -89,6 +89,14 @@ body {
 
 #techreport:empty { display: none; }
 
+#ratelimited {
+	color: pink;
+	font: 14px/26px sans-serif;
+	max-width: 780px;
+}
+
+#ratelimited:empty { display: none; }
+
 #errors {
 	color: pink;
 	display: inline-block;

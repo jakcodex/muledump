@@ -1,10 +1,14 @@
-**2017-09-01** version 0.7.5-vaultorder1
+**2017-09-03** version 0.7.5-vaultorder1
 
 - VAULTORDER array restructured to support multiple layouts and moved to lib/staticvars.js
 - Complete vault layout in full and compact views now available (default: compact)
 - Options menu updated to support switching between layouts
 - Adding custom vault layouts will automatically update the options menu
-- Updated lib/pcstats.js (thanks to [/u/Prof3ssor_Ice's](https://www.reddit.com/user/Prof3ssor_Ice) previous [update](https://www.reddit.com/r/RotMG/comments/61giew/muledump_update_for_277x12/))
+- Updated lib/pcstats.js (thanks in part to [/u/Prof3ssor_Ice](https://www.reddit.com/user/Prof3ssor_Ice) and [/u/TheSTDman](https://www.reddit.com/user/TheSTDman))
+- MuleQueue now exits on rate limit detection after alerting the user
+- Account reloading disabled for 5 minutes after rate limit detection to prevent resetting the Deca timeout
+- Active MuleQueue now provides a 'cancel reload' button
+- Changing options no longer reloads account data
 
 **2017-08-29** version 0.7.4
 

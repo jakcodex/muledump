@@ -1,5 +1,6 @@
 **2017-09-06** version 0.7.5-beta
 
+- Export to Imgur, CSV, JSON, and text fixed, and added local save option
 - VAULTORDER array restructured to support multiple layouts and moved to lib/staticvars.js
 - Complete vault layout in full and compact views now available (default: compact)
 - Options menu updated to support switching between layouts
@@ -10,6 +11,8 @@
 - Active MuleQueue now provides a 'cancel reload' button
 - Changing options no longer reloads account data
 - Debug logging switch moved to global options
+- JQuery updated to 3.2.1
+- Masonry updated to 4.2.0
 
 **2017-08-29** version 0.7.4
 

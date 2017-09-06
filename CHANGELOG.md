@@ -1,4 +1,4 @@
-**2017-09-03** version 0.7.5-vaultorder1
+**2017-09-06** version 0.7.5-beta
 
 - VAULTORDER array restructured to support multiple layouts and moved to lib/staticvars.js
 - Complete vault layout in full and compact views now available (default: compact)
@@ -9,6 +9,7 @@
 - Account reloading disabled for 5 minutes after rate limit detection to prevent resetting the Deca timeout
 - Active MuleQueue now provides a 'cancel reload' button
 - Changing options no longer reloads account data
+- Debug logging switch moved to global options
 
 **2017-08-29** version 0.7.4
 

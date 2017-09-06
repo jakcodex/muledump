@@ -5,16 +5,19 @@
 - Complete vault layout in full and compact views now available (default: compact)
 - Options menu updated to support switching between layouts
 - Adding custom vault layouts will automatically update the options menu
-- Updated lib/pcstats.js (thanks in part to [/u/Prof3ssor_Ice](https://www.reddit.com/user/Prof3ssor_Ice) and [/u/TheSTDman](https://www.reddit.com/user/TheSTDman))
+- Updated lib/pcstats.js (thanks to [/u/TheSTDman](https://www.reddit.com/user/TheSTDman))
 - MuleQueue now exits on rate limit detection after alerting the user
 - Account reloading disabled for 5 minutes after rate limit detection to prevent resetting the Deca timeout
 - Active MuleQueue now provides a 'cancel reload' button
 - Email option changed to Account Info and now includes account gold, fame, and gift item count
+- Automatic update checking added on startup with option to disable
+- Update button changed to use new version checking tool
 - Changing options no longer reloads account data
 - Non-web users no longer displayed as being unverified
 - Debug logging switch moved to global options
 - JQuery updated to 3.2.1
 - Masonry updated to 4.2.0
+- Featherlight 1.7.2 added
 
 **2017-08-29** version 0.7.4
 

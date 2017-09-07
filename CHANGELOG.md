@@ -1,11 +1,11 @@
-**2017-09-06** version 0.7.5-beta
+**2017-09-07** version 0.7.5
 
 - Export to Imgur, CSV, JSON, and text fixed, and added local save option
 - VAULTORDER array restructured to support multiple layouts and moved to lib/staticvars.js
 - Complete vault layout in full and compact views now available (default: compact)
 - Options menu updated to support switching between layouts
 - Adding custom vault layouts will automatically update the options menu
-- Updated lib/pcstats.js (thanks to [/u/TheSTDman](https://www.reddit.com/user/TheSTDman))
+- Updated lib/pcstats.js (thanks to [/u/TheSTDman](https://github.com/thestdman/muledump))
 - MuleQueue now exits on rate limit detection after alerting the user
 - Account reloading disabled for 5 minutes after rate limit detection to prevent resetting the Deca timeout
 - Active MuleQueue now provides a 'cancel reload' button

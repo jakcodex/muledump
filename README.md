@@ -19,7 +19,7 @@ The point of playing the game is to have fun. Muling is not fun. I am trying to 
 
 ## Download
 
-All released versions are [here](https://github.com/jakcodex/muledump/releases).
+All released versions are [here](https://github.com/jakcodex/muledump/releases). The current version is 0.7.5.
 
 ## Howto
 
@@ -37,7 +37,7 @@ All released versions are [here](https://github.com/jakcodex/muledump/releases).
 - ctrl-click account name to temporarily hide it from totals
 - read the `accounts.js` file, it has some variables to play with
 - logins thru muledump count towards daily login calendar
-- custom vault layouts can be defined in [lib/staticvars.js](lib/staticvars.js)
+- custom vault layouts and more can be defined in [lib/staticvars.js](lib/staticvars.js)
 
 ## Head to the [wiki](https://github.com/jakcodex/muledump/wiki) for more information!
 

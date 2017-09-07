@@ -374,18 +374,6 @@ td.cont > div {
 	color: #eaa;
 }
 
-.exportbox {
-	background: rgba(0, 0, 0, 0.8);
-}
-
-.exportbox .featherlight-content {
-	width: 30%;
-	padding: 25px;
-	color: #fff;
-	background: #000;
-}
-
-.exportbox .featherlight-close {
-	color: #fff;
-	background: #333;
+.lightbox .featherlight-content {
+	min-width: 30%;
 }

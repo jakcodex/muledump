@@ -1,3 +1,7 @@
+**2017-09-08** version 0.7.6
+
+- X17.0.0 updates added (thanks to [/u/Falecon](https://www.reddit.com/user/Falecon))
+
 **2017-09-07** version 0.7.5
 
 - Export to Imgur, CSV, JSON, and text fixed, and added local save option

@@ -377,3 +377,16 @@ td.cont > div {
 .lightbox .featherlight-content {
 	min-width: 30%;
 }
+
+.setuptools.error {
+	color: #ae0000;
+	font-weight: bold;
+}
+
+.setuptools.initsetup a {
+	font-weight: bold;
+}
+
+.setuptools .featherlight-content {
+	max-width: 50%;
+}

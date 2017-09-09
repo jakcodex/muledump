@@ -142,6 +142,11 @@
 		color: #2496ff;
 		text-decoration: none;
 	}
+
+	.featherlight a:hover {
+		color: #36a1ff;
+		text-decoration: none;
+	}
 }
 
 /* handling phones and small screens */

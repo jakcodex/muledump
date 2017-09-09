@@ -390,3 +390,86 @@ td.cont > div {
 .setuptools .featherlight-content {
 	max-width: 50%;
 }
+
+.setuptools-small .featherlight-content {
+	max-width: 20%;
+	min-width: 20%;
+}
+
+.setuptools-medium .featherlight-content {
+	max-width: 30%;
+	min-width: 30%;
+}
+
+.setuptools.app.initsetup.accounts {
+	clear: both;
+	float: left;
+}
+
+
+.setuptools.app.initsetup.accounts div:not(.controller) {
+	float: left;
+	width: 200px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.setuptools.app.initsetup.accounts div:not(:last-child) {
+	margin-bottom: 5px;
+}
+
+.setuptools.app.initsetup.accounts input {
+	font-size: 12px;
+	float: left;
+	width: 200px;
+	border: #ffffff solid 1px;
+	background-color: #333;
+	margin-left: 5px;
+	margin-right: 5px;
+	padding: 3px;
+	color: #ffffff;
+}
+
+.setuptools.app.initsetup.accounts .controller {
+	font-size: 22px;
+	font-weight: bold;
+	float: left;
+	width: 20px;
+	cursor: pointer;
+}
+
+.setuptools.app.initsetup.accounts .controller:first-of-type {
+	margin-left: 5px;
+}
+
+.setuptools.app.initsetup.accounts .reveal {
+	font-size: 20px;
+}
+
+.setuptools.app.initsetup.accounts .remove {
+	padding-left: 2px;
+}
+
+.setuptools.app.initsetup.accounts .add:hover {
+	color: #cccccc;
+}
+
+.setuptools.app.initsetup.accounts .add:active {
+	color: #2496ff;
+}
+
+.setuptools.app.initsetup.accounts .reveal:hover {
+	color: #cccccc;
+}
+
+.setuptools.app.initsetup.accounts .reveal:active {
+	color: #14ff2c;
+}
+
+.setuptools.app.initsetup.accounts .remove:hover {
+	color: #cccccc;
+}
+
+.setuptools.app.initsetup.accounts .remove:active {
+	color: #ff1c29;
+}

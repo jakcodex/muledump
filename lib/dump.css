@@ -414,7 +414,7 @@ td.cont > div {
 	margin-right: 5px;
 }
 
-.setuptools.app.initsetup.accounts div:not(:last-child) {
+.setuptools.app.initsetup.accounts:not(:last-child) {
 	margin-bottom: 5px;
 }
 

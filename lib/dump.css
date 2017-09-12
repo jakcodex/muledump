@@ -397,8 +397,33 @@ td.cont > div {
 }
 
 .setuptools-medium .featherlight-content {
-	max-width: 30%;
-	min-width: 30%;
+	max-width: 35%;
+}
+
+.setuptools-large .featherlight-content {
+	max-width: 60%;
+}
+
+.drawhelp {
+	position: absolute;
+	z-index: 9999;
+	top: 0;
+	right: 30px;
+	line-height: 25px;
+	width: 25px;
+	cursor: pointer;
+	text-align: center;
+	font-family: Arial, sans-serif;
+	background: #222;
+	background: rgba(255, 255, 255, 0.05);
+	color: #fff;
+	border: none;
+	padding: 0;
+	font-weight: bold;
+}
+
+.drawhelp.noclose {
+	right: 0px;
 }
 
 .setuptools.app.initsetup.accounts {

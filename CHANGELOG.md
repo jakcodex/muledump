@@ -1,3 +1,7 @@
+**2017-09-13** version 0.7.0
+
+- Forgot to put any changelog, starting that now, with the latest addition being Quest Chest and Marks
+
 **2016-10-16** version 0.6.7
 
 - 27.7.X6 items

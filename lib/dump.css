@@ -381,6 +381,7 @@ td.cont > div {
 .setuptools.error {
 	color: #ae0000;
 	font-weight: bold;
+	z-index: 99999;
 }
 
 .setuptools.initsetup a {
@@ -426,11 +427,45 @@ td.cont > div {
 	right: 0px;
 }
 
+.setuptools.app input, .setuptools.app select {
+	font-size: 12px;
+	width: 200px;
+	border: #ffffff solid 1px;
+	background-color: #333;
+	margin-left: 5px;
+	margin-right: 5px;
+	padding: 3px;
+	color: #ffffff;
+}
+
+.setuptools.app.config.settings:not(a) {
+	clear: both;
+	float: left;
+	width: 100%;
+}
+
+.setuptools.app.config.settings:not(:last-child) {
+	margin-bottom: 5px;
+}
+
+.setuptools.app.config.settings div {
+	float: left;
+	clear: left;
+	height: 25px;
+	padding-top: 6px;
+	margin-right: 10px;
+}
+
+.setuptools.app.config.settings input, .setuptools.app.config.settings select {
+	clear: right;
+	float: right;
+	height: 25px;
+}
+
 .setuptools.app.initsetup.accounts {
 	clear: both;
 	float: left;
 }
-
 
 .setuptools.app.initsetup.accounts div:not(.controller) {
 	float: left;
@@ -443,24 +478,16 @@ td.cont > div {
 	margin-bottom: 5px;
 }
 
-.setuptools.app.initsetup.accounts input {
-	font-size: 12px;
-	float: left;
-	width: 200px;
-	border: #ffffff solid 1px;
-	background-color: #333;
-	margin-left: 5px;
-	margin-right: 5px;
-	padding: 3px;
-	color: #ffffff;
-}
-
 .setuptools.app.initsetup.accounts .controller {
 	font-size: 22px;
 	font-weight: bold;
 	float: left;
 	width: 20px;
 	cursor: pointer;
+}
+
+.setuptools.app.initsetup.accounts input, .setuptools.app.initsetup.accounts select {
+	float: left;
 }
 
 .setuptools.app.initsetup.accounts .controller:first-of-type {

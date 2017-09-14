@@ -1,0 +1,211 @@
+
+.lightbox .featherlight-content {
+    min-width: 30%;
+}
+
+.setuptools.error {
+    color: #ae0000;
+    font-weight: bold;
+    z-index: 99999;
+}
+
+.setuptools.initsetup a {
+    font-weight: bold;
+}
+
+.setuptools .featherlight-content {
+    max-width: 50%;
+}
+
+.setuptools-small .featherlight-content {
+    max-width: 20%;
+    min-width: 20%;
+}
+
+.setuptools-medium .featherlight-content {
+    max-width: 35%;
+}
+
+.setuptools-large .featherlight-content {
+    max-width: 60%;
+}
+
+.drawhelp {
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    right: 30px;
+    line-height: 25px;
+    width: 25px;
+    cursor: pointer;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: #222;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    border: none;
+    padding: 0;
+    font-weight: bold;
+}
+
+.drawhelp.noclose {
+    right: 0px;
+}
+
+.featherlight-content h3 {
+    margin: 0px; padding: 0px;
+}
+
+.setuptools.app input, .setuptools.app select {
+    font-size: 12px;
+    width: 200px;
+    border: #ffffff solid 1px;
+    background-color: #333;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 3px;
+    color: #ffffff;
+}
+
+.setuptools.app.config.settings:not(a) {
+    clear: both;
+    float: left;
+    width: 100%;
+}
+
+.setuptools.app.config.settings:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.setuptools.app.config.settings div {
+    float: left;
+    clear: left;
+    height: 25px;
+    padding-top: 6px;
+    margin-right: 10px;
+}
+
+.setuptools.app.config.settings input, .setuptools.app.config.settings select {
+    clear: right;
+    float: right;
+    height: 25px;
+}
+
+.setuptools.app.config.settings.save {
+    float: right;
+    margin-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border: #ffffff solid 1px;
+    background-color: #111;
+}
+
+.setuptools.app.config.settings.save:hover {
+    background-color: #000000;
+}
+
+.setuptools.app.config.settings.save:active {
+    background-color: #222;
+}
+
+.setuptools.app.backups.options {
+    clear: both;
+    float: left;
+    width: 100%;
+}
+
+.setuptools.app.backups.options:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.setuptools.app.backups.options div {
+    float: left;
+    clear: left;
+    height: 25px;
+    padding-top: 6px;
+    margin-right: 10px;
+}
+
+.setuptools.app.backups.options input, .setuptools.app.backups.options select {
+    clear: right;
+    float: right;
+    height: 25px;
+}
+
+.setuptools.app.initsetup.accounts {
+    clear: both;
+    float: left;
+}
+
+.setuptools.app.initsetup.accounts:first-child div:first-child {
+    width: 25px;
+}
+
+.setuptools.app.initsetup.accounts div:first-child {
+    width: 25px;
+}
+
+.setuptools.app.initsetup.accounts div:not(.controller) {
+    float: left;
+    width: 200px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.setuptools.app.initsetup.accounts:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.setuptools.app.initsetup.accounts .controller {
+    font-size: 22px;
+    font-weight: bold;
+    float: left;
+    width: 20px;
+    cursor: pointer;
+}
+
+.setuptools.app.initsetup.accounts input[type="checkbox"] {
+    width: 25px;
+}
+
+.setuptools.app.initsetup.accounts input, .setuptools.app.initsetup.accounts select {
+    float: left;
+}
+
+.setuptools.app.initsetup.accounts .controller:first-of-type {
+    margin-left: 5px;
+}
+
+.setuptools.app.initsetup.accounts .reveal {
+    font-size: 20px;
+}
+
+.setuptools.app.initsetup.accounts .remove {
+    padding-left: 2px;
+}
+
+.setuptools.app.initsetup.accounts .add:hover {
+    color: #cccccc;
+}
+
+.setuptools.app.initsetup.accounts .add:active {
+    color: #2496ff;
+}
+
+.setuptools.app.initsetup.accounts .reveal:hover {
+    color: #cccccc;
+}
+
+.setuptools.app.initsetup.accounts .reveal:active {
+    color: #14ff2c;
+}
+
+.setuptools.app.initsetup.accounts .remove:hover {
+    color: #cccccc;
+}
+
+.setuptools.app.initsetup.accounts .remove:active {
+    color: #ff1c29;
+}

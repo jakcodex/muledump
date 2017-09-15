@@ -30,6 +30,10 @@
     max-width: 60%;
 }
 
+.setuptools input[name="restoreSaveExisting"] {
+
+}
+
 .drawhelp {
     position: absolute;
     z-index: 9999;
@@ -91,7 +95,7 @@
     height: 25px;
 }
 
-.setuptools.app.config.settings.save {
+.setuptools.app.save {
     float: right;
     margin-right: 5px;
     padding-left: 10px;
@@ -102,11 +106,11 @@
     background-color: #111;
 }
 
-.setuptools.app.config.settings.save:hover {
+.setuptools.app.save:hover {
     background-color: #000000;
 }
 
-.setuptools.app.config.settings.save:active {
+.setuptools.app.save:active {
     background-color: #222;
 }
 

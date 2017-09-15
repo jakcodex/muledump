@@ -44,3 +44,27 @@ Specified conversion format does not exist
 
 #### Error 14 - setuptools.app.config.userExists
 Could not determine format of account data
+
+#### Error 15 - setuptools.app.backups.protect
+Arguments missing from call
+
+#### Error 16 - setuptools.app.backups.protect
+Could not find a backup matching the supplied BackupID
+
+#### Error 17 - setuptools.app.backups.delete
+Arguments missing from call
+
+#### Error 18 - setuptools.app.backups.*
+Supplied BackupID did not begin with the prefix muledump-backup-
+
+#### Error 19 - setuptools.app.backups.restore
+Arguments missing from call
+
+#### Error 20 - setuptools.app.backups.restore
+RestoreMethod supplied was invalid (accepts: local, upload)
+
+#### Error 21 - setuptools.app.backups.restore
+Failed to read localStorage with the supplied BackupID
+
+#### Error 22 - setuptools.app.backups.restore
+Backup data located in localStorage is not in valid JSON format 

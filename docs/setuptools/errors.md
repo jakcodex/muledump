@@ -68,3 +68,6 @@ Failed to read localStorage with the supplied BackupID
 
 #### Error 22 - setuptools.app.backups.restore
 Backup data located in localStorage is not in valid JSON format 
+
+#### Error 23 - setuptools.app.backups.restore
+Failed to upload backup to program due to FileReader error

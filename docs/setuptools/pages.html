@@ -1,0 +1,193 @@
+<DOCTYPE !html>
+<html>
+<head>
+    <style type="text/css">
+        body {
+            font-family: calibri;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .columns {
+            float: left;
+            clear: both;
+        }
+
+        .columns div {
+            float: left;
+        }
+
+        .columns div:first-child {
+            clear: left;
+        }
+
+        .columns div:last-child {
+            clear: right;
+        }
+
+        .columns.three {
+            width: 800px;
+        }
+
+        .columns.three div:first-child {
+            width: 50%;
+        }
+
+        .columns.three div:nth-child(2) {
+            width: 30%;
+        }
+
+        .columns.three:not(.bold) div:last-child {
+            width: 20%;
+            color: green;
+        }
+
+        .red {
+            color: red !important;
+        }
+
+        .columns div:first-child span:first-child {
+            color: blue;
+        }
+
+        .columns div:first-child span:nth-child(2) {
+            color: green;
+        }
+
+        .columns div:first-child span:nth-child(3) {
+            color: red;
+        }
+
+        .columns div:first-child span:nth-child(4) {
+            color: purple;
+        }
+
+    </style>
+</head>
+<body>
+<h1>SetupTools Page IDs and Information</h1>
+
+The panels displayed in SetupTools are referred to as pages. The page IDs are used to track page build data within setuptools.lightbox.
+
+<br><br>This is an exhaustive list of all subroutines which create build data.
+
+<h3>Program Position and Page ID</h3>
+
+<div class="columns three bold">
+    <div>Method</div><div>Page ID</div><div>Callable</div>
+</div>
+
+<div class="columns three">
+    <div>setuptools.init.main</div><div>bypass-help</div><div class="red">No</div>
+</div>
+
+<div class="columns three">
+    <div>setuptools.init.main</div><div>noaccount-help</div><div class="red">No</div>
+</div>
+
+<div class="columns three">
+    <div>setuptools.app.index</div><div>main</div><div>Yes</div>
+</div>
+
+<div class="columns three">
+    <div>setuptools.app.introduction</div><div>introduction</div><div>Yes</div>
+</div>
+
+<div class="columns three">
+    <div>setuptools.app.config.settings</div><div>settings</div><div>Yes</div>
+</div>
+
+<div class="columns three">
+    <div>setuptools.app.config.settings</div><div>settings-erase-confirm</div><div class="red">No</div>
+</div>
+
+<div class="columns three">
+    <div>setuptools.app.config.settings</div><div>settings-erase-completed</div><div class="red">No</div>
+</div>
+
+<div class="columns three">
+    <div>setuptools.app.config.settings</div><div>settings-saved</div><div class="red">No</div>
+</div>
+
+<div class="columns three">
+    <div>setuptools.app.config.saveError</div><div>saveerror</div><div>Yes</div>
+</div>
+
+<div class="columns three">
+    <div>setuptools.app.backups.index</div><div>backups-index</div><div>Yes</div>
+</div>
+
+<div class="columns three">
+    <div>setuptools.app.backups.upload</div><div>backups-upload</div><div>Yes</div>
+</div>
+
+<div class="columns three">
+    <div>setuptools.app.backups.restore</div><div>backups-restore-confirmed</div><div>Yes</div>
+</div>
+
+<div class="columns three">
+    <div>setuptools.app.backups.restoreConfirm</div><div>backups-restore-confirm</div><div>Yes</div>
+</div>
+
+<div class="columns three">
+    <div>setuptools.app.backups.delete</div><div>backups-delete</div><div>Yes</div>
+</div>
+
+<div class="columns three">
+    <div>setuptools.app.backups.protect</div><div>backups-protect</div><div>Yes</div>
+</div>
+
+<div class="columns three">
+    <div>setuptools.app.backups.download</div><div>backups-download</div><div>Yes</div>
+</div>
+
+<div class="columns three">
+    <div>setuptools.app.backups.create</div><div>backups-create</div><div>Yes</div>
+</div>
+
+<div class="columns three">
+    <div>setuptools.app.accounts.start</div><div>accounts-start</div><div>Yes</div>
+</div>
+
+<div class="columns three">
+    <div>setuptools.app.accounts.manager</div><div>accounts-manager</div><div>Yes</div>
+</div>
+
+<div class="columns three">
+    <div>setuptools.app.accounts.massImport</div><div>accounts-massImport</div><div>Yes</div>
+</div>
+
+<div class="columns three">
+    <div>setuptools.app.accounts.save</div><div>accounts-save</div><div>Yes</div>
+</div>
+
+<div class="columns three">
+    <div>setuptools.app.accounts.AccountsJSImport</div><div>accounts-accountsjs-index</div><div>Yes</div>
+</div>
+
+<div class="columns three">
+    <div>setuptools.app.accounts.AccountsJSImportLocal</div><div>accounts-accountsjs-import</div><div>Yes</div>
+</div>
+
+<div class="columns three">
+    <div>setuptools.app.accounts.AccountsJSImportUpload</div><div>accounts-accountsjs-upload</div><div>Yes</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script language="javascript">
+    $('.columns:not(.bold) div:first-child').each(function() {
+        var method = $(this).text();
+        var split = method.split('.');
+        var message = '';
+        for ( var i in split )
+            if ( split.hasOwnProperty(i) )
+                message += '<span>' + split[i] + '</span>.';
+        message = message.substr(0, message.length-1);
+        $(this).html(message);
+    });
+</script>
+
+</body>
+</html>

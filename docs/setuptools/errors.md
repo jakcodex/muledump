@@ -71,3 +71,6 @@ Backup data located in localStorage is not in valid JSON format
 
 #### Error 23 - setuptools.app.backups.restore
 Failed to upload backup to program due to FileReader error
+
+#### Error 24 - setuptools.app.config.settings
+Located setting on page does not exist in the configuration structure

@@ -43,6 +43,15 @@ input[name="checkAll"] {
     min-width: 20%;
 }
 
+.setuptools-small .featherlight-content {
+    max-width: 20%;
+    min-width: 20%;
+}
+
+.setuptools-halfsies .featherlight-content {
+    max-width: 25%;
+}
+
 .setuptools-medium .featherlight-content {
     max-width: 35%;
 }
@@ -125,14 +134,68 @@ input[name="checkAll"] {
     padding-top: 5px;
     border: #ffffff solid 1px;
     background-color: #111;
+    clear: right;
+    font-weight: normal !important;
+    font-size: 13px !important;
+    width: 175px;
+    text-align: center;
 }
 
-.setuptools.app.save:hover {
+a.setuptools.app.config.settings.action {
+    margin-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border: #ffffff solid 1px;
+    background-color: #111;
+    font-weight: normal !important;
+    font-size: 13px !important;
+    width: 175px;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none !important;
+}
+
+.setuptools.app.deleteDisabled {
+    text-decoration: line-through !important;
+}
+
+.setuptools.app.deleteDisabled:hover {
+    text-decoration: line-through !important;
+}
+
+.setuptools.app.deleteDisabled:active {
+    text-decoration: line-through !important;
+}
+
+a.setuptools.app.config.settings.action:hover {
     background-color: #000000;
 }
 
-.setuptools.app.save:active {
+a.setuptools.app.config.settings.action:active {
     background-color: #222;
+}
+
+a.setuptools.app.config.settings.action.save {
+    float: right !important;
+    clear: both !important;
+}
+
+a.setuptools.app.config.settings.action.destroy {
+    float: right;
+    clear: right;
+    color: #9e0900 !important;
+}
+
+a.setuptools.app.config.settings.action.arrrrgbaaad {
+    float: left;
+    clear: left;
+    color: #9e0900 !important;
+}
+
+a.setuptools.app.config.settings.action.destroy:hover, a.setuptools.app.config.settings.action.arrrrgbaaad:hover {
+    color: #bb0b00 !important;
 }
 
 .setuptools.app.backups.options {

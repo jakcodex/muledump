@@ -56,6 +56,11 @@ input[name="checkAll"] {
     max-width: 35%;
 }
 
+.setuptools-medium-centered .featherlight-content {
+    max-width: 35%;
+    text-align: center;
+}
+
 .setuptools-large .featherlight-content {
     max-width: 60%;
 }
@@ -99,6 +104,46 @@ input[name="checkAll"] {
     margin-right: 5px;
     padding: 3px;
     color: #ffffff;
+}
+
+
+.setuptools textarea {
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    border: 1px solid #2386ff;
+    resize: none;
+}
+
+div.setuptools.app.uploadData {
+    width: 700px;
+    padding-right: 5px;
+}
+
+.setuptools.app.uploadData textarea {
+    width: 100%;
+    height: 300px;
+}
+
+
+.setuptools.scrollbar::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #002464;
+    border-left: #2386ff 1px dashed;
+}
+
+.setuptools.scrollbar::-webkit-scrollbar
+{
+    width: 10px;
+    background-color: #F5F5F5;
+}
+
+.setuptools.scrollbar::-webkit-scrollbar-thumb
+{
+    background-color: #254adf;
+    border-left: #2386ff dashed 1px;
+
 }
 
 .setuptools.app.config.settings:not(a) {

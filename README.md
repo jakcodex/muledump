@@ -4,40 +4,54 @@ This is a fork of Atomizer's [Muledump](https://github.com/atomizer) made to add
 
 You can read about the reasoning for a new fork in the [upstream notes](UPSTREAM.md).
 
-## Improvements over original Muledump
-
-1. Deca rate limiting has been addressed and Muledump works again
-2. Task queuing controls the flow of activity when loading large account lists
-3. Vault order is fixed and now offers an easier way to add and switch between custom, user-defined layouts
-3. Exports are fixed with the following modes: text, csv, json, image, imgur
-
 ## Synopsis
 
 This tool allows you to list contents of all your accounts in a single page (characters, their stats and items, items in vaults). Also it generates a summary of all the items - you probably saw screenshots of these in trading forum ([example](http://i755.photobucket.com/albums/xx195/Ind3sisiv3/Ilovemuledump.png)).
 
 The point of playing the game is to have fun. Muling is not fun. I am trying to increase overall fun ratio by decreasing amount of time spent fussing with mules and storagekeeping.
 
-## Download
+## Release Information
 
-All released versions are [here](https://github.com/jakcodex/muledump/releases). The current version is 0.7.5.
+A hosted version on Github is available [here](https://jakcodex.github.io/muledump/muledump.html).
 
-## Howto
+All released versions are available for download [here](https://github.com/jakcodex/muledump/releases).
 
-- unpack
-- edit **`accounts_sample.js`**
-- rename it to **`accounts.js`**
-- add chrome extension **[Allow-Control-Allow-Origin: *](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi)**
-- in CORS settings clear any existing Intercepted URLs and add: https://realmofthemadgodhrd.appspot.com/*
-- open **`muledump.html`**
+## Requirements
+
+Currently due to how Deca handles requests to ROTMG servers a browser extension is required to use this Muledump.
+
+See the [Requirements](REQUIERMENTS.MD) page for more information.
+
+## Local Download Version
+
+- Unzip the latest muledump release
+- Open **`muledump.html`**
+- First time users will be guided thru Muledump setup
+- Returning users are ready to go immediately
+
+## Online Hosted Version
+
+- Open **```https://jakcodex.github.io/muledump/muledump.html```**
+- Returning users can upload a backup or import their existing accounts.js file
+- New users will be guided through first time setup
+- This version runs entirely on your local computer and is updated automatically with new releases
+- All data submitted and stored in this version never leave your computer
+
+## Main Features
+
+- Manage all of your ROTMG accounts from a single interface
+- [SetupTools](/docs/setuptools/index.html) - An easy to use, browser-based user interface for managing Muledump
+- MuleQueue - Task queuing to control the flow of requests from Muledump
+- Vault display is now fully customizable and comes with three pre-defined layouts
+- Exporting works with the following modes: text, csv, json, image, imgur
+- Fully compliant with Deca rate limiting
 
 ## Not so obvious features
 
 - click on item to filter accounts that hold it
 - click on account name for individual options menu
 - ctrl-click account name to temporarily hide it from totals
-- read the `accounts.js` file, it has some variables to play with
 - logins thru muledump count towards daily login calendar
-- custom vault layouts and more can be defined in [lib/staticvars.js](lib/staticvars.js)
 
 ## Head to the [wiki](https://github.com/jakcodex/muledump/wiki) for more information!
 

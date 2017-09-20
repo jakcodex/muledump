@@ -12,7 +12,11 @@ The point of playing the game is to have fun. Muling is not fun. I am trying to 
 
 ## Release Information
 
+This is a *preview release* of new features in Jakcodex/Muledump.
+
 A hosted version on Github is available [here](https://jakcodex.github.io/muledump/muledump.html).
+
+This preview release is available for download [here](https://github.com/jakcodex/muledump/archive/setuptools.zip).
 
 All released versions are available for download [here](https://github.com/jakcodex/muledump/releases).
 
@@ -20,7 +24,7 @@ All released versions are available for download [here](https://github.com/jakco
 
 Currently due to how Deca handles requests to ROTMG servers a browser extension is required to use this Muledump.
 
-See the [Requirements](REQUIERMENTS.MD) page for more information.
+See the [Requirements](REQUIREMENTS.md) page for more information.
 
 ## Local Download Version
 
@@ -40,7 +44,7 @@ See the [Requirements](REQUIERMENTS.MD) page for more information.
 ## Main Features
 
 - Manage all of your ROTMG accounts from a single interface
-- [SetupTools](/docs/setuptools/index.html) - An easy to use, browser-based user interface for managing Muledump
+- [SetupTools](docs/setuptools/index.md) - An easy to use, browser-based user interface for managing Muledump
 - MuleQueue - Task queuing to control the flow of requests from Muledump
 - Vault display is now fully customizable and comes with three pre-defined layouts
 - Exporting works with the following modes: text, csv, json, image, imgur

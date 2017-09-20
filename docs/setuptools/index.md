@@ -20,17 +20,17 @@ SetupTools can import your existing or uploaded accounts.js file or restore a ba
 
 ## Features
 
-### [Accounts Manager](/docs/setuptools/accounts-manager)
+### [Accounts Manager](help/accounts-manager/index)
 
 A very simple interface for rapidly adding and removing ROTMG user accounts from Muledump.
 
-Accounts and [account groups](/docs/setuptools/groups-manager) can be enabled or disabled individually.
+Accounts and [account groups](help/accounts-manager/groups) can be enabled or disabled individually.
 
 Multiple accounts.js files can be imported merging your configurations into one.
 
 Account email addresses and user accounts for Steam, Kongregate, and Kabam are all validated with bad entries removed rather than causing errors.
 
-### [Backups Manager](/docs/setuptools/backups-manager)
+### [Backups Manager](help/backups-manager/index)
 
 Create, download, and restore backups of your Muledump configuration including all accounts, options, and settings.
 
@@ -44,12 +44,12 @@ Backups can be protected so they cannot be deleted or count towards storage usag
 
 Deep Copy Backups provide you with your full accounts XML data (in JSON format).
 
-### [Settings Manager](/docs/setuptools/settings-manager)
+### [Settings Manager](help/settings-manager)
 
 All Muledump settings are manageable in the user interface.
 
-## [Documentation](/docs/setuptools/help)
-SetupTools is [fully documented](/docs/setuptools/help) with many help pages discussing the various menus available. Help screens are available on each page in Muledump SetupTools.
+## [Documentation](help/index)
+SetupTools is [fully documented](help/index) with many help pages discussing the various menus available. Help screens are available on each page in Muledump SetupTools.
 
 ## Uninstalling SetupTools
 

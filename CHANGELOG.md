@@ -1,3 +1,9 @@
+**2017-09-xx** version 0.8.0 - preview 3
+
+- SetupTools
+- Muledump Online
+- Character Sorting
+
 **2017-09-08** version 0.7.6
 
 - X17.0.0 updates added (thanks to [/u/Falecon](https://www.reddit.com/user/Falecon))

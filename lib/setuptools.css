@@ -95,6 +95,19 @@ input[name="checkAll"] {
     margin: 0px; padding: 0px;
 }
 
+input.setuptools.app.wideinput {
+    font-size: 12px;
+    width: 100%;
+    border: #ffffff solid 1px;
+    background-color: #333;
+    padding: 3px;
+    color: #ffffff;
+}
+
+.setuptools.app.nomargin {
+    margin: 0 !important;
+}
+
 .setuptools.app input, .setuptools.app select {
     font-size: 12px;
     width: 200px;

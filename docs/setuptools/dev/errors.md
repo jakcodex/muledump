@@ -74,3 +74,6 @@ Failed to upload backup to program due to FileReader error
 
 #### Error 24 - setuptools.app.config.settings
 Located setting on page does not exist in the configuration structure
+
+#### Error 25 - setuptools.app.muledump.chsortcustom
+No mule object was provided

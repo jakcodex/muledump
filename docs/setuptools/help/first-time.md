@@ -1,6 +1,6 @@
 # SetupTools Help
 
-Welcome to SetupTools! Take a moment to read the [Overview](/docs/setuptools) if you are new here.
+Welcome to SetupTools! Take a moment to read the [Overview](docs/setuptools/index.md) if you are new here.
 
 There are three ways you can get started.
 
@@ -14,3 +14,5 @@ Have a backup stored in your browser or on your computer? You can quickly restor
 
 ### Accounts.js Migration
 Whether you have an existing accounts.js file in your Muledump folder or files stored on your computer you'd like to upload, you can import as many accounts.js files you need to into this system.
+
+<!-- baseHref docs/setuptools/help -->

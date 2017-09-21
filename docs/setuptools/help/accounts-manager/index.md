@@ -1,7 +1,9 @@
 # Accounts Manager Topics
 
-[Accounts Manager](users)
+[Accounts Manager](users.md)
 
-[AccountJS Local Import](accountsjs-import)
+[AccountJS Local Import](accountsjs-import.md)
 
-[AccountsJS Upload Import](accountsjs-upload)
+[AccountsJS Upload Import](accountsjs-upload.md)
+
+<!-- baseHref docs/setuptools/help/accounts-manager -->

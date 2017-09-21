@@ -12,7 +12,7 @@ The point of playing the game is to have fun. Muling is not fun. I am trying to 
 
 ## Release Information
 
-This is a *preview release* of new features in Jakcodex/Muledump.
+This is a *preview release* of new features in Jakcodex/Muledump 0.8.
 
 A hosted version on Github is available [here](https://jakcodex.github.io/muledump/muledump.html).
 
@@ -63,7 +63,7 @@ And of course, feel free to contribute to it!
 
 ## Support and Contributions
 
-You can message me [on Reddit](messagesupport) with any questions, comments, concerns, or other feedback. I will respond as soon as I am able to. I'm glad to help get you up and running or answer any questions.
+You can message me [on Reddit](https://www.reddit.com/message/compose?to=jakisaurus&subject=Muledump%20support&message=) with any questions, comments, concerns, or other feedback. I will respond as soon as I am able to. I'm glad to help get you up and running or answer any questions.
 
 If you encounter a bug, have a feature request, or have any other feedback then you can check out the [issue tracker](https://github.com/jakcodex/muledump/issues) to see if it's already being discussed. If not then you can [submit a new issue](https://github.com/jakcodex/muledump/issues/new).
 
@@ -82,5 +82,3 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-[messagesupport]: https://www.reddit.com/message/compose?to=jakisaurus&subject=Muledump%20support&message= "Message Jakisaurus on Reddit"

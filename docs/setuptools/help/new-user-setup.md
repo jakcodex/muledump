@@ -4,7 +4,7 @@
 
 If there were no errors then you should be all set! You should download a backup of your configuration in case you ever need to restore.
 
-You can manage backups in the [Backup Manager](/docs/setuptools/help/backup-manager.md).
+You can manage backups in the [Backup Manager](/docs/setuptools/help/backups-manager.md).
 
 #### Oops, there was a problem.
 

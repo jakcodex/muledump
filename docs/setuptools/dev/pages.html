@@ -100,15 +100,15 @@ The panels displayed in SetupTools are referred to as pages. The page IDs are us
 </div>
 
 <div class="columns three">
-    <div>setuptools.app.config.settings</div><div>settings-erase-confirm</div><div class="red">No</div>
+    <div>setuptools.app.config.settings</div><div>settings-erase-confirm</div><div>No</div>
 </div>
 
 <div class="columns three">
-    <div>setuptools.app.config.settings</div><div>settings-erase-completed</div><div class="red">No</div>
+    <div>setuptools.app.config.settings</div><div>settings-erase-completed</div><div>No</div>
 </div>
 
 <div class="columns three">
-    <div>setuptools.app.config.settings</div><div>settings-saved</div><div class="red">No</div>
+    <div>setuptools.app.config.settings</div><div>settings-saved</div><div>No</div>
 </div>
 
 <div class="columns three">
@@ -175,6 +175,14 @@ The panels displayed in SetupTools are referred to as pages. The page IDs are us
     <div>setuptools.app.accounts.AccountsJSImportUpload</div><div>accounts-accountsjs-upload</div><div>Yes</div>
 </div>
 
+<div class="columns three">
+    <div>setuptools.app.accounts.ExportDeepCopy</div><div>accounts-deepcopy</div><div>Yes</div>
+</div>
+
+<div class="columns three">
+    <div>setuptools.app.accounts.ExportDeepCopy</div><div>accounts-deepcopy-download</div><div>No</div>
+</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script language="javascript">
     $('.columns:not(.bold) div:first-child').each(function() {
@@ -187,6 +195,11 @@ The panels displayed in SetupTools are referred to as pages. The page IDs are us
         message = message.substr(0, message.length-1);
         $(this).html(message);
     });
+
+    $('.columns:not(.bold) div:nth-child(3)').each(function() {
+        if ( $(this).text() === 'No' ) $(this).addClass('red');
+    });
+
 </script>
 
 </body>

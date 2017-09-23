@@ -3,6 +3,18 @@ a.setuptools {
     text-decoration: none !important;
 }
 
+a.red {
+    color: #ff5985 !important;
+    letter-spacing: 1px;
+    text-decoration: none !important;
+}
+
+a.red:hover {
+    letter-spacing: 1px;
+    color: #417fff !important;
+    text-decoration: underline !important;
+}
+
 a.setuptools:hover {
     color: #5aa4ff !important;
 }
@@ -69,7 +81,7 @@ input[name="checkAll"] {
 
 }
 
-.drawhelp {
+.drawhelp:not(.nostyle) {
     position: absolute;
     z-index: 9999;
     top: 0;
@@ -87,7 +99,7 @@ input[name="checkAll"] {
     font-weight: bold;
 }
 
-.drawhelp.noclose {
+.drawhelp.noclose:not(.nostyle) {
     right: 0px;
 }
 
@@ -240,20 +252,24 @@ a.setuptools.app.config.settings.action.save {
     clear: both !important;
 }
 
-a.setuptools.app.config.settings.action.destroy {
+a.setuptools.app.action.destroy {
     float: right;
     clear: right;
     color: #9e0900 !important;
 }
 
-a.setuptools.app.config.settings.action.arrrrgbaaad {
+a.setuptools.app.action.arrrrgbaaad {
     float: left;
     clear: left;
     color: #9e0900 !important;
 }
 
-a.setuptools.app.config.settings.action.destroy:hover, a.setuptools.app.config.settings.action.arrrrgbaaad:hover {
+a.setuptools.app.action.destroy:hover, a.setuptools.app.action.arrrrgbaaad:hover {
     color: #bb0b00 !important;
+}
+
+.featherlight-content strong {
+    color: #22b7da;
 }
 
 .setuptools.app.backups.options {

@@ -5,14 +5,17 @@
   * Backups Manager for backing up and restoring Muledump configurations rapidly
   * Settings Manager for controlling all Muledump settings (including options previously found in accounts.js)
   * Deep Copy Backups of ROTMG account XML data in JSON format
-- New feature: [Muledump Online](https//jakcodex.github.io/muledump/muledump) loads Muledump to your PC without needing to download and maintain your own install
+- New feature: [Muledump Online](https://jakcodex.github.io/muledump/muledump) loads Muledump to your PC without needing to download and maintain your own install
   * Muledump still runs locally on your computer and does not transmit your data anywhere other than to Deca servers
 - New feature: Character Sorting by id, base fame, total fame, base exp, class, and custom named lists
+- MuleQueue Improvements
+  * Pause, resume, and cancel task queues
+  * Encountering rate limiting now pauses tasks instead of cancelling
+- Accounts.js no longer required to run Muledump (see SetupTools)
 - Account email returned to its own field (separated from Account Info)
 - accountLoadDelay will now determine a best value based on accounts quantity if set to 0
-- Accounts.js no longer required to run Muledump (see SetupTools)
 - CORS Extension guidelines added for Firefox, Safari, and Opera
-- Updated renders (thanks /u/wawawa)
+- Updated renders (thanks [/u/wawawa](https://github.com/wawawawawawawa))
 
 **2017-09-08** version 0.7.6
 

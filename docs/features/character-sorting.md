@@ -1,8 +1,8 @@
 # Custom Character Sorting Lists
 
-On a per-account level the character sorting option allows you to create customized lists which will only show the characters specified.
+On a per-account level the character sorting option being set to custom allows you to create customized lists which will only show the characters specified.
 
-With named groups, you can create as many display groups as you would like. Switching between lists is fast and easy.
+You can create as many named lists as you would like. Switching between lists is fast and easy.
 
 ## Usage
 

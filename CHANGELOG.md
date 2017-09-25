@@ -1,4 +1,4 @@
-**2017-09-22** version 0.8.0 - preview 5
+**2017-09-24** version 0.8.0 - preview 6
 
 - New feature: [SetupTools](docs/setuptools/index.md) browser-based Muledump configuration and management
   * Accounts Manager for easy configuration of accounts, disable/enable accounts, import accounts.js

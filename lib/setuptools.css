@@ -268,7 +268,7 @@ a.setuptools.app.action.destroy:hover, a.setuptools.app.action.arrrrgbaaad:hover
     color: #bb0b00 !important;
 }
 
-.featherlight-content strong {
+.featherlight-content strong, .featherlight-content code {
     color: #22b7da;
 }
 

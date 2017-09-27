@@ -14,5 +14,3 @@ Have a backup stored in your browser or on your computer? You can quickly restor
 
 ### Accounts.js Migration
 Whether you have an existing accounts.js file in your Muledump folder or files stored on your computer you'd like to upload, you can import as many accounts.js files you need to into this system.
-
-<!-- baseHref docs/setuptools/help -->

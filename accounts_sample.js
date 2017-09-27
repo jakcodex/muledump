@@ -1,3 +1,5 @@
+// accounts.js no longer required, open muledump.html and check out the first time setup tool
+
 // editor with syntax highlighting is recommended (for example, notepad++ or textmate)
 
 accounts = {
@@ -30,7 +32,7 @@ mulelogin = 0;
 // 1 = show account boxes row by row
 nomasonry = 0;
 
-//  seconds to delay between loading separate accounts
+//  seconds to delay between loading separate accounts (try to limit yourself to 6 requests per minute)
 accountLoadDelay = 2;
 
 //  whether or not to enable debug console logging

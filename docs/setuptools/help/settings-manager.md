@@ -29,13 +29,13 @@ Whether or not you're connecting to the production or testing ROTMG servers.
 Show pricing information on screen.
 
 #### ```Enable One-click Login```
-Whether or not to enable the support of muledump:// links
+Whether or not to enable the support of muledump:// links.
 
 #### ```Use Smart Layout```
-Whether or not to use Masonry to generate the page layout
+Whether or not to use Masonry to generate the page layout.
 
 #### ```Enable Debug Logging```
-Whether or not to output the debug log to the console
+Whether or not to output the debug log to the console.
 
 ### Optional Actions
 

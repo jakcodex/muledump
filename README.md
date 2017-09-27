@@ -6,25 +6,25 @@ You can read about the reasoning for a new fork in the [upstream notes](UPSTREAM
 
 ## Synopsis
 
-This tool allows you to list contents of all your accounts in a single page (characters, their stats and items, items in vaults). Also it generates a summary of all the items - you probably saw screenshots of these in trading forum ([example](http://i755.photobucket.com/albums/xx195/Ind3sisiv3/Ilovemuledump.png)).
+This tool allows you to list contents of all your accounts in a single page (characters, their stats and items, items in vaults). Also it generates a summary of all the items - you probably saw screenshots of these in trading forum ([example](https://imgur.com/dDA2vC9)).
 
 The point of playing the game is to have fun. Muling is not fun. I am trying to increase overall fun ratio by decreasing amount of time spent fussing with mules and storagekeeping.
-
-## Release Information
-
-This is a *preview release* of new features in Jakcodex/Muledump 0.8.
-
-A hosted version on Github is available [here](https://jakcodex.github.io/muledump/muledump.html).
-
-This preview release is available for download [here](https://github.com/jakcodex/muledump/archive/setuptools.zip).
-
-All released versions are available for download [here](https://github.com/jakcodex/muledump/releases).
 
 ## Requirements
 
 Currently due to how Deca handles requests to ROTMG servers a browser extension is required to use this Muledump.
 
 See the [Requirements](REQUIREMENTS.md) page for more information.
+
+## Release Information
+
+The current version is Jakcodex/Muledump v0.8.0-7.
+
+Muledump Online is available hosted on Github [here](https://jakcodex.github.io/muledump/muledump.html).
+
+This version is available for download [here](https://github.com/jakcodex/muledump/archive/setuptools.zip).
+
+All released versions are available for download [here](https://github.com/jakcodex/muledump/releases).
 
 ## Local Download Version
 
@@ -33,7 +33,7 @@ See the [Requirements](REQUIREMENTS.md) page for more information.
 - First time users will be guided thru Muledump setup
 - Returning users are ready to go immediately
 
-## Online Hosted Version
+## Muledump Online Version
 
 - Open **```https://jakcodex.github.io/muledump/muledump.html```**
 - Returning users can upload a backup or import their existing accounts.js file
@@ -47,6 +47,8 @@ See the [Requirements](REQUIREMENTS.md) page for more information.
 - [SetupTools](docs/setuptools/index.md) - An easy to use, browser-based user interface for managing Muledump
 - MuleQueue - Task queuing to control the flow of requests from Muledump
 - Vault display is now fully customizable and comes with three pre-defined layouts
+- Character Sorting by fame, exp, total fame, class, and custom lists
+- Character Lists allow you to create custom Muledump account layouts showing only characters you specify 
 - Exporting works with the following modes: text, csv, json, image, imgur
 - Fully compliant with Deca rate limiting
 

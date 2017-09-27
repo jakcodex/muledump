@@ -1,16 +1,16 @@
 # Muledump SetupTools
 
-Muledump SetupTools is designed to make management and usage of Muledump easy on all users from small the very large. At its very basic, SetupTools will guide you through a quick setup of Muledump and get you working without ever needing to touch a config file. It requires no prior knowledge of code structure or concepts.
+Muledump SetupTools is designed to make management and usage of Muledump easy on all users from small to the very large. At its very basic, SetupTools will guide you through a quick setup of Muledump and get you working without ever needing to touch a config file. It requires no prior knowledge of code structure or concepts.
 
 For new users this means a quick and easy setup of Muledump. For returning users it means restoring all account data, options, and settings with only a few clicks.
 
 ## Basic Setup and Usage
 
-#### New Users - First Time Setup
+### New Users - First Time Setup
 
 Open ```muledump.html``` and you will be presented with the first time user guide. It will take care of the legwork of getting you up and running.
 
-#### Existing Users - Convert to SetupTools
+### Existing Users - Convert to SetupTools
 
 If you are an existing Muledump user prior to version 0.8, SetupTools is disabled by default when it detects a new user with an accounts.js file. This is because SetupTools is meant to be as minimally invasive as possible.
  
@@ -54,6 +54,3 @@ SetupTools is [fully documented](help/index.md) with many help pages discussing 
 ## Uninstalling SetupTools
 
 If you don't like SetupTools and just want to go back to your accounts.js file, click 'Erase Configuration' in Settings Manager.
-
-
-<!-- baseHref docs/setuptools -->

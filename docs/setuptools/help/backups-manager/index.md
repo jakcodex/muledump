@@ -9,5 +9,3 @@
 [Backup Deletion](delete.md)
 
 [Backup Upload](upload.md)
-
-<!-- baseHref docs/setuptools/help/backups-manager -->

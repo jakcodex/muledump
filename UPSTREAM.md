@@ -17,5 +17,3 @@ Just don't forget to configure it properly!
 Deca servers will now block you for 10 minutes if you make too many requests at once. Users with many accounts are finding themselves unable to use Muledump because of this.
 
 This version of Muledump rate limits how fast you hit Deca's servers in an attempt to prevent you getting blocked. By default Muledump will automatically determine the delay necessary based how many accounts you have enabled. You can change this by updating the 'Account Load Delay' setting in the SetupTools Settings Manager.
-
-In this example, and by default, there is a 5-second delay between loading each account. Setting to 0 will disable the limiter.

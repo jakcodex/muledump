@@ -6,16 +6,16 @@ In order to get around browser restrictions when attempting to contact Deca serv
 
 Do not forget the astrisk at the end of the url in the settings!
 
-#### Google Chrome
+#### Google Chrome (recommended)
 - Requires the extension **[Allow-Control-Allow-Origin: *](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi)**
 - In the CORS settings clear any existing Intercepted URLs and add: ```https://realmofthemadgodhrd.appspot.com/*```
 
 #### Firefox
 - Requires the extension **[CORS Everywhere](https://addons.mozilla.org/en-us/firefox/addon/cors-everywhere/)**
-- In the CORS settings clear any existing Intercepted URLs and add: ```https://realmofthemadgodhrd.appspot.com/*```
+- When you wish to run Muledump, turn on this extension as described [here](https://github.com/spenibus/cors-everywhere-firefox-addon/blob/master/README.md).
 
 #### Opera
-- Requires the Opera extension **[Download Chrome Extension](https://addons.opera.com/en/extensions/details/download-chrome-extension-9/?display=en)***
+- Requires the Opera extension **[Download Chrome Extension](https://addons.opera.com/en/extensions/details/download-chrome-extension-9/?display=en)**
 - Requires the Chrome extension **[Allow-Control-Allow-Origin: *](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi)**
 - In the CORS settings clear any existing Intercepted URLs and add: ```https://realmofthemadgodhrd.appspot.com/*```
 

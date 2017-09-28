@@ -1,4 +1,4 @@
-**2017-09-28** version 0.8.0-8
+**2017-09-28** version 0.8.0-9
 
 - New feature: [SetupTools](docs/setuptools/index.md) browser-based Muledump configuration and management
   * Accounts Manager for easy configuration of accounts, disable/enable accounts, import accounts.js
@@ -16,7 +16,7 @@
 - accountLoadDelay will now determine a best value based on accounts quantity if set to 0
 - CORS Extension guidelines added for Firefox, Safari, and Opera
 - Updated renders (thanks [/u/wawawa](https://github.com/wawawawawawawa))
-- Totals removed from default enable options
+- Default enabled options changed up a bit
 - Jakcodex/Muledump original source code now distributed under open source BSD License 2.0
 
 **2017-09-08** version 0.7.6

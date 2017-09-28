@@ -43,6 +43,7 @@ All released versions are available for download [here](https://github.com/jakco
 
 - Manage all of your ROTMG accounts from a single interface
 - [SetupTools](docs/setuptools/index.md) - An easy to use, browser-based user interface for managing Muledump
+- [Muledump Online](https://jakcodex.github.io/muledump/muledump.html) - Load Muledump directly from Github using SetupTools
 - MuleQueue - Task queuing to control the flow of requests from Muledump
 - Vault display is now fully customizable and comes with three pre-defined layouts
 - Character Sorting by fame, exp, total fame, class, and custom lists
@@ -70,6 +71,14 @@ If you encounter a bug, have a feature request, or have any other feedback then 
 If you are interested in helping test new versions of this software before release then check out the [Beta Testing](https://github.com/jakcodex/muledump/wiki/Beta-Testing) wiki page for more information.
 
 Feel free to submit pull requests or patches if you have any Muledump changes you'd like to contribute. See [Contributing](https://github.com/jakcodex/muledump/wiki/Contributing) for more information.
+
+## Version and Update Information
+
+Muledump versions are described as 0.x.y-p where x is the major version, y is the minor version, and p is the patch version.
+
+All incrementes of x or y are published as an official Muledump Local release. The patch version at time of release will be noted in the release notes. Subsequent patches after release will not be published as a new release unless they are for a high severity issue.
+
+Muledump Online always runs the latest version of Muledump with all patches.
 
 ## Original Muledump License
 

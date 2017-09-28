@@ -1,4 +1,4 @@
-# Backups Manager Topics
+# Backup Manager Topics
 
 [Backups Manager](backups.md)
 

@@ -1,4 +1,4 @@
-## Backups Manager
+## Backup Manager
 
 Backups are important for quickly getting setup with Muledump again in the future.
 

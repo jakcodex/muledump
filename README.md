@@ -18,9 +18,9 @@ See the [Requirements](REQUIREMENTS.md) page for more information.
 
 ## Release Information
 
-The current version is Jakcodex/Muledump v0.8.0.
+This is a preview release of Jakcodex/Muledump v0.8.1.
 
-Muledump Online is available hosted on Github [here](https://jakcodex.github.io/muledump/muledump.html).
+Muledump Online is available hosted on Github [here](https://jakcodex.github.io/muledump-preview/muledump.html).
 
 All released versions are available for download [here](https://github.com/jakcodex/muledump/releases).
 
@@ -33,7 +33,7 @@ All released versions are available for download [here](https://github.com/jakco
 
 ## Muledump Online Version
 
-- Open **```https://jakcodex.github.io/muledump/muledump.html```**
+- Open **```https://jakcodex.github.io/muledump-preview/muledump.html```**
 - Returning users can upload a backup or import their existing accounts.js file
 - New users will be guided through first time setup
 - This version runs entirely on your local computer and is updated automatically with new releases
@@ -43,7 +43,7 @@ All released versions are available for download [here](https://github.com/jakco
 
 - Manage all of your ROTMG accounts from a single interface
 - [SetupTools](docs/setuptools/index.md) - An easy to use, browser-based user interface for managing Muledump
-- [Muledump Online](https://jakcodex.github.io/muledump/muledump.html) - Load Muledump directly from Github using SetupTools
+- [Muledump Online](https://jakcodex.github.io/muledump-preview/muledump.html) - Load Muledump directly from Github using SetupTools
 - MuleQueue - Task queuing to control the flow of requests from Muledump
 - Vault display is now fully customizable and comes with three pre-defined layouts
 - Character Sorting by fame, exp, total fame, class, and custom lists
@@ -76,7 +76,7 @@ Feel free to submit pull requests or patches if you have any Muledump changes yo
 
 Muledump versions are described as 0.x.y-p where x is the major version, y is the minor version, and p is the patch version.
 
-All incrementes of x or y are published as an official Muledump Local release. The patch version at time of release will be noted in the release notes. Subsequent patches after release will not be published as a new release unless they are for a high severity issue.
+All incrementes of x or y are published as an official Muledump Local release. The patch version at time of release will be noted in the release notes. Subsequent patches after release will not be published as a new release unless they are for a high severity issue or there is a cumulative release.
 
 Muledump Online always runs the latest version of Muledump with all patches.
 

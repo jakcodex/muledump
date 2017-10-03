@@ -37,6 +37,9 @@ Whether or not to use Masonry to generate the page layout.
 #### ```Enable Debug Logging```
 Whether or not to output the debug log to the console.
 
+#### ```Alert on New Version```
+Whether or not to display a notice on a new version or patch release.
+
 ### Optional Actions
 
 #### ```Reset to Default Settings```

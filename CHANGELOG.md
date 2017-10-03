@@ -1,16 +1,39 @@
+**2017-10-??** version 0.8.1-1
+
+- Bug Fixes
+  * SetupTools: Accounts.js export incorrectly using the default settings instead of user settings (#26)
+  * SetupTools: Mulelogin setting would not import correctly (#25)
+  * SetupTools: Bypass mode would overwrite accounts.js settings with default settings (#36)
+  * SetupTools: Disabling and re-enabling SetupTools overwrites settings imported from accounts.js (#37)
+  
+- Improvements
+  * Muledump Online: Update check replaced with a new version alert (#29)
+  
+- Options loading moved into SetupTools main execution to enable modifying before display (#32)
+- SetupTools can no longer be disabled in the Settings Manager for Muledump Online users (#38)
+- Dev docs written for SetupTools (#35)
+- Added a vendor licenses file
+- Muledump Online [Preview Release](https://jakcodex.github.io/muledump-preview/) demos upcoming changes to Muledump before they're released
+
 **2017-09-28** version 0.8.0-9
+
+Release: 0.8.0
 
 - New feature: [SetupTools](docs/setuptools/index.md) browser-based Muledump configuration and management
   * Accounts Manager for easy configuration of accounts, disable/enable accounts, import accounts.js
   * Backups Manager for backing up and restoring Muledump configurations rapidly
   * Settings Manager for controlling all Muledump settings (including options previously found in accounts.js)
   * Deep Copy Backups of ROTMG account XML data in JSON format
+  
 - New feature: [Muledump Online](https://jakcodex.github.io/muledump/muledump) loads Muledump to your PC without needing to download and maintain your own install
   * Muledump still runs locally on your computer and does not transmit your data anywhere other than to Deca servers
+  
 - New feature: Character Sorting by id, base fame, total fame, base exp, class, and custom named lists
+
 - MuleQueue Improvements
   * Pause, resume, and cancel task queues
   * Encountering rate limiting now pauses tasks instead of cancelling
+  
 - Accounts.js no longer required to run Muledump (see SetupTools)
 - Account email returned to its own field (separated from Account Info)
 - accountLoadDelay will now determine a best value based on accounts quantity if set to 0

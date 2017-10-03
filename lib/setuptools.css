@@ -189,6 +189,11 @@ div.setuptools.app.uploadData {
     margin-right: 10px;
 }
 
+.setuptools.app.config.settings input:disabled, .setuptools.app.config.settings select:disabled {
+    color: #777;
+    font-style: italic;
+}
+
 .setuptools.app.config.settings input, .setuptools.app.config.settings select {
     clear: right;
     float: right;

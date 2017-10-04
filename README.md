@@ -18,9 +18,9 @@ See the [Requirements](REQUIREMENTS.md) page for more information.
 
 ## Release Information
 
-This is a preview release of Jakcodex/Muledump v0.8.1.
+The current version is Jakcodex/Muledump v0.8.1.
 
-Muledump Online is available hosted on Github [here](https://jakcodex.github.io/muledump-preview/muledump.html).
+Muledump Online is available hosted on Github [here](https://jakcodex.github.io/muledump/muledump.html).
 
 All released versions are available for download [here](https://github.com/jakcodex/muledump/releases).
 
@@ -43,7 +43,7 @@ All released versions are available for download [here](https://github.com/jakco
 
 - Manage all of your ROTMG accounts from a single interface
 - [SetupTools](docs/setuptools/index.md) - An easy to use, browser-based user interface for managing Muledump
-- [Muledump Online](https://jakcodex.github.io/muledump-preview/muledump.html) - Load Muledump directly from Github using SetupTools
+- [Muledump Online](https://jakcodex.github.io/muledump/muledump.html) - Load Muledump directly from Github using SetupTools
 - MuleQueue - Task queuing to control the flow of requests from Muledump
 - Vault display is now fully customizable and comes with three pre-defined layouts
 - Character Sorting by fame, exp, total fame, class, and custom lists

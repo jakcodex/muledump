@@ -1,6 +1,7 @@
-**2017-10-??** version 0.8.1-1
+**2017-10-04** version 0.8.1-3
 
 - Bug Fixes
+  * Muledump: Empty vaults weren't always getting displayed (#30)
   * SetupTools: Accounts.js export incorrectly using the default settings instead of user settings (#26)
   * SetupTools: Mulelogin setting would not import correctly (#25)
   * SetupTools: Bypass mode would overwrite accounts.js settings with default settings (#36)
@@ -9,11 +10,12 @@
 - Improvements
   * Muledump Online: Update check replaced with a new version alert (#29)
   
+- Updated vaults to new 100-vault layout (#40)
 - Options loading moved into SetupTools main execution to enable modifying before display (#32)
 - SetupTools can no longer be disabled in the Settings Manager for Muledump Online users (#38)
 - Dev docs written for SetupTools (#35)
 - Added a vendor licenses file
-- Muledump Online [Preview Release](https://jakcodex.github.io/muledump-preview/) demos upcoming changes to Muledump before they're released
+- Muledump Online [Preview Release](https://jakcodex.github.io/muledump-preview/) demos upcoming changes to Muledump before they're released (#39)
 
 **2017-09-28** version 0.8.0-9
 

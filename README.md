@@ -33,7 +33,7 @@ All released versions are available for download [here](https://github.com/jakco
 
 ## Muledump Online Version
 
-- Open **```https://jakcodex.github.io/muledump-preview/muledump.html```**
+- Open **```https://jakcodex.github.io/muledump/muledump.html```**
 - Returning users can upload a backup or import their existing accounts.js file
 - New users will be guided through first time setup
 - This version runs entirely on your local computer and is updated automatically with new releases

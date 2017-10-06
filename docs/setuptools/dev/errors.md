@@ -77,3 +77,6 @@ Located setting on page does not exist in the configuration structure
 
 #### Error 25 - setuptools.app.muledump.chsortcustom
 No mule object was provided
+
+#### Error 26 - setuptools.app.config.listUsers
+Users who have not migrated to SetupTools configuration cannot utilize this feature

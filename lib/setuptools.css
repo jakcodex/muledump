@@ -75,6 +75,11 @@ input[name="checkAll"] {
 
 .setuptools-large .featherlight-content {
     max-width: 60%;
+    min-width: 20%;
+}
+
+.setuptools-tiles .featherlight-content {
+    max-width: 80%;
 }
 
 .setuptools input[name="restoreSaveExisting"] {
@@ -375,4 +380,33 @@ a.setuptools.app.action.destroy:hover, a.setuptools.app.action.arrrrgbaaad:hover
 
 .setuptools.app.initsetup.accounts .remove:active {
     color: #ff1c29;
+}
+
+/* groups manager */
+input.setuptools.groups {
+
+}
+
+.setuptools.div.app {
+    clear: both;
+    float: left;
+    width: 100%;
+}
+
+.setuptools.div.app:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+.setuptools.div.app div {
+    float: left;
+    clear: left;
+    height: 25px;
+    padding-top: 6px;
+    margin-right: 10px;
+}
+
+.setuptools.div.app input, .setuptools.div.app select {
+    clear: right;
+    float: right;
+    height: 25px;
 }

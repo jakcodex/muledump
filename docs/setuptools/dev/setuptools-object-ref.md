@@ -410,6 +410,10 @@ Determine of the supplied accountConfig format matches the specified format. Ret
 
 Determine the format of the supplied accountConfig. Returns 0 or 1. Throws an error if invalid.
 
+#### setuptools.app.config.listUsers([string id, boolean enabled])
+
+Lists all users in the configuration and optionally filters on id (group or guid) and enabled status.
+
 #### setuptools.app.config.userExists(string username)
 
 Checks if the supplied user exists in the accounts variable. Returns true or false.

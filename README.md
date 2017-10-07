@@ -24,6 +24,8 @@ Muledump Online is available hosted on Github [here](https://jakcodex.github.io/
 
 All released versions are available for download [here](https://github.com/jakcodex/muledump/releases).
 
+Head over to [Installation and Setup](https://github.com/jakcodex/muledump/wiki/Installation-and-Setup) in the wiki for a detailed setup guide.
+
 ## Local Download Version
 
 - Unzip the latest muledump release

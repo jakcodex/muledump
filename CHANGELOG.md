@@ -1,3 +1,12 @@
+**2017-10-??** version 0.8.1-4
+
+- Bug Fixes
+  * SetupTools: Date.getMonth() needs to be incremented before use (#44)
+  
+- Improvements
+  * Muledump: Display a problem assistant page for users experiencing network or cors issues (#34)
+  * MuleQueue: Automatically resume a queue after rate limiting expires (#41)
+
 **2017-10-04** version 0.8.1-3
 
 - Bug Fixes

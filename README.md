@@ -64,6 +64,7 @@ Head over to [Installation and Setup](https://github.com/jakcodex/muledump/wiki/
 
 And of course, feel free to contribute to it!
 
+<a id="jakcodex-supportandcontributions"></a>
 ## Support and Contributions
 
 You can message me [on Reddit](https://www.reddit.com/message/compose?to=jakisaurus&subject=Muledump%20support&message=) with any questions, comments, concerns, or other feedback. I will respond as soon as I am able to. I'm glad to help get you up and running or answer any questions.

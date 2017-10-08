@@ -36,7 +36,7 @@ For the method reference, arguments contained in brackets [...] are optional.
 
 #### Muledump Code Reference
 
-## <a id="serverstate" href="#"></a>SetupTools State Information - `setuptools.state`
+## <a id="serverstate" href="#"></a>SetupTools State Information - setuptools.state
 
 These are keys which report state information about SetupTools current runtime. All values are boolean.
 
@@ -76,6 +76,7 @@ Hex color used for error texts outside of css
 
 #### setuptools.config.devForcePoint
 `[default: string|empty]`
+
 Used for forcing redirection within code. For example, setuptools.storage.test() listens for devForcePoint='storage-test' and will always force a test failure if present.
 
 Basically, if you want to test alternative paths such as errors and fallbacks, this will let you simulate those events.

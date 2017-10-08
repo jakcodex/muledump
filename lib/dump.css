@@ -8,9 +8,10 @@ body {
 }
 
 #cnt {
-	position: fixed;
+	/*position: fixed;
 	top: 4px;
-	left: 4px;
+	left: 4px;*/
+	float: left;
 	padding: 4px;
 	z-index: 200;
 	background-color: #ccc;
@@ -34,7 +35,7 @@ body {
 .menu {
 	display: none;
 	position: absolute;
-	right: -2px;
+	left: -2px;
 	z-index: 100;
 	padding: 5px;
 	border: solid 2px #555;
@@ -372,4 +373,24 @@ td.cont > div {
 
 .line.error {
 	color: #eaa;
+}
+
+.mdscroll::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: rgba(57, 85, 136, 0.78);
+	border-left: rgba(117, 151, 184, 0.56) 1px solid;
+}
+
+.mdscroll::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #1a1a1a;
+}
+
+.mdscroll::-webkit-scrollbar-thumb
+{
+	background-color: rgba(71, 86, 133, 0.78);
+	border-left: rgba(75, 115, 164, 0.76) dashed 1px;
+
 }

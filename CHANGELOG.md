@@ -1,4 +1,4 @@
-**2017-10-??** version 0.8.1-4
+**2017-10-08** version 0.8.1-5
 
 - Bug Fixes
   * Muledump: Empty vaults weren't always getting displayed (#30)
@@ -9,6 +9,7 @@
   * SetupTools: Date.getMonth() needs to be incremented before use (#44)
   
 - Improvements
+  * Muledump: Allow user to choose where to display menu (left, center, right) (#45) 
   * Muledump: Display a problem assistant page for users experiencing network or cors issues (#34)
   * MuleQueue: Automatically resume a queue after rate limiting expires (#41)
   * Muledump Online: Update check replaced with a new version alert (#29)
@@ -16,6 +17,7 @@
 - Updated vaults to new 100-vault layout (#40)
 - Options loading moved into SetupTools main execution to enable modifying before display (#32)
 - SetupTools can no longer be disabled in the Settings Manager for Muledump Online users (#38)
+- Minor updates to lib/pcstats.js
 - Dev docs written for SetupTools (#35)
 - Added a vendor licenses file
 - Muledump Online [Preview Release](https://jakcodex.github.io/muledump-preview/) demos upcoming changes to Muledump before they're released (#39)

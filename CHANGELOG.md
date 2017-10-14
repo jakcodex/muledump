@@ -1,3 +1,8 @@
+**2017-10-12** version 0.8.1-6
+
+- Bug Fixes
+  * Muledump: TOS, Migration, and Age Verification actions throwing errors (#42)
+  
 **2017-10-08** version 0.8.1-5
 
 - Bug Fixes

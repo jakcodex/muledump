@@ -69,6 +69,8 @@ And of course, feel free to contribute to it!
 
 You can message me [on Reddit](https://www.reddit.com/message/compose?to=jakisaurus&subject=Muledump%20support&message=) with any questions, comments, concerns, or other feedback. I will respond as soon as I am able to. I'm glad to help get you up and running or answer any questions.
 
+A Muledump support Discord is available at [https://discord.gg/bHuBZuB](https://discord.gg/bHuBZuB).
+
 If you encounter a bug, have a feature request, or have any other feedback then you can check out the [issue tracker](https://github.com/jakcodex/muledump/issues) to see if it's already being discussed. If not then you can [submit a new issue](https://github.com/jakcodex/muledump/issues/new).
 
 If you are interested in helping test new versions of this software before release then check out the [Beta Testing](https://github.com/jakcodex/muledump/wiki/Beta-Testing) wiki page for more information.

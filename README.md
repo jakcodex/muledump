@@ -85,6 +85,10 @@ All incrementes of x or y are published as an official Muledump Local release. T
 
 Muledump Online always runs the latest version of Muledump with all patches.
 
+## Special Thanks
+
+Muledump Renders and Constants have been provided to Jakcodex/Muledump courtesy of [TheSTDMan](https://github.com/thestdman) and is primarily maintained by [Wawawa](https://github.com/wawawawawawawa/muledump). They made my life easier and I appreciate that greatly.
+
 ## Original Muledump License
 
 Copyright (c) 2013 [atomizer](https://github.com/atomizer)

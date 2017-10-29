@@ -1,3 +1,11 @@
+**2017-??-??** version 0.8.2-0
+
+- New Feature: Groups Manager in dev
+
+- New Settings
+  * accountsPerPage: How many accounts to display per page 
+  * longpress: How long to wait for longpress clicks
+
 **2017-10-12** version 0.8.1-6
 
 - Bug Fixes

@@ -336,6 +336,10 @@ This creates a lightbox with a link in its message. When the link is clicked the
 
 Erases the build data for the specified page.
 
+#### setuptools.lightbox.close(page)
+
+Manually closes a lightbox for the specified page.
+
 #### setuptools.lightbox.drawhelp(string page, string link, string title)
 
 Adds to the page build data a drawhelp object with the format:
@@ -368,6 +372,75 @@ var object = {
 #### setuptools.lightbox.error(string message [, number code=0])
 
 Creates and displays an error page with the specified information. Terminates program execution by throwing a new error. 
+
+#### setuptools.lightbox.menu.context.create(string title, object position, object options[, jQuery self])
+
+Creates and displays a context menu at the specified position (pos.left, pos.top).
+
+The following example is taken from Groups Manager group menu controller:
+
+```js
+//  selection menu
+$('.setuptools.div.groupControls div.groupSelect').click(function (e) {
+
+    var self = this;
+
+    //  deselect other menu options
+    $('.setuptools.div.groupControls div:not(.groupSelect)').each(function(index, element) {
+       $(element).removeClass('selected');
+    });
+
+    //  display the menu
+    if ( $('.setuptools.div.groupControls div.groupSelect').hasClass('selected') === false ) {
+
+        //  base info
+        $(self).addClass('selected');
+        var position = $('.setuptools.div.groupList div.dragbox div.cell:first-child').offset();
+        var options = [
+            {
+                class: 'selectAll',
+                name: 'Select All',
+                callback: SelectAll
+            },
+            {
+                class: 'selectNone',
+                name: 'Deselect All',
+                callback: SelectNone
+            },
+            {
+                class: 'selectEnabled',
+                name: 'Select Enabled Groups',
+                callback: SelectAllEnabled
+            },
+            {
+                class: 'selectDisabled',
+                name: 'Select Disabled Groups',
+                callback: SelectAllDisabled
+            }
+        ];
+
+        setuptools.lightbox.menu.context.create('Select Menu', position, options, self);
+
+    } else {
+
+        setuptools.lightbox.menu.context.close(self);
+
+    }
+
+});
+```
+
+Clicks to the specified div are captured to toggle the menu on and off. If the menu is presently disabled, setuptools.lightbox.menu.context.create() will be called to create it.
+
+For this context menu, it is supposed to line up with the first div underneath the menu. That position is sent directly to the method.
+
+The options object defines the menu options and what their clicks do. The callback can be a literal callback with no arguments, or you can use `function() { ... }` to use local variables in the callback.
+
+Providing the jQuery self argument will deselect the menu icon when the menu is closed.
+
+#### setuptools.lightbox.menu.context.close([jQuery self])
+
+Closes any open context menu and will removed selected class from any provided jQuery object
 
 ### <a id="setuptools.app" href="#"></a>Main Application - setuptools.app
 

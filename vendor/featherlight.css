@@ -27,9 +27,10 @@
 
 		/* styling */
 		cursor: pointer;
-		background: #333;
+
 		/* IE8 "hack" for nested featherlights */
-		background: rgba(0, 0, 0, 0);
+		background: #000000;
+		background: rgba(0, 0, 0, 0.8);
 	}
 
 	/* support for nested featherlights. Does not work in IE8 (use JS to fix) */

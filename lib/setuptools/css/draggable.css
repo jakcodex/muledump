@@ -1,0 +1,18 @@
+.dragbox div {
+    padding: 10px;
+    margin-top: 5px;
+    margin-right: 5px;
+    border: #fff solid 1px;
+    background-color: #1a1a1a;
+    float: left;
+    cursor: pointer;
+}
+
+.dragbox div:last-child {
+    margin-right: 0 !important;
+}
+
+.dragbox div.selected, .selected {
+    background-color: #0c0870;
+    color: #22b7da;
+}

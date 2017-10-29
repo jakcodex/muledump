@@ -1,3 +1,5 @@
+@import 'draggable.css';
+
 a.setuptools {
     color: #2386ff !important;
     text-decoration: none !important;
@@ -74,13 +76,23 @@ input[name="checkAll"] {
     text-align: center;
 }
 
+.setuptools-medium-static .featherlight-content {
+    max-width: 35%;
+    min-width: 35%;
+}
+
 .setuptools-large .featherlight-content {
     max-width: 60%;
     min-width: 20%;
 }
 
 .setuptools-tiles .featherlight-content {
-    max-width: 80%;
+    max-width: 1000px;
+}
+
+.setuptools-tiles-fixed .featherlight-content {
+    max-width: 50%;
+    min-width: 50%;
 }
 
 .setuptools input[name="restoreSaveExisting"] {
@@ -126,13 +138,11 @@ input.setuptools.app.wideinput {
     margin: 0 !important;
 }
 
-.setuptools.app input, .setuptools.app select {
+.setuptools.app input, .setuptools.app select, select.setuptools {
     font-size: 12px;
     width: 200px;
     border: #ffffff solid 1px;
     background-color: #333;
-    margin-left: 5px;
-    margin-right: 5px;
     padding: 3px;
     color: #ffffff;
 }
@@ -410,4 +420,188 @@ input.setuptools.groups {
     clear: right;
     float: right;
     height: 25px;
+}
+
+.setuptools.bottom.container div:first-child {
+    margin-right: 10px;
+}
+
+.setuptools.bottom.container div:last-child:not(:first-child) {
+    margin-left: 10px;
+}
+
+.setuptools.div.groupEditor.container {
+    clear: both;
+}
+
+
+.setuptools.div.pageControls, .setuptools.div.groupControls, .setuptools.div.groupList {
+    float: left;
+    clear: both;
+}
+
+.setuptools.div.pageControls div, .setuptools.div.groupControls div {
+    float: left;
+    border: #fff solid 1px;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding-top: 3px;
+    font-size: 11px;
+    cursor: pointer;
+    width: 21px;
+    height: 21px;
+}
+
+.setuptools.div.pageControls div:not(.selected), .setuptools.div.groupControls div:not(.selected) {
+    background-color: #333;
+}
+
+.setuptools.div.menu {
+    position: absolute;
+    z-index: 99999999999;
+    width: 200px;
+    border: #fff solid 1px;
+    padding: 5px;
+    background-color: #111;
+    opacity: 0.95;
+}
+
+.setuptools.div.menu div {
+    float: left;
+    clear: both;
+    width: 100%;
+    padding-bottom: 7px;
+    padding-top: 7px;
+}
+
+.setuptools.div.menu div:not(:last-child) {
+    border-bottom: #2386ff solid 1px;
+}
+
+.setuptools.div.menu div:hover:not(:first-child) {
+    background-color: #1d2533;
+    cursor: pointer;
+}
+
+.setuptools.div.menu strong {
+    color: #22b7da;
+}
+
+/* group editor */
+.setuptools.div.groups.editor.active {
+    min-width: 670px;
+}
+
+.setuptools.div.groups.editor > div {
+    width: 325px;
+}
+
+.setuptools.div.groups.editor > div:first-child {
+    float: left;
+    clear: left;
+    margin-right: 5px;
+}
+
+.setuptools.div.groups.editor > div:last-child {
+    float: right;
+    clear: right;
+}
+
+.setuptools.div.groups.editor div.availableAccounts > div:first-child {
+    border-bottom: #fff solid 1px;
+}
+
+.setuptools.div.groups.editor div.groupMembers > div:first-child {
+    border-bottom: #fff solid 1px;
+}
+
+.setuptools.div.groups.editor div.cell {
+    width: 100%;
+}
+
+div.setuptools.div.pageControls div.editor.control.lastPage {
+    float: right;
+    clear: right;
+}
+
+div.setuptools.div.pageControls div.editor.control.nextPage {
+    float: right;
+}
+
+div.setuptools.div.pageControls div.editor.control.firstPage {
+    float: left;
+    clear: left;
+}
+
+div.setuptools.div.pageControls div.editor.control.previousPage {
+    float: left;
+}
+
+div.setuptools.div.pageControls div.editor.control.customPage, div.setuptools.div.pageControls div.editor.control.searchName {
+    background-color: #222 !important;
+    width: auto;
+    border: 0 !important;
+    padding-top: 0 !important;
+    float: left;
+    margin-right: 0 !important;
+}
+
+div.setuptools.div.pageControls div.editor.control input {
+    font-size: 12px;
+    width: 35px;
+    height: 21px;
+    border: 1px solid #ffffff;
+    background-color: #333;
+    color: #ffffff;
+    padding-left: 2px;
+    padding-right: 2px;
+    text-align: center;
+}
+
+div.setuptools.div.pageControls div.editor.control span {
+    font-weight: normal;
+    padding-top: 3px;
+    font-size: 12px;
+    cursor: default !important;
+}
+
+div.editor.control.searchName input {
+    width: 200px !important;
+    text-align: left !important;
+}
+
+div.setuptools.div.pageControls div.editor.control.gotoPage, div.setuptools.div.pageControls div.editor.control.search {
+    float: left;
+    border: 0 !important;
+    background-color: #222 !important;
+    padding: 0 !important;
+}
+
+div.setuptools.div.pageControls div.editor.control.gotoPage:hover, div.setuptools.div.pageControls div.editor.control.search:hover {
+    color: rgb(59, 85, 255);
+}
+
+
+div.setuptools.div.pageControls {
+    width: 100%;
+}
+
+div.setuptools.div.pageControls div {
+    padding-top: 0 !important;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+div.setuptools.div.pageControls div:hover, div.setuptools.div.pageControls div:active {
+    background-color: #0c0870;
+}
+
+div.setuptools.div.pageControls div.lastPage {
+    margin-right: 0 !important;
+}
+
+.setuptools.div.groups.editor > div > div > div.cell:hover {
+    background-color: #0c0870;
 }

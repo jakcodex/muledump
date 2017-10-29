@@ -80,3 +80,9 @@ No mule object was provided
 
 #### Error 26 - setuptools.app.config.listUsers
 Users who have not migrated to SetupTools configuration cannot utilize this feature
+
+#### Error 27 - setuptools.app.groups.delete
+Required argument groupName was invalid
+
+#### Error 28 - setuptools.app.groups.manager
+Supplied groupName does not exist in client configuration or was an invalid name

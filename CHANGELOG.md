@@ -5,6 +5,8 @@
 - New Settings
   * accountsPerPage: How many accounts to display per page 
   * longpress: How long to wait for longpress clicks
+  
+- Renders update for X17
 
 **2017-10-12** version 0.8.1-6
 

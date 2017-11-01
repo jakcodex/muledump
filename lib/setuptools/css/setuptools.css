@@ -466,6 +466,7 @@ input.setuptools.groups {
     padding: 5px;
     background-color: #111;
     opacity: 0.95;
+    overflow: hidden;
 }
 
 .setuptools.div.menu div {
@@ -480,9 +481,13 @@ input.setuptools.groups {
     border-bottom: #2386ff solid 1px;
 }
 
-.setuptools.div.menu div:hover:not(:first-child) {
+.setuptools.div.menu div:hover:not(.noselect) {
     background-color: #1d2533;
     cursor: pointer;
+}
+
+.setuptools.div.menu > div.selected {
+    background-color: #1d2533;
 }
 
 .setuptools.div.menu strong {
@@ -498,22 +503,22 @@ input.setuptools.groups {
     width: 325px;
 }
 
-.setuptools.div.groups.editor > div:first-child {
+.setuptools.div.groups.editor > div.availableAccounts {
     float: left;
     clear: left;
     margin-right: 5px;
 }
 
-.setuptools.div.groups.editor > div:last-child {
+.setuptools.div.groups.editor > div.groupMembers {
     float: right;
     clear: right;
 }
 
-.setuptools.div.groups.editor div.availableAccounts > div:first-child {
-    border-bottom: #fff solid 1px;
+div.nocontext {
+   cursor: initial;
 }
 
-.setuptools.div.groups.editor div.groupMembers > div:first-child {
+.setuptools.div.groups.editor > div > div:first-child {
     border-bottom: #fff solid 1px;
 }
 
@@ -604,4 +609,13 @@ div.setuptools.div.pageControls div.lastPage {
 
 .setuptools.div.groups.editor > div > div > div.cell:hover {
     background-color: #0c0870;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }

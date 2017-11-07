@@ -7,6 +7,8 @@
   * longpress: How long to wait for longpress clicks
   
 - Renders update for X17
+- Renders update for X18
+- Clipboard.js 1.7.1 added
 
 **2017-10-12** version 0.8.1-6
 

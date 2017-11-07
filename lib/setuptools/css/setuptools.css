@@ -87,7 +87,7 @@ input[name="checkAll"] {
 }
 
 .setuptools-tiles .featherlight-content {
-    max-width: 1000px;
+    max-width: 725px;
 }
 
 .setuptools-tiles-fixed .featherlight-content {
@@ -465,7 +465,6 @@ input.setuptools.groups {
     border: #fff solid 1px;
     padding: 5px;
     background-color: #111;
-    opacity: 0.95;
     overflow: hidden;
 }
 
@@ -494,6 +493,43 @@ input.setuptools.groups {
     color: #22b7da;
 }
 
+.setuptools.div.menu div.input {
+    width: 100%;
+    height: 24px !important;
+    margin-bottom: 3px !important;
+}
+
+.setuptools.div.menu div.input > div {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.setuptools.div.menu div.input > div > div:first-child {
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    float: left;
+    clear: left;
+}
+
+.setuptools.div.menu div.input > div > div:first-child > input {
+    width: 163px !important;
+    height: 21px;
+    margin: 0;
+}
+
+.setuptools.div.menu div.input > div > div:last-child {
+    width: 31px;
+    margin: 2px 0 0 0 !important;
+    text-align: center;
+    background-color: inherit !important;
+    float: left;
+    clear: right;
+}
+
 /* group editor */
 .setuptools.div.groups.editor.active {
     min-width: 670px;
@@ -518,7 +554,7 @@ div.nocontext {
    cursor: initial;
 }
 
-.setuptools.div.groups.editor > div > div:first-child {
+.setuptools.div.groups.editor > div > div:first-child:not(.pageControls) {
     border-bottom: #fff solid 1px;
 }
 
@@ -545,7 +581,7 @@ div.setuptools.div.pageControls div.editor.control.previousPage {
 }
 
 div.setuptools.div.pageControls div.editor.control.customPage, div.setuptools.div.pageControls div.editor.control.searchName {
-    background-color: #222 !important;
+    background-color: #222;
     width: auto;
     border: 0 !important;
     padding-top: 0 !important;
@@ -580,7 +616,7 @@ div.editor.control.searchName input {
 div.setuptools.div.pageControls div.editor.control.gotoPage, div.setuptools.div.pageControls div.editor.control.search {
     float: left;
     border: 0 !important;
-    background-color: #222 !important;
+    background-color: #222;
     padding: 0 !important;
 }
 
@@ -611,11 +647,59 @@ div.setuptools.div.pageControls div.lastPage {
     background-color: #0c0870;
 }
 
-.noselect {
+.noselect, .featherlight-content {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+.relBottom {
+    position: absolute;
+    bottom: 0;
+}
+
+.setuptools.groupSaveControls {
+    margin-top: 20px;
+}
+
+.setuptools.groupSaveControls > div:first-child {
+    clear: left;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.setuptools.groupSaveControls > div:last-child {
+    clear: right;
+}
+
+.setuptools.groupSaveControls > div:last-child > div {
+    padding-top: 31px;
+    margin-left: 10px;
+    color: #14ff2c;
+}
+
+div.setuptools.group.save {
+    width: 200px !important;
+    float: left;
+    clear: both;
+    border: #fff solid 1px;
+    background-color: #111;
+    padding: 10px 10px 10px 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+div.setuptools.group.save:hover {
+    background-color: #0c0870;
+}
+
+div.setuptools.group.save:active {
+    background-color: #060434;
+}
+
+div.error {
+    color: red !important;
 }

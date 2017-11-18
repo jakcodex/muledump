@@ -24,11 +24,17 @@ SetupTools can import your existing or uploaded accounts.js file or restore a ba
 
 A very simple interface for rapidly adding and removing ROTMG user accounts from Muledump.
 
-Accounts and [account groups](help/accounts-manager/groups.md) can be enabled or disabled individually.
+Accounts and groups can be enabled or disabled individually.
 
 Multiple accounts.js files can be imported merging your configurations into one.
 
 Account email addresses and user accounts for Steam, Kongregate, and Kabam are all validated with bad entries removed rather than causing errors.
+
+### [Groups Manager](help/groups-manager/manager.md)
+
+Create groups to organize accounts however you wish. Accounts can be in multiple groups and multiple groups can be enabled at the same time.
+
+Groups and accounts are sorted by priority in their respective lists. The final accounts list is generated either in parallel (default) or serial mode.
 
 ### [Backups Manager](help/backups-manager/index.md)
 

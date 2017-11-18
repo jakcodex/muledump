@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "BackupDate": "2017-11-08T00:00:00.000Z",
+    "protected": false,
+    "auto": false
+  },
+  "config": {
+    "enabled": true,
+    "preventAutoDownload": true,
+    "maximumBackupCount": 10,
+    "automaticBackups": true,
+    "rowlength": 7,
+    "testing": 0,
+    "prices": 0,
+    "mulelogin": 0,
+    "nomasonry": 0,
+    "accountLoadDelay": 0,
+    "debugging": false,
+    "alertNewVersion": 1,
+    "menuPosition": 2,
+    "backupAssistant": 14,
+    "corsAssistant": 1,
+    "accountAssistant": 1,
+    "longpress": 1000,
+    "accountsPerPage": 5,
+    "groups": true
+  },
+  "version": {
+    "major": 8,
+    "minor": 2,
+    "patch": 0
+  },
+  "accounts": {
+    "meta": {
+      "created": 1510135507593,
+      "modified": 1510135582046,
+      "format": 1,
+      "version": 1
+    },
+    "accounts": {
+      "test@test.com": {
+        "password": "mypassword",
+        "enabled": false,
+        "group": 0,
+        "autoReload": false
+      },
+      "anothername@different.com": {
+        "password": "testingtesting1",
+        "enabled": false,
+        "group": 0,
+        "autoReload": false
+      },
+      "spookyboi@notdeca.com": {
+        "password": "2spooky3mee",
+        "enabled": false,
+        "group": 0,
+        "autoReload": false
+      },
+      "notarealaccount@gmail.com": {
+        "password": "helloworld5",
+        "enabled": false,
+        "group": 0,
+        "autoReload": false
+      },
+      "onelasttest@account.com": {
+        "password": "accounttesting88",
+        "enabled": false,
+        "group": 0,
+        "autoReload": false
+      },
+      "evenmoretests@account.com": {
+        "password": "blahblahblahdoodoodeedoodooo",
+        "enabled": false,
+        "group": 0,
+        "autoReload": false
+      },
+      "trulya@greataccount.com": {
+        "password": "yaybadpassword",
+        "enabled": false,
+        "group": 0,
+        "autoReload": false
+      }
+    }
+  },
+  "groups": {
+    "format": 1,
+    "groupList": {
+      "Sample Group": {
+        "enabled": true,
+        "members": [
+          "anothername@different.com",
+          "spookyboi@notdeca.com"
+        ]
+      },
+      "Ignored Accounts": {
+        "enabled": false,
+        "members": [
+          "test@test.com",
+          "notarealaccount@gmail.com",
+          "onelasttest@account.com"
+        ]
+      }
+    },
+    "groupOrder": [
+      "Sample Group",
+      "Ignored Accounts"
+    ]
+  },
+  "options": {
+    "totals": false,
+    "email": false,
+    "accountinfo": false,
+    "chdesc": true,
+    "chsortchoice": true,
+    "chsort": "0",
+    "equipment": true,
+    "hpmp": false,
+    "inv": true,
+    "vaults": false,
+    "vaultlayoutchoice": true,
+    "vaultlayout": "0",
+    "famefilter": false,
+    "fameamount": "0",
+    "stats": true,
+    "sttype": "base",
+    "pcstats": true,
+    "goals": false,
+    "backpack": true,
+    "gifts": false,
+    "techreport": false
+  },
+  "muledump": {
+    "chsortcustom": {
+      "format": 1,
+      "accounts": {}
+    }
+  }
+}

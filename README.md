@@ -18,7 +18,7 @@ See the [Requirements](REQUIREMENTS.md) page for more information.
 
 ## Release Information
 
-The current version is Jakcodex/Muledump v0.8.1.
+The current version is Jakcodex/Muledump v0.8.2.
 
 Muledump Online is available hosted on Github [here](https://jakcodex.github.io/muledump/muledump.html).
 
@@ -45,6 +45,7 @@ Head over to [Installation and Setup](https://github.com/jakcodex/muledump/wiki/
 
 - Manage all of your ROTMG accounts from a single interface
 - [SetupTools](docs/setuptools/index.md) - An easy to use, browser-based user interface for managing Muledump
+- [Groups Manager](docs/setuptools/groups-manager/manager.md) - Account grouping and ordering utility to customize the Muledump accounts list
 - [Muledump Online](https://jakcodex.github.io/muledump/muledump.html) - Load Muledump directly from Github using SetupTools
 - MuleQueue - Task queuing to control the flow of requests from Muledump
 - Vault display is now fully customizable and comes with three pre-defined layouts
@@ -62,18 +63,22 @@ Head over to [Installation and Setup](https://github.com/jakcodex/muledump/wiki/
 
 ## Head to the [wiki](https://github.com/jakcodex/muledump/wiki) for more information!
 
-And of course, feel free to contribute to it!
+## Demoing Muledump
+
+Want to take a look around Muledump without having to provide any account information? A sample backup with dummy accounts can be downloaded here: [docs/setuptools/muledump-sample-config.json](docs/setuptools/muledump-sample-config.json).
+
+This file can be imported to Muledump via the upload backup option.
 
 <a id="jakcodex-supportandcontributions"></a>
 ## Support and Contributions
 
-You can message me [on Reddit](https://www.reddit.com/message/compose?to=jakisaurus&subject=Muledump%20support&message=) with any questions, comments, concerns, or other feedback. I will respond as soon as I am able to. I'm glad to help get you up and running or answer any questions.
+A new Discord for Jakcodex/Muledump is available here - [https://discord.gg/JFS5fqW](https://discord.gg/JFS5fqW).
 
-A Muledump support Discord is available at [https://discord.gg/bHuBZuB](https://discord.gg/bHuBZuB).
+Feel free to join and ask for help getting setup, hearing about updates, offer your suggestions and feedback, or just say hi.
 
 If you encounter a bug, have a feature request, or have any other feedback then you can check out the [issue tracker](https://github.com/jakcodex/muledump/issues) to see if it's already being discussed. If not then you can [submit a new issue](https://github.com/jakcodex/muledump/issues/new).
 
-If you are interested in helping test new versions of this software before release then check out the [Beta Testing](https://github.com/jakcodex/muledump/wiki/Beta-Testing) wiki page for more information.
+If you are interested in helping test new versions of this software before release then check out [Muledump Preview](https://github.com/jakcodex/muledump-preview/) for the recent stable development builds of Muledump.
 
 Feel free to submit pull requests or patches if you have any Muledump changes you'd like to contribute. See [Contributing](https://github.com/jakcodex/muledump/wiki/Contributing) for more information.
 
@@ -87,7 +92,7 @@ Muledump Online always runs the latest version of Muledump with all patches.
 
 ## Special Thanks
 
-Muledump Renders and Constants have been provided to Jakcodex/Muledump courtesy of [TheSTDMan](https://github.com/thestdman) and is primarily maintained by [Wawawa](https://github.com/wawawawawawawa/muledump). They made my life easier and I appreciate that greatly.
+Muledump Renders and Constants are maintained for Jakcodex/Muledump with contributions by [TheSTDMan](https://github.com/thestdman), [Wawawa](https://github.com/wawawawawawawa), and [tuvior](https://github.com/tuvior).
 
 ## Original Muledump License
 

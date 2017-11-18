@@ -45,6 +45,7 @@ body {
 	text-align: left;
 	font-weight: normal;
 	font-size: 15px;
+	overflow: hidden;
 }
 .menu:hover:not(.setuptools) { display: block; }
 .handle { position: relative; }
@@ -52,7 +53,7 @@ body {
 
 .menu:not(.setuptools) input,label { cursor: pointer; }
 .menu:not(.setuptools) input { float: left; clear: left; margin: 4px;  }
-.menu:not(.setuptools) label {display: block; padding: 2px; }
+.menu:not(.setuptools) label {display: block; padding: 2px; overflow: hidden;}
 
 .menu:not(.setuptools) label:hover,
 .menu:not(.setuptools) input:hover ~ label,
@@ -62,6 +63,7 @@ body {
     color: #fff;
 }
 
+.menu:not(.setuptools) div { overflow: hidden; }
 .menu:not(.setuptools) div>div>div { padding-left: 15px; }
 
 #export { width: auto; text-align: center; }

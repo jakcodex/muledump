@@ -1,6 +1,6 @@
 # Accounts Manager Topics
 
-[Accounts Manager](users.md)
+[Accounts Manager](manager.md)
 
 [AccountJS Local Import](accountsjs-import.md)
 

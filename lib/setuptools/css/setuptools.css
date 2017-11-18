@@ -1,5 +1,3 @@
-@import 'draggable.css';
-
 a.setuptools {
     color: #2386ff !important;
     text-decoration: none !important;
@@ -54,49 +52,12 @@ input[name="checkAll"] {
 }
 
 .setuptools-small .featherlight-content {
-    max-width: 20%;
-    min-width: 20%;
-}
-
-.setuptools-small .featherlight-content {
     max-width: 370px;
     min-width: 370px;
 }
 
-.setuptools-halfsies .featherlight-content {
-    max-width: 25%;
-}
-
 .setuptools-medium .featherlight-content {
     max-width: 35%;
-}
-
-.setuptools-medium-centered .featherlight-content {
-    max-width: 35%;
-    text-align: center;
-}
-
-.setuptools-medium-static .featherlight-content {
-    max-width: 35%;
-    min-width: 35%;
-}
-
-.setuptools-large .featherlight-content {
-    max-width: 60%;
-    min-width: 20%;
-}
-
-.setuptools-tiles .featherlight-content {
-    max-width: 725px;
-}
-
-.setuptools-tiles-fixed .featherlight-content {
-    max-width: 50%;
-    min-width: 50%;
-}
-
-.setuptools input[name="restoreSaveExisting"] {
-
 }
 
 .drawhelp:not(.nostyle) {
@@ -117,12 +78,17 @@ input[name="checkAll"] {
     font-weight: bold;
 }
 
+.drawhelp.gohome {
+    right: 30px;
+}
+
 .drawhelp.noclose:not(.nostyle) {
     right: 0px;
 }
 
 .featherlight-content h3 {
-    margin: 0px; padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 input.setuptools.app.wideinput {
@@ -134,19 +100,15 @@ input.setuptools.app.wideinput {
     color: #ffffff;
 }
 
-.setuptools.app.nomargin {
-    margin: 0 !important;
-}
-
-.setuptools.app input, .setuptools.app select, select.setuptools {
+.featherlight-inner select,
+.featherlight-inner input {
     font-size: 12px;
     width: 200px;
-    border: #ffffff solid 1px;
+    border: #707070 solid 2px;
     background-color: #333;
     padding: 3px;
     color: #ffffff;
 }
-
 
 .setuptools textarea {
     background-color: #000;
@@ -158,7 +120,6 @@ input.setuptools.app.wideinput {
 
 div.setuptools.app.uploadData {
     width: 700px;
-    padding-right: 5px;
 }
 
 .setuptools.app.uploadData textarea {
@@ -167,20 +128,23 @@ div.setuptools.app.uploadData {
 }
 
 
-.featherlight-content::-webkit-scrollbar-track, .scrollbar::-webkit-scrollbar-track
+.featherlight-content::-webkit-scrollbar-track,
+.scrollbar::-webkit-scrollbar-track
 {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     background-color: #002464;
     border-left: #2386ff 1px dashed;
 }
 
-.featherlight-content::-webkit-scrollbar, .scrollbar::-webkit-scrollbar
+.featherlight-content::-webkit-scrollbar,
+.scrollbar::-webkit-scrollbar
 {
     width: 10px;
     background-color: #F5F5F5;
 }
 
-.featherlight-content::-webkit-scrollbar-thumb, .scrollbar::-webkit-scrollbar-thumb
+.featherlight-content::-webkit-scrollbar-thumb,
+.scrollbar::-webkit-scrollbar-thumb
 {
     background-color: #254adf;
     border-left: #2386ff dashed 1px;
@@ -205,15 +169,17 @@ div.setuptools.app.uploadData {
     margin-right: 10px;
 }
 
-.setuptools.app.config.settings input:disabled, .setuptools.app.config.settings select:disabled {
+.setuptools.app.config.settings input:disabled,
+.setuptools.app.config.settings select:disabled {
     color: #777;
     font-style: italic;
 }
 
-.setuptools.app.config.settings input, .setuptools.app.config.settings select {
+.setuptools.app.config.settings input,
+.setuptools.app.config.settings select {
     clear: right;
     float: right;
-    height: 25px;
+    height: 24px;
 }
 
 .setuptools.app.save {
@@ -248,7 +214,7 @@ a.setuptools.app.config.settings.action {
     text-decoration: none !important;
 }
 
-.setuptools.app.deleteDisabled {
+.deleteDisabled {
     text-decoration: line-through !important;
 }
 
@@ -273,6 +239,13 @@ a.setuptools.app.config.settings.action.save {
     clear: both !important;
 }
 
+a.setuptools.app.config.settings.action.eraseAll,
+a.setuptools.app.config.settings.action.eraseCache {
+    float: left;
+    clear: both;
+    color: #9e0900 !important;
+}
+
 a.setuptools.app.action.destroy {
     float: right;
     clear: right;
@@ -285,7 +258,10 @@ a.setuptools.app.action.arrrrgbaaad {
     color: #9e0900 !important;
 }
 
-a.setuptools.app.action.destroy:hover, a.setuptools.app.action.arrrrgbaaad:hover {
+a.setuptools.app.action.destroy:hover,
+a.setuptools.app.action.arrrrgbaaad:hover,
+a.setuptools.app.config.settings.action.eraseAll:hover,
+a.setuptools.app.config.settings.action.eraseCache:hover {
     color: #bb0b00 !important;
 }
 
@@ -311,92 +287,14 @@ a.setuptools.app.action.destroy:hover, a.setuptools.app.action.arrrrgbaaad:hover
     margin-right: 10px;
 }
 
-.setuptools.app.backups.options input, .setuptools.app.backups.options select {
+.setuptools.app.backups.options input,
+.setuptools.app.backups.options select {
     clear: right;
     float: right;
     height: 25px;
 }
 
-.setuptools.app.initsetup.accounts {
-    clear: both;
-    float: left;
-}
-
-.setuptools.app.initsetup.accounts:first-child div:first-child {
-    width: 25px;
-}
-
-.setuptools.app.initsetup.accounts div:first-child {
-    width: 25px;
-}
-
-.setuptools.app.initsetup.accounts div:not(.controller) {
-    float: left;
-    width: 200px;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.setuptools.app.initsetup.accounts:not(:last-child) {
-    margin-bottom: 5px;
-}
-
-.setuptools.app.initsetup.accounts .controller {
-    font-size: 22px;
-    font-weight: bold;
-    float: left;
-    width: 20px;
-    cursor: pointer;
-}
-
-.setuptools.app.initsetup.accounts input[type="checkbox"] {
-    width: 25px;
-}
-
-.setuptools.app.initsetup.accounts input, .setuptools.app.initsetup.accounts select {
-    float: left;
-}
-
-.setuptools.app.initsetup.accounts .controller:first-of-type {
-    margin-left: 5px;
-}
-
-.setuptools.app.initsetup.accounts .reveal {
-    font-size: 20px;
-}
-
-.setuptools.app.initsetup.accounts .remove {
-    padding-left: 2px;
-}
-
-.setuptools.app.initsetup.accounts .add:hover {
-    color: #cccccc;
-}
-
-.setuptools.app.initsetup.accounts .add:active {
-    color: #2496ff;
-}
-
-.setuptools.app.initsetup.accounts .reveal:hover {
-    color: #cccccc;
-}
-
-.setuptools.app.initsetup.accounts .reveal:active {
-    color: #14ff2c;
-}
-
-.setuptools.app.initsetup.accounts .remove:hover {
-    color: #cccccc;
-}
-
-.setuptools.app.initsetup.accounts .remove:active {
-    color: #ff1c29;
-}
-
 /* groups manager */
-input.setuptools.groups {
-
-}
 
 .setuptools.div.app {
     clear: both;
@@ -416,7 +314,8 @@ input.setuptools.groups {
     margin-right: 10px;
 }
 
-.setuptools.div.app input, .setuptools.div.app select {
+.setuptools.div.app input,
+.setuptools.div.app select {
     clear: right;
     float: right;
     height: 25px;
@@ -435,26 +334,44 @@ input.setuptools.groups {
 }
 
 
-.setuptools.div.pageControls, .setuptools.div.groupControls, .setuptools.div.groupList {
+.setuptools.div.pageControls,
+.setuptools.div.groupControls,
+.setuptools.div.accountControls,
+.setuptools.div.groupList {
     float: left;
     clear: both;
 }
 
-.setuptools.div.pageControls div, .setuptools.div.groupControls div {
+.setuptools.div.accountControls div {
     float: left;
-    border: #fff solid 1px;
+    border: #707070 solid 2px;
     text-align: center;
     vertical-align: middle;
     margin-right: 5px;
-    margin-top: 5px;
-    padding-top: 3px;
-    font-size: 11px;
+    padding: 3px 5px 0 5px;
+    font-size: 12px;
     cursor: pointer;
-    width: 21px;
-    height: 21px;
+    height: 24px;
 }
 
-.setuptools.div.pageControls div:not(.selected), .setuptools.div.groupControls div:not(.selected) {
+.setuptools.div.pageControls div,
+.setuptools.div.groupControls div {
+    float: left;
+    border: #707070 solid 2px;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 5px;
+    padding: 1px 0 0 0;
+    margin-top: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 25px;
+    height: 24px;
+}
+
+.setuptools.div.pageControls div:not(.selected),
+.setuptools.div.groupControls div:not(.selected),
+.setuptools.div.accountControls div:not(.selected) {
     background-color: #333;
 }
 
@@ -477,7 +394,7 @@ input.setuptools.groups {
 }
 
 .setuptools.div.menu div:not(:last-child) {
-    border-bottom: #2386ff solid 1px;
+    border-bottom: #b4b4b4 solid 1px;
 }
 
 .setuptools.div.menu div:hover:not(.noselect) {
@@ -516,14 +433,14 @@ input.setuptools.groups {
 }
 
 .setuptools.div.menu div.input > div > div:first-child > input {
-    width: 163px !important;
+    width: 160px !important;
     height: 21px;
     margin: 0;
 }
 
 .setuptools.div.menu div.input > div > div:last-child {
     width: 31px;
-    margin: 2px 0 0 0 !important;
+    margin: 3px 0 0 0 !important;
     text-align: center;
     background-color: inherit !important;
     float: left;
@@ -554,12 +471,16 @@ div.nocontext {
    cursor: initial;
 }
 
-.setuptools.div.groups.editor > div > div:first-child:not(.pageControls) {
-    border-bottom: #fff solid 1px;
+.setuptools.div.groups.editor > div > div:first-child:not(.pageControls):not(.menuStyle):not(.formStyle) {
+    border-bottom: #b4b4b4 solid 2px;
 }
 
 .setuptools.div.groups.editor div.cell {
     width: 100%;
+}
+
+div.setuptools.div.pageControls div.editor.control.massSwitch {
+    float: right;
 }
 
 div.setuptools.div.pageControls div.editor.control.lastPage {
@@ -580,7 +501,8 @@ div.setuptools.div.pageControls div.editor.control.previousPage {
     float: left;
 }
 
-div.setuptools.div.pageControls div.editor.control.customPage, div.setuptools.div.pageControls div.editor.control.searchName {
+div.setuptools.div.pageControls div.editor.control.customPage,
+div.setuptools.div.pageControls div.editor.control.searchName {
     background-color: #222;
     width: auto;
     border: 0 !important;
@@ -592,8 +514,8 @@ div.setuptools.div.pageControls div.editor.control.customPage, div.setuptools.di
 div.setuptools.div.pageControls div.editor.control input {
     font-size: 12px;
     width: 35px;
-    height: 21px;
-    border: 1px solid #ffffff;
+    height: 24px;
+    border: 2px solid #707070;
     background-color: #333;
     color: #ffffff;
     padding-left: 2px;
@@ -613,19 +535,21 @@ div.editor.control.searchName input {
     text-align: left !important;
 }
 
-div.setuptools.div.pageControls div.editor.control.gotoPage, div.setuptools.div.pageControls div.editor.control.search {
+div.setuptools.div.pageControls div.editor.control.gotoPage,
+div.setuptools.div.pageControls div.editor.control.search {
     float: left;
     border: 0 !important;
     background-color: #222;
     padding: 0 !important;
 }
 
-div.setuptools.div.pageControls div.editor.control.gotoPage:hover, div.setuptools.div.pageControls div.editor.control.search:hover {
+div.setuptools.div.pageControls div.editor.control.gotoPage:hover,
+div.setuptools.div.pageControls div.editor.control.search:hover {
     color: rgb(59, 85, 255);
 }
 
 
-div.setuptools.div.pageControls {
+div.setuptools.div.pageControls.full {
     width: 100%;
 }
 
@@ -635,7 +559,8 @@ div.setuptools.div.pageControls div {
     font-weight: bold;
 }
 
-div.setuptools.div.pageControls div:hover, div.setuptools.div.pageControls div:active {
+div.setuptools.div.pageControls div:hover,
+div.setuptools.div.pageControls div:active {
     background-color: #0c0870;
 }
 
@@ -643,7 +568,8 @@ div.setuptools.div.pageControls div.lastPage {
     margin-right: 0 !important;
 }
 
-.setuptools.div.groups.editor > div > div > div.cell:hover {
+.setuptools.div.groups.editor > div > div > div.cell:hover,
+div.setuptools.div.pageControls div.editor.control.massSwitch:hover {
     background-color: #0c0870;
 }
 
@@ -661,45 +587,382 @@ div.setuptools.div.pageControls div.lastPage {
     bottom: 0;
 }
 
-.setuptools.groupSaveControls {
-    margin-top: 20px;
-}
-
-.setuptools.groupSaveControls > div:first-child {
-    clear: left;
-    margin-top: 20px;
-    margin-right: 10px;
-}
-
-.setuptools.groupSaveControls > div:last-child {
+.setuptools.groupSaveControls > div > div.save.result {
+    float: right;
     clear: right;
+    color: #008cfc;
 }
 
-.setuptools.groupSaveControls > div:last-child > div {
-    padding-top: 31px;
-    margin-left: 10px;
-    color: #14ff2c;
+div.error, span.error {
+    color: red !important;
 }
 
-div.setuptools.group.save {
-    width: 200px !important;
+div.success, span.success {
+    color: #00b0fc !important;
+    margin-left: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.setuptools.containerSettings {
+    width: 450px;
+}
+
+/* accounts manager */
+
+.setuptools.accounts.editor {
+    width: 495px;
+}
+
+.setuptools.accounts.editor > div.AccountsList > div.list {
+    margin-top: 5px;
     float: left;
     clear: both;
-    border: #fff solid 1px;
-    background-color: #111;
-    padding: 10px 10px 10px 10px;
-    cursor: pointer;
+}
+
+.setuptools.accounts.editor > div.AccountsList > div.list > div.cell:not(:last-child) {
+    margin-bottom: 5px;
+    float: left;
+    clear: both;
+}
+
+.setuptools.accounts.editor > div.AccountsList > div.list > div.cell > div {
+    float: left;
+}
+
+.setuptools.accounts.editor > div.AccountsList > div.list > div.cell > div:not(:last-child) {
+    margin-right: 5px;
+}
+
+div.setuptools.app.accountControls div {
+    margin-top: 0 !important;
+}
+
+div.setuptools.div.pageControls div.editor.control.massSwitch,
+div.accountControls > div {
+    width: 25px;
     text-align: center;
 }
 
-div.setuptools.group.save:hover {
+div.accountControls > div:last-child {
+    margin-right: 0 !important;
+}
+
+div.setuptools.div.pageControls div.editor.control.massSwitch:hover,
+div.accountControls > div:hover,
+.formStyle:hover {
+    background-color: #040f51 !important;
+    color: #22b7da;
+}
+
+div.accountControls > div[data-option="delete"]:hover {
+    background-color: #6e070a !important;
+    color: #fd0005;
+}
+
+
+
+div.empty {
+    background-color: initial;
+    border: initial;
+    margin-top: 5px;
+    margin-right: 5px;
+    clear: left;
+    float: left;
+}
+
+div.empty:hover {
+    background-color: initial !important;
+    cursor: initial;
+}
+
+div.controller.saveNotice {
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+div.AccountsList > div.controller.newAccount {
+    margin-top: 5px;
+    clear: right;
+    float: right;
+}
+
+div.AccountsList > div.controller.saveAccounts {
+    margin-top: 34px;
+    float: left;
+    clear: left;
+    margin-right: 5px;
+}
+
+div.AccountsList > div.controller.saveAccounts > span#changeStatus {
+    float: right;
+}
+
+div.AccountsList > div.controller.exportAccountsJS {
+    margin-right: 0;
+    margin-top: 5px;
+}
+
+div.AccountsList > div.controller.importAccountsJS {
+    margin-top: 34px;
+    margin-right: 0;
+    float: right;
+    clear: right;
+}
+
+div.massSwitch > div.cfleft {
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-top: 3px;
+    height: 24px
+}
+
+div.massSwitch > div.link {
+    margin-bottom: 5px;
+}
+
+/* button types */
+
+.menuStyle {
+    float: left;
+    cursor: pointer;
+    font-size: 12px;
+    width: 200px;
+    padding: 3px;
+    color: #00ceff;
+    background-color: #12182b;
+    border: #000 solid 2px;
+    margin-right: 5px;
+}
+
+.formStyle {
+    float: left;
+    cursor: pointer;
+    font-size: 12px;
+    width: 200px;
+    padding: 3px;
+    border: #004db4 solid 2px;
+    background-color: #0e1622;
+    color: #2386ff;
+}
+
+div.AccountsList > div.controller.saveAccounts:hover,
+div.AccountsList > div.controller.importAccountsJS:hover,
+div.AccountsList > div.controller.exportAccountsJS:hover,
+.menuStyle:hover {
+    background-color: #142346 !important;
+}
+
+.menuStyle.negative {
+    color: #f6a084;
+    background-color: #2b1215;
+}
+
+.menuStyle.negative:hover {
+    background-color: #3c0e19 !important;
+}
+
+.menuStyle.positive {
+    color: #7df67f;
+    background-color: #132b1c;
+}
+
+.menuStyle.positive:hover {
+    background-color: #103c29 !important;
+}
+
+.menuStyle.disabled {
+    color: #65676a;
+    background-color: #37393d;
+}
+
+.menuStyle.disabled:hover {
+    color: #5b6876 !important;
+    background-color: #3a434d !important;
+}
+
+.menuStyle.disabled.truly:hover {
+    color: #65676a !important;
+    background-color: #37393d !important;
+    cursor: initial !important;
+}
+
+.menuStyle.notice {
+    color: #c78bff;
+    background-color: #231525;
+}
+
+.menuStyle.notice:hover {
+    background-color: #302532 !important;
+}
+
+.menuSmall {
+    width: 150px;
+}
+
+.menuTiny {
+    width: 100px;
+    text-align: center;
+}
+
+/* generic positioning */
+.fleft {
+    float: left;
+}
+
+.fright {
+    float: right;
+}
+
+.cfleft {
+    float: left;
+    clear: left;
+}
+
+.cfright {
+    float: right;
+    clear: right;
+}
+
+.cboth {
+    clear: both;
+}
+
+.nomargin {
+    margin: 0 !important;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+/* specific featherlight variants */
+.fl-AccountsManager .featherlight-content  {
+    width: 545px;
+}
+
+.fl-AccountsSmall .featherlight-content  {
+    width: 450px;
+}
+
+.fl-GroupsManager .featherlight-content {
+    min-width: 365px;
+    max-width: 725px;
+}
+
+.fl-BackupsManager .featherlight-content {
+    min-width: 350px;
+    max-width: 510px;
+}
+
+.fl-Index .featherlight-content {
+    width: 370px;
+}
+
+.fl-IndexCentered .featherlight-content {
+    width: 370px;
+    text-align: center;
+}
+
+.fl-Introduction .featherlight-content {
+    width: 465px;
+}
+
+.fl-AccountsJSImportUpload .featherlight-content {
+    min-width: 455px;
+    max-width: 750px;
+}
+
+.fl-BackupUpload .featherlight-content {
+    min-width: 500px;
+    max-width: 750px;
+}
+
+.fl-BackupRestore .featherlight-content {
+    width: 422px;
+}
+
+.fl-Settings .featherlight-content {
+    width: 497px;
+}
+
+.fl-SettingsSmall .featherlight-content {
+    width: 384px;
+}
+
+/* other */
+
+.Accounts-AccountsJSImport {
+    width: 100%;
+    margin-top: 17px;
+}
+
+.mr5 {
+    margin-right: 5px;
+}
+
+.mr0 {
+    margin-right: 0 !important;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt5 {
+    margin-top: 5px;
+}
+
+.mt15 {
+    margin-top: 15px;
+}
+
+.w100 {
+    width: 100% !important;
+}
+
+.w400px {
+    width: 400px;
+}
+
+.h100 {
+    height: 100%;
+}
+
+.Backups-BackupOptions > div {
+    width: 70px;
+    text-align: center;
+}
+
+.Settings-Menu > div {
+    width: 108px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.Groups-ManagerMenu > div {
+    width: 100px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.dragbox div {
+    padding: 10px;
+    margin-top: 5px;
+    margin-right: 5px;
+    border: #707070 solid 2px;
+    background-color: #1a1a1a;
+    float: left;
+    cursor: pointer;
+}
+
+.dragbox div:last-child {
+    margin-right: 0 !important;
+}
+
+.dragbox div.selected, .selected {
     background-color: #0c0870;
-}
-
-div.setuptools.group.save:active {
-    background-color: #060434;
-}
-
-div.error {
-    color: red !important;
+    color: #22b7da;
 }

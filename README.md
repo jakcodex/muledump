@@ -60,14 +60,9 @@ Head over to [Installation and Setup](https://github.com/jakcodex/muledump/wiki/
 - click on account name for individual options menu
 - ctrl-click account name to temporarily hide it from totals
 - logins thru muledump count towards daily login calendar
+- account settings include automatic reload, login-only (daily calendar only), and cache disable
 
 ## Head to the [wiki](https://github.com/jakcodex/muledump/wiki) for more information!
-
-## Demoing Muledump
-
-Want to take a look around Muledump without having to provide any account information? A sample backup with dummy accounts can be downloaded here: [docs/setuptools/muledump-sample-config.json](docs/setuptools/muledump-sample-config.json).
-
-This file can be imported to Muledump via the upload backup option.
 
 <a id="jakcodex-supportandcontributions"></a>
 ## Support and Contributions

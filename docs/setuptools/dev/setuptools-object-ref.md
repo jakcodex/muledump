@@ -22,6 +22,8 @@ For the method reference, arguments contained in brackets [...] are optional.
 
 <a href="#setuptools.app.accounts">setuptools.app.accounts</a>
 
+<a href="#setuptools.app.groups">setuptools.app.groups</a>
+
 <a href="#setuptools.app.backups">setuptools.app.backups</a>
 
 <a href="#setuptools.app.config">setuptools.app.config</a>
@@ -51,6 +53,15 @@ Whether or not the user is detected as being a first time user.
 
 #### setuptools.state.hosted
 Whether or not the user is running local or hosted Muledump
+
+#### setuptools.state.ctrlKey
+Whether or not the control key is being pressed.
+
+#### setuptools.state.versionNotifier
+Whether or not the version notifier is running.
+
+#### setuptools.state.assistant
+Various assistant states.
 
 ## <a id="serverconfigkeys" href="#"></a>Server Configuration Keys - setuptools.config
 
@@ -149,6 +160,51 @@ How many seconds to delay between account loads with Deca (setting to 0 will cau
 
 Whether or not to log debugging information to the browser console
 
+#### setuptools.data.config.alertNewVersion
+`[default: number|1]`
+
+Whether or not to alert on new versions (0=off, 1=releases, 2=all versions).
+
+#### setuptools.data.config.menuPosition
+`[default: number|2]`
+
+Position of the menu between left, center, and right.
+
+#### setuptools.data.config.backupAssistant
+`[default: number|14]`
+
+How many days between backup assistant alerts.
+
+#### setuptools.data.config.corsAssistant
+`[default: number|1]`
+
+Whether or not the CORS assistant is enabled.
+
+#### setuptools.data.config.accountAssistant
+`[default: number|1]`
+
+Whether or not the account assistant is enabled.
+
+#### setuptools.data.config.longpress
+`[default: number|1000]`
+
+How long a long left click must last to register as a longpress.
+
+#### setuptools.data.config.accountsPerPage
+`[default: number|5]`
+
+How many accounts to display per page during pagination.
+
+#### setuptools.data.config.groupsMergeMode
+`[default: number|1]`
+
+How to merge accounts configured in the groups manager (0=off, 1=parallel, 2=serial).
+
+#### setuptools.data.config.accountReloadDays
+`[default: number|0]`
+
+How old cache data can be before it is considered stale (only applies to accounts with autoReload=true).
+
 ## <a id="muledumpaccounts" href="#"></a>Muledump Accounts Configuration - setuptools.data.accounts
 
 SetupTools replaces the need for an accounts.js file by importing that data and restructuring it. Muledump is still provided the original structure for the `accounts` variable by means of `setuptools.app.config.convert()`.
@@ -176,13 +232,15 @@ setuptools.data.accounts = {
         'email@test.com': {
             password: 'pass',
             enabled: true,
-            group: 0,
+            loginOnly: false,
+            cacheEnabled: true,
             autoReload: false
         },
         'email2@test2.com': {
             password: 'pass2',
             enabled: true,
-            group: 0,
+            loginOnly: false,
+            cacheEnabled: true,
             autoReload: false
         }
     }
@@ -192,17 +250,22 @@ setuptools.data.accounts = {
 ##### setuptools.data.accounts.accounts[guid].enabled
 `[default: boolean|true]`
 
-Whether or not the specified account is enabled
+Whether or not the specified account is enabled.
 
-##### setuptools.data.accounts.accounts[guid].group
-`[default: number|0]`
+##### setuptools.data.accounts.accounts[guid].loginOnly
+`[default: boolean|false]`
 
-Group which this account belongs to
+Accounts marked as login only will connect to Deca to reload account data but will not display in Muledump.
+
+##### setuptools.data.accounts.accounts[guid].cacheEnabled
+`[default: boolean|true]`
+
+Disabling the data cache forces an account to reload its account data every time Muledump is ran.
 
 ##### setuptools.data.accounts.accounts[guid].autoReload
 `[default: boolean|false]`
 
-Not currently in use anywhere but present for a potential future feature.
+Accounts marked as auto reload will reload account data whose cache is determined to be too old.
 
 #### Converting Formats
 
@@ -438,9 +501,136 @@ The options object defines the menu options and what their clicks do. The callba
 
 Providing the jQuery self argument will deselect the menu icon when the menu is closed.
 
-#### setuptools.lightbox.menu.context.close([jQuery self])
+#### setuptools.lightbox.menu.context.keyup(string name, eventObject e[, string selectorSuffix])
 
-Closes any open context menu and will removed selected class from any provided jQuery object
+Binds up and down arrows for menu navigation and enter for menu selection.
+
+#### setuptools.lightbox.menu.context.isOpen(string name)
+
+Returns true or false for the status of the specified context menu.
+
+#### setuptools.lightbox.menu.context.close([string name, boolean keep])
+
+Closes any open context menu and will removed selected class from any provided jQuery object. 
+
+If keep is true, it will close all menus except the specified menu.
+
+#### setuptools.lightbox.menu.paginate.create(array PageList, string ActionItem, string ActionContainer, string ActionSelector, function ActionCallback, function ActionContext[, object Modifiers])
+
+Creates and managed a paginated display (think accounts manager or either column in the group editor).
+
+##### PageList
+Format A: 
+```js
+var PageList = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 100"];
+```
+
+Format B:
+```js
+var PageList = [{item: 1}, {item: 2}, {item: 3}, {item: 4}, {item: 5}];
+```
+
+##### ActionItem
+
+Any constant that might be used in this pagination system (e.g. groupName). This argument belongs in the optional section.
+
+Use "undefined" if none.
+
+##### ActionContainer
+
+Pagination assumes you are attaching to a div with this class (e.g. div.ActionContainer).
+
+##### ActionSelector
+
+Full selector value for the location page updates are stored.
+
+##### ActionCallback
+
+Action to perform when the page needs to be updated. Received arguments: ActionItem, currentPage.
+
+##### ActionContext
+
+Action to perform after the page HTML has been updated (JQuery bindings, etc).
+
+##### Modifiers
+
+Modifies aspects of the pagination system.
+
+You can add extra buttons next to the 'Next Page' button:
+```js
+var Modifiers = {
+    'pageButtons': ' \
+        <div \
+        class="editor control massSwitch noselect" \
+        title="Mass Switch" \
+        style="font-weight: normal; font-size: 12px; padding-top: 3px !important;">\
+            &#8801;\
+        </div>\
+    '};
+```
+
+If you PageList is a Format B (see above) you can attach the search feature to specified keys:
+```js
+var PageList = [
+    {user: 'blah', someoption: true}, 
+    {user: 'ick', someoption: true}, 
+    {user: 'oof', someoption: true}, 
+    {user: 'doh', someoption: true}
+];
+var Modifiers = {search: {key: 'user'}};
+```
+
+#### setuptools.lightbox.menu.search.searchExecute(object state, string searchTerm[, boolean skip])
+
+Locates the specified searchTerm and updates state.currentPage to reflect it. If skip=true it will skip automatically updating the page.
+
+#### setuptools.lightbox.menu.search.bind(object state[, boolean skip, string altContainer, JQuery altPosition, object altAdjustments, function altBinding, boolean keepName])
+
+Binds the search menu to the state and can be modified in a variety of ways.
+
+##### altContainer
+
+Overrides the ActionContainer setting for the page.
+
+##### altPosition
+
+Overrides the JQuery selector used to position the menu.
+
+##### altBinding
+
+Overrides the bindings to execute after search execution.
+
+##### keepName
+
+Name of the search menu to keep when taking focus.
+
+#### setuptools.lightbox.menu.paginate.clear([string ActionContainer, boolean reset])
+
+Resets all or specified pagination data back to a clear state. If reset=true, ActionContainer is reset to page 0.
+
+#### setuptools.lightbox.menu.paginate.findPage(string searchIndex, string ActionContainer)
+ 
+Locates page of specified searchIndex and updates state.currentPage.
+
+#### setuptools.lightbox.menu.paginate.pageUpdate(boolean close, function ActionContext, object ActionContextOptions)
+
+Refreshes page bindings after the page has been updated.
+
+##### close
+
+If true, any open context menus are closed.
+
+##### ActionContext 
+
+Function or array of functions to execute.
+
+##### ActionContextOptions
+
+Object passed to ActionContext functions.
+
+#### setuptools.lightbox.status(object self, string string, number duration)
+
+Replaces provided self with supplied string for the specified duration before resetting the label.
 
 ### <a id="setuptools.app" href="#"></a>Main Application - setuptools.app
 
@@ -455,6 +645,72 @@ Display the application index page (or first time user page for new users)
 #### setuptools.app.checknew()
 
 Determine if the user is completely new or not
+
+### <a id="setuptools.app.accounts" href="#"></a>Accounts Management Utilities - setuptools.app.accounts
+
+#### setuptools.app.accounts.start()
+
+An early prototype for the first time user walk through. A relic of old.
+
+#### setuptools.app.accounts.manager()
+
+Displays the Accounts Manager page and facilitates all modifications.
+
+#### setuptools.app.accounts.ExportDeepCopy(string guid)
+
+Displays a download link for the specified GUID's account data if any exists.
+
+#### setuptools.app.accounts.saveConfirm()
+
+A save confirmation screen shown to first-time users upon finishing setup.
+
+#### setuptools.app.accounts.AccountsJSExport()
+
+Generates an accounts.js file using setuptools.app.accounts.AccountsJSExport() and provide a download link.
+
+#### setuptools.app.accounts.AccountsJSImport()
+
+Display a page offering users the choices available for importing an Accounts.js file.
+
+#### setuptools.app.accounts.AccountsJSImportLocal()
+
+Facilitates importing from an accounts.js detected in the Muledump installation.
+
+#### setuptools.app.accounts.AccountsJSImportUpload([boolean manual=false])
+
+Facilitates importing by uploading an accounts.js file to SetupTools.
+
+### <a id="setuptools.app.groups" href="#"></a>Groups Management Utilities - setuptools.app.groups
+
+#### setuptools.app.groups.manager([string group, boolean open])
+
+Displays the Groups Manager page. A string or array of groups provided will be automatically selected. If open=true, the first group is opened in the group editor.
+
+#### setuptools.app.groups.delete(mixed groupName)
+
+Displays a confirmation page to delete the specified list og groups.
+
+Accepts a JQuery selector of selected groups from the groups list or a comma-separated string of groups.
+
+#### setuptools.app.groups.copy(string groupName[, string newGroupName]) 
+
+Displays a page to facilitate copying a group to a new group. Calling with newGroupName will alert the user that the name is a duplicate.
+
+#### setuptools.app.groups.rename(string groupName[, newGroupName])
+
+Displays a page to facilitate the renaming of a group. Calling with newGroupName will alert the user that the name is a duplicate.
+
+#### setuptools.app.groups.merge(JQuery selectedClass[, newGroupName])
+
+Displays a page to facilitate the merging of two or more selected groups. Calling with newGroupName will alert the user that the name is a duplicate.
+
+#### setuptools.app.groups.add([string groupName])
+
+Displays a page to facilitate creating a new group.
+
+#### setuptools.app.groups.load(object accounts)
+
+Returns a sorted list of group accounts based on the provided list of available accounts.
 
 ### <a id="setuptools.app.config" href="#"></a>Config Utilities - setuptools.app.config
 
@@ -554,6 +810,14 @@ Change the protection state of the specified backup.
 
 Display a page with a download link for the specified backup.
 
+#### setuptools.app.backups.rename(string BackupID)
+
+Display a page providing the user a form to change a backup's name.
+
+#### setuptools.app.backups.renameHtml(string page, string BackupID, string BackupDataJSON[, function callback, boolean noclose])
+
+Inserts a backup custom name input to the provided page and returns a context binding. When the form is executed, it will update the backup and any download link filename on display.
+
 #### setuptools.app.backups.create()
 
 Create a backup and display a page with a download link for the new backup.
@@ -566,45 +830,15 @@ Returns an array listing all backup metadata found in local storage.
 
 Enforces the maximum backup count by finding all non-protected backups and deleting any whose position is larger than the maximum allowed limit.
 
-### <a id="setuptools.app.accounts" href="#"></a>Accounts Management Utilities - setuptools.app.accounts
-
-#### setuptools.app.accounts.start()
-
-An early prototype for the first time user walk through. A relic of old.
-
-#### setuptools.app.accounts.manager()
-
-Displays the Accounts Manager page and facilitates all modifications.
-
-#### setuptools.app.accounts.ExportDeepCopy()
-
-Displays a page containing all configured accounts. Clicking an account generates a download link for that account's ROTMG XML data in JSON format.
-
-#### setuptools.app.accounts.save()
-
-Processes all accounts located in the Accounts Manager and validates email/guid data. Bad entries are removed and the user alerted. If valid accounts were detected it then saves the changes.
-
-#### setuptools.app.accounts.AccountsJSExport()
-
-Generates an accounts.js file using setuptools.app.accounts.AccountsJSExport() and provide a download link.
-
-#### setuptools.app.accounts.AccountsJSImport()
-
-Display a page offering users the choices available for importing an Accounts.js file.
-
-#### setuptools.app.accounts.AccountsJSImportLocal()
-
-Facilitates importing from an accounts.js detected in the Muledump installation.
-
-#### setuptools.app.accounts.AccountsJSImportUpload([boolean manual=false])
-
-Facilitates importing by uploading an accounts.js file to SetupTools.
-
 ### <a id="setuptools.other" href="#"></a>Other Methods - setuptools.*
 
 #### setuptools.click()
 
 Captures clicks on #setup button
+
+#### setuptools.app.upgrade.version()
+
+Checks if a new Muledump version has been loaded and applies it to the client configuration. Also notifies Muledump Online users of changes.
 
 #### setuptools.app.upgrade.seek()
 

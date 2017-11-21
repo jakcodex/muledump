@@ -3,7 +3,7 @@
 
 @import "{{ site.theme }}";
 
-h3 {
+h3, h5 {
   color: #d5ab00;
 }
 
@@ -11,6 +11,6 @@ h4 {
   color: #25d4fa;
 }
 
-h5, strong, code {
+strong, code {
   color: #22b7da;
 }

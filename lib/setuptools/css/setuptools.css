@@ -857,6 +857,10 @@ div.AccountsList > div.controller.exportAccountsJS:hover,
     max-width: 510px;
 }
 
+.fl-BackupsModify .featherlight-content {
+    width: 455px;
+}
+
 .fl-Index .featherlight-content {
     width: 370px;
 }
@@ -870,8 +874,8 @@ div.AccountsList > div.controller.exportAccountsJS:hover,
     width: 465px;
 }
 
-.fl-AccountsJSImportUpload .featherlight-content {
-    min-width: 455px;
+.fl-AccountsJSImport .featherlight-content {
+    min-width: 500px;
     max-width: 750px;
 }
 
@@ -893,11 +897,6 @@ div.AccountsList > div.controller.exportAccountsJS:hover,
 }
 
 /* other */
-
-.Accounts-AccountsJSImport {
-    width: 100%;
-    margin-top: 17px;
-}
 
 .mr5 {
     margin-right: 5px;
@@ -929,6 +928,16 @@ div.AccountsList > div.controller.exportAccountsJS:hover,
 
 .h100 {
     height: 100%;
+}
+
+input[type="checkbox"] {
+    width: auto;
+}
+
+/*file input*/
+.Accounts-AccountsJSImport {
+    width: 100%;
+    margin-top: 17px;
 }
 
 .Backups-BackupOptions > div {

@@ -13,7 +13,7 @@ body {
 	left: 4px;*/
 	float: left;
 	padding: 4px;
-	z-index: 200;
+	z-index: 600;
 	background-color: #ccc;
 	color: #333;
 }
@@ -29,6 +29,7 @@ body {
 	cursor: pointer;
 	border: 2px solid #555;
 	padding: 0 4px;
+	height: 17px;
 }
 #top > a { color: inherit; text-decoration: none; }
 
@@ -36,7 +37,7 @@ body {
 	display: none;
 	position: absolute;
 	left: -2px;
-	z-index: 100;
+	z-index: 550;
 	padding: 5px;
 	border: solid 2px #555;
 	background: #363636;
@@ -211,6 +212,8 @@ hr {
 	margin: 2px;
 	background: url(renders.png) #545454;
 	overflow: hidden;
+	z-index: 100;
+	cursor: pointer;
 }
 
 .item.selected {
@@ -227,6 +230,7 @@ hr {
 	color: white;
 	font: bold 15px Arial,sans-serif;
 	text-shadow: -1px 0 3px black, 0 1px 3px black, 1px 0 3px black, 0 -1px 3px black;
+	z-index: 50;
 }
 
 /* unknown item indicator */
@@ -362,6 +366,7 @@ td.cont > div {
 	background-color: rgba(0, 0, 0, 0.7);
 	overflow: hidden;
 	padding: 2px;
+	z-index: 700;
 }
 
 .log {

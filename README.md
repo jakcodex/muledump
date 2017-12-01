@@ -18,7 +18,7 @@ See the [Requirements](REQUIREMENTS.md) page for more information.
 
 ## Release Information
 
-The current version is Jakcodex/Muledump v0.8.2.
+The current version is Jakcodex/Muledump v0.8.3.
 
 Muledump Online is available hosted on Github [here](https://jakcodex.github.io/muledump/muledump.html).
 
@@ -62,16 +62,16 @@ Head over to [Installation and Setup](https://github.com/jakcodex/muledump/wiki/
 - logins thru muledump count towards daily login calendar
 - account settings include automatic reload, login-only (daily calendar only), and cache disable
 
-## Head to the [wiki](https://github.com/jakcodex/muledump/wiki) for more information!
+## Check out the [Frequently Asked Questions](https://github.com/jakcodex/muledump/wiki/Frequently-Asked-Questions) and explore the [wiki](https://github.com/jakcodex/muledump/wiki) for more information!
 
 <a id="jakcodex-supportandcontributions"></a>
 ## Support and Contributions
 
-A new Discord for Jakcodex/Muledump is available here - [https://discord.gg/JFS5fqW](https://discord.gg/JFS5fqW).
+Jakcodex/Muledump operates its own support Discord server - [https://discord.gg/JFS5fqW](https://discord.gg/JFS5fqW).
 
-Feel free to join and ask for help getting setup, hearing about updates, offer your suggestions and feedback, or just say hi.
+Feel free to join and ask for help getting setup, hear about new updates, offer your suggestions and feedback, or just say hi.
 
-If you encounter a bug, have a feature request, or have any other feedback then you can check out the [issue tracker](https://github.com/jakcodex/muledump/issues) to see if it's already being discussed. If not then you can [submit a new issue](https://github.com/jakcodex/muledump/issues/new).
+If you encounter a bug, have a feature request, or have any other feedback you can also check out the [issue tracker](https://github.com/jakcodex/muledump/issues) to see if it's already being discussed. If not then you can [submit a new issue](https://github.com/jakcodex/muledump/issues/new).
 
 If you are interested in helping test new versions of this software before release then check out [Muledump Preview](https://github.com/jakcodex/muledump-preview/) for the recent stable development builds of Muledump.
 
@@ -81,13 +81,13 @@ Feel free to submit pull requests or patches if you have any Muledump changes yo
 
 Muledump versions are described as 0.x.y-p where x is the major version, y is the minor version, and p is the patch version.
 
-All incrementes of x or y are published as an official Muledump Local release. The patch version at time of release will be noted in the release notes. Subsequent patches after release will not be published as a new release unless they are for a high severity issue or there is a cumulative release.
+All incrementes of x or y are published as an official Muledump Local release. Subsequent patches after release will not be published as a new release.
 
 Muledump Online always runs the latest version of Muledump with all patches.
 
 ## Special Thanks
 
-Muledump Renders and Constants are maintained for Jakcodex/Muledump with contributions by [TheSTDMan](https://github.com/thestdman), [Wawawa](https://github.com/wawawawawawawa), and [tuvior](https://github.com/tuvior).
+Muledump Renders and Constants are maintained by [tuvior](https://github.com/tuvior).
 
 ## Original Muledump License
 

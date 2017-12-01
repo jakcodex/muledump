@@ -1,3 +1,27 @@
+**2017-11-30** version 0.8.3-0
+
+- New Features
+  * Added Wawawa option (#19)
+  * Total living character hours active now displayed in Account Info (#67) 
+  * XpBooster and Loot Drop / Tier info added (#56)
+
+- Bug Fixes
+  * Verify import data of custom options over default options (#64)
+  * Options setting throwing errors (#75)
+  * Empty vaults being displayed incorrectly as empty spaces (#77)
+  * Gifts chests properly displayed in totals when vaults are disabled (#73)
+
+- Improvements
+  * Constants updated with bagType, soulbound, and st/ut data (#69)
+  * Item tooltip replaced (#70)
+  
+- Renders updated to X.20.0
+- Meta data added to account data cache (#68)
+- Re-enabled text selection in About and CORS Assistant 
+- Default Groups Manager Mode changed from Parallel to Serial
+- Default Account Reload Days changed from 0 to 1 (conditional client config upgrade)
+- Temporarily disabled the Account Reload Days master off setting
+
 **2017-11-20** version 0.8.2
 
 - New Features

@@ -1,3 +1,8 @@
+**2017-??-??** version 0.8.4
+
+- Bug Fixes
+  * Totals counting empty backpack data on chars with no backpacks (#79)
+
 **2017-12-01** version 0.8.3-2
 
 - Fixed an issue with totals not adding up properly

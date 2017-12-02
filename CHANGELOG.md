@@ -1,3 +1,8 @@
+**2017-12-01** version 0.8.3-1
+
+- Fixed an issue with loading and saving options
+- Updated portrait sheet with a few missing dyes
+
 **2017-11-30** version 0.8.3-0
 
 - New Features

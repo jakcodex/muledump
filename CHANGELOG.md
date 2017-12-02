@@ -1,3 +1,7 @@
+**2017-12-01** version 0.8.3-2
+
+- Fixed an issue with totals not adding up properly
+
 **2017-12-01** version 0.8.3-1
 
 - Fixed an issue with loading and saving options

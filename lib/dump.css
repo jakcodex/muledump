@@ -156,7 +156,7 @@ body {
 	float: left;
 	width: 34px;
 	height: 34px;
-	margin: 2px 4px 0 4px;
+	margin: 2px 0 0 4px;
 }
 
 hr {
@@ -264,7 +264,7 @@ hr {
 	background-position: 22px 2px;
 	background-repeat: no-repeat;
 	color: white;
-	float: right;
+	float: left;
 	font: bold 15px/20px Arial, sans-serif;
 	height: 20px;
 	margin: 0 4px 4px 2px;

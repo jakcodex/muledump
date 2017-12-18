@@ -57,8 +57,8 @@ Whether or not the user is running local or hosted Muledump
 #### setuptools.state.ctrlKey
 Whether or not the control key is being pressed.
 
-#### setuptools.state.versionNotifier
-Whether or not the version notifier is running.
+#### setuptools.state.notifier
+Whether or not any notifier is running.
 
 #### setuptools.state.assistant
 Various assistant states.
@@ -97,8 +97,27 @@ Basically, if you want to test alternative paths such as errors and fallbacks, t
 
 How many seconds to wait before triggering automatic window reloads
 
-#### setuptools.config.drawhelpUrlPrefix - deprecated
-An array containing setuptools.config.url
+#### setuptools.config.actoken
+`[default: string|jcmd]`
+
+An identifier placed in certain local storage keys to identify the specific Muledump fork generating the data.
+
+#### setuptools.config.muledump
+`[default: object]`
+
+An object for storing Muledump-specific feature server configuration data.
+
+This currently consists of a single key. `setuptools.config.muledump.corsAttempts` which determines how many failed preflight requests may occur before triggering CORS Assistant.
+
+#### setuptools.config.updatecheckURL
+`[default: string|https://api.github.com/repos/jakcodex/muledump/tags]`
+
+The Github API URI for accessing Muledump repo tags.
+
+#### setuptools.config.updatecheckTTL
+`[default: number|600000]`
+
+The length of time in miliseconds to cache Github Tags API response data.
 
 #### setuptools.config.regex
 A list of RegExp objects used throughout the program

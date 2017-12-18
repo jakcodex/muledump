@@ -117,7 +117,6 @@
     "hpmp": false,
     "inv": true,
     "vaults": false,
-    "vaultlayoutchoice": true,
     "vaultlayout": "0",
     "famefilter": false,
     "fameamount": "0",
@@ -126,8 +125,7 @@
     "pcstats": true,
     "goals": false,
     "backpack": true,
-    "gifts": false,
-    "techreport": false
+    "gifts": false
   },
   "muledump": {
     "chsortcustom": {

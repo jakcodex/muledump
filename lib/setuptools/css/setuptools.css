@@ -380,6 +380,7 @@ a.setuptools.app.config.settings.action.eraseCache:hover {
     z-index: 99999999999;
     width: 200px;
     border: #fff solid 1px;
+    box-shadow: 0 0 2px 2px #000;
     padding: 5px;
     background-color: #111;
     overflow: hidden;
@@ -1044,10 +1045,9 @@ img.boost {
     width: 14px;
     height: 15px;
     margin-top: 7px;
-    margin-right: -1px;
     overflow: hidden;
     position: relative;
-    float: left;
+    float: right;
     border: 0;
     cursor: pointer;
     z-index: 450;
@@ -1061,4 +1061,39 @@ img.hidden {
     height: auto !important;
     width: 175px;
     padding: 5px;
+}
+
+@keyframes notifypulse {
+    0% {
+        background-color: #0094ff;
+    }
+    100% {
+        background-color: #0056a4;
+    }
+}
+
+.center .featherlight-content {
+    text-align: center;
+}
+
+.nobackground {
+    background: initial !important;
+}
+
+.nobackground .featherlight-content {
+    border: #000 solid 2px;
+    box-shadow: 0 0 5px 5px #000;
+}
+
+.flex-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notifyPulse {
+    color: #ffffff;
+    animation: notifypulse 3s infinite;
+    animation-direction: alternate;
 }

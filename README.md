@@ -18,7 +18,7 @@ See the [Requirements](REQUIREMENTS.md) page for more information.
 
 ## Release Information
 
-The current version is Jakcodex/Muledump v0.8.3.
+The current version is Jakcodex/Muledump v0.8.4.
 
 Muledump Online is available hosted on Github [here](https://jakcodex.github.io/muledump/muledump.html).
 
@@ -79,7 +79,7 @@ Feel free to submit pull requests or patches if you have any Muledump changes yo
 
 ## Version and Update Information
 
-Muledump versions are described as 0.x.y-p where x is the major version, y is the minor version, and p is the patch version.
+Muledump versions are described as 0.x.y.p where x is the major version, y is the minor version, and p is the patch version.
 
 All incrementes of x or y are published as an official Muledump Local release. Subsequent patches after release will not be published as a new release.
 
@@ -88,6 +88,10 @@ Muledump Online always runs the latest version of Muledump with all patches.
 ## Special Thanks
 
 Muledump Renders and Constants are maintained by [tuvior](https://github.com/tuvior).
+
+## FYI
+
+The following paths are for Github Pages configuration and are not apart of the Muledump code: _layouts, assets, and _config.yml.
 
 ## Original Muledump License
 

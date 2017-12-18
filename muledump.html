@@ -36,6 +36,7 @@
 	<script type="application/javascript" src="lib/setuptools/src/upgrade.js"></script>
 	<script type="application/javascript" src="lib/mule.js"></script>
 	<script type="application/javascript" src="lib/muledump.js"></script>
+	<script type="application/javascript" src="lib/setuptools/src/analytics.js"></script>
 </head>
 <body>
 	<img id="renders" alt="renders" src="lib/renders.png" style="display:none">
@@ -43,15 +44,15 @@
 	<div id="main">
 		<div id="top">
 			<div id="cnt" style="display: none;">running requests: <span id="counter"></span></div>
+			<div id="notice" style="display: none;">notice</div>
 			<div class="handle"><span>options</span><span id="options" class="menu"></span></div>
 			<div id="setuptools">setup</div>
 			<div id="reloader">reload all</div>
 			<div id="resume" style="display: none;">resume reload</div>
 			<div class="handle"><span>export</span><span id="export" class="menu"></span></div>
-			<div id="update">about</div>
+			<div id="about">about</div>
 			<a href="https://github.com/jakcodex/muledump" target="_blank">home</a>
 		</div>
-		<div id="techreport"></div>
 		<div id="ratelimited"></div>
 		<div id="totals"></div>
 		<div id="errors"></div>

@@ -12,10 +12,13 @@
   * Added active time to character sort options (#88)
   * Totals display width now adjustable (#89)
   * Added notices button for user information notification (#91)
+  * Various styling changes (#92) [curlip]
   * Cleaned up dungeon portal names
   
 - Added hash navigation for linking to Muledump SetupTools pages (#74)
 - Added optional usage analytics (#90)
+- Hover menus (options, export) less likely to close accidentally
+- Various other styling changes
 - Renders updated to X20.1.0
 
 **2017-12-01** version 0.8.3.2

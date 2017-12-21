@@ -1,6 +1,7 @@
 a.setuptools {
-    color: #2386ff !important;
+    color: #0094ff !important;
     text-decoration: none !important;
+    font-weight: bold;
 }
 
 a.red {
@@ -11,12 +12,12 @@ a.red {
 
 a.red:hover {
     letter-spacing: 1px;
-    color: #417fff !important;
+    color: #0094ff !important;
     text-decoration: underline !important;
 }
 
 a.setuptools:hover {
-    color: #5aa4ff !important;
+    color: #0094ff !important;
 }
 
 a.setuptools:not(.save):hover {
@@ -133,7 +134,6 @@ div.setuptools.app.uploadData {
 {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     background-color: #002464;
-    border-left: #2386ff 1px dashed;
 }
 
 .featherlight-content::-webkit-scrollbar,
@@ -147,7 +147,6 @@ div.setuptools.app.uploadData {
 .scrollbar::-webkit-scrollbar-thumb
 {
     background-color: #254adf;
-    border-left: #2386ff dashed 1px;
 
 }
 
@@ -381,17 +380,16 @@ a.setuptools.app.config.settings.action.eraseCache:hover {
     position: absolute;
     z-index: 2147483647;
     width: 200px;
-    box-shadow: rgb(17, 17, 17) 2px 2px 8px, rgba(0, 0, 0, 0.1) 0px 0px 4px 4px inset;
-    background-color: rgb(51, 51, 51);
+    background-color: rgb(21, 31, 53);
     overflow: hidden;
+    box-shadow: #000 0 0 1px 3px;
 }
 
 .setuptools.header.noselect {
-    background-color: rgb(68, 68, 68);
-    border-bottom: 1px solid rgb(51, 51, 51);
+    background-color: #222;
 }
 
-.setuptools.div.menu div {
+.setuptools.div.menu > div {
     float: left;
     clear: both;
     width: 100%;
@@ -399,19 +397,24 @@ a.setuptools.app.config.settings.action.eraseCache:hover {
     padding: 7px;
 }
 
-.setuptools.div.menu > div:not(.noselect):not(.input) {
+.setuptools.div.menu > div:not(.noselect) {
+    cursor: pointer;
+}
+
+.setuptools.div.menu > div:not(.input) {
     padding-left: 10px;
-    transition: padding-left 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955), box-shadow 0.2s, background-color 0.4s;
 }
 
 .setuptools.div.menu > div:not(:last-child) {
-    border: 1px solid rgb(47, 47, 47);
+    border-bottom: 3px solid #000;
 }
 
 .setuptools.div.menu > div:not(.noselect):not(.input):hover {
-    padding-left: 12px;
-    background-color: rgb(48, 48, 48);
-    box-shadow: rgb(45, 45, 45) 0px 0px 4px 4px inset;
+    background-color: #253c63;
+}
+
+.menuSelected {
+    background-color: #253c63;
 }
 
 .setuptools.div.menu div.input {
@@ -419,7 +422,7 @@ a.setuptools.app.config.settings.action.eraseCache:hover {
 }
 
 .setuptools.div.menu strong {
-    color: #22b7da;
+    color: rgb(49, 164, 214);
 }
 
 .setuptools.div.menu div.input > div {
@@ -915,6 +918,10 @@ div.AccountsList > div.controller.exportAccountsJS:hover,
 
 /* other */
 
+.mb5 {
+    margin-bottom: 5px;
+}
+
 .mr5 {
     margin-right: 5px;
 }
@@ -989,7 +996,7 @@ input[type="checkbox"] {
 }
 
 .dragbox div.selected, .selected {
-    background-color: #0c0870;
+    background-color: #040f51;
     color: #22b7da;
 }
 
@@ -1089,7 +1096,7 @@ img.hidden {
 
 .nobackground .featherlight-content {
     border: #000 solid 2px;
-    box-shadow: 0 0 5px 5px #000;
+    box-shadow: 0 0 1px 3px #000;
 }
 
 .flex-container {

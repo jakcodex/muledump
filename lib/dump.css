@@ -440,26 +440,24 @@ td.cont > div {
     border: none;
 }
 
-#ratelimited {
+#stickynotice {
     display: block;
     position: sticky;
     padding: 4px;
-
-    font: 18px Arial,sans-serif;
-
+    font: 14px Arial,sans-serif;
     margin: 0;
     top: 0;
     left: 0;
     max-width: 100%;
     right: 0;
-    background-color: #F44336;
     z-index: 1001;
     text-align: center;
     color: #EEE;
+    background-color: #F44336;
 }
 
-#ratelimited:empty {
+#stickynotice:empty {
     background-color: #2196F3;
     padding: 0;
-    height: 2px;
+    height: 0px;
 }

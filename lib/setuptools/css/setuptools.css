@@ -111,7 +111,7 @@ input.setuptools.app.wideinput {
     color: #ffffff;
 }
 
-.setuptools textarea {
+.setuptools textarea, textarea.setuptools {
     background-color: #000;
     color: #fff;
     padding: 5px;
@@ -382,7 +382,7 @@ a.setuptools.app.config.settings.action.eraseCache:hover {
     width: 200px;
     background-color: rgb(21, 31, 53);
     overflow: hidden;
-    box-shadow: #000 0 0 1px 3px;
+    box-shadow: #111 0 0 1px 3px;
 }
 
 .setuptools.header.noselect {
@@ -741,6 +741,15 @@ div.massSwitch > div.cfleft {
 
 div.massSwitch > div.link {
     margin-bottom: 5px;
+}
+
+/* feedback */
+.setuptools.div.feedback > div:first-child {
+    flex-basis: 200px;
+}
+
+.setuptools.div.feedback > div:last-child {
+    flex-grow: 2;
 }
 
 /* button types */

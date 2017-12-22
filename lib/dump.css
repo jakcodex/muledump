@@ -441,23 +441,35 @@ td.cont > div {
 }
 
 #stickynotice {
-    display: block;
-    position: sticky;
     padding: 4px;
-    font: 14px Arial,sans-serif;
-    margin: 0;
-    top: 0;
-    left: 0;
-    max-width: 100%;
-    right: 0;
-    z-index: 1001;
+    font: 18px Arial,sans-serif;
+    background-color: #F44336;
     text-align: center;
     color: #EEE;
     background-color: #F44336;
 }
 
+#top {
+    z-index: 1002;
+    padding: 5px;
+}
+
 #stickynotice:empty {
-    background-color: #2196F3;
-    padding: 0;
-    height: 0px;
+    display: none;
+}
+
+.wawawa .perfect { color: #fcdf00; }
+.wawawa .good { color: #90ff90; }
+.wawawa .great { color: #00ff00; }
+.wawawa .bad { color: #ff0000; }
+
+#fix {
+    display: block;
+    position: sticky;
+    margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    background-color: rgba(44,44,44,0.75)
 }

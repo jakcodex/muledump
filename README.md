@@ -18,7 +18,7 @@ See the [Requirements](REQUIREMENTS.md) page for more information.
 
 ## Release Information
 
-The current version is Jakcodex/Muledump v9.0.
+The current version is Jakcodex/Muledump v9.0.0.
 
 Muledump Online is available hosted on Github [here](https://jakcodex.github.io/muledump/muledump.html).
 

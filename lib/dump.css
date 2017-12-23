@@ -471,5 +471,7 @@ td.cont > div {
     left: 0;
     right: 0;
     z-index: 1001;
-    background-color: rgba(44,44,44,0.75)
+    background-color: rgba(44,44,44,0.75);
+
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.4);
 }

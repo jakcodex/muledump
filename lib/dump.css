@@ -440,28 +440,40 @@ td.cont > div {
     border: none;
 }
 
-#ratelimited {
+#stickynotice {
+    padding: 4px;
+    font: 18px Arial,sans-serif;
+    background-color: #F44336;
+    text-align: center;
+    color: #EEE;
+    background-color: #F44336;
+}
+
+#top {
+    z-index: 1002;
+    padding: 5px;
+}
+
+#stickynotice:empty {
+    display: none;
+}
+
+.wawawa .perfect { color: #fcdf00; }
+.wawawa .good { color: #90ff90; }
+.wawawa .great { color: #00ff00; }
+.wawawa .bad { color: #ff0000; }
+
+#fix {
     display: block;
     position: sticky;
-    padding: 4px;
-
-    font: 18px Arial,sans-serif;
-
     margin: 0;
     top: 0;
     left: 0;
-    max-width: 100%;
     right: 0;
-    background-color: #F44336;
     z-index: 1001;
-    text-align: center;
-    color: #EEE;
-}
+    background-color: rgba(44,44,44,0.75);
 
-#ratelimited:empty {
-    background-color: #2196F3;
-    padding: 0;
-    height: 2px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.4);
 }
 
 .wawawa .perfect { color: #fcdf00; }

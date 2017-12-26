@@ -1,4 +1,4 @@
-**2017-??-??** version 0.8.4
+**2017-??-??** version 9.0.0
 
 - Bug Fixes
   * Totals counting empty backpack data on chars with no backpacks (#79)
@@ -10,6 +10,7 @@
   * Character skins and missing textiles added to portraits (#82) [tuvior]
   * Feed power filter added to options for totals (#78)
   * Added active time to character sort options (#88)
+  * Added maxed stats to character sort options and char description (#94, #95) [curlip]
   * Totals display width now adjustable (#89)
   * Added notices button for user information notification (#91)
   * Various styling changes (#92) [curlip]

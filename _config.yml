@@ -1,2 +1,8 @@
 theme: jekyll-theme-midnight
 google_analytics: UA-111254659-1
+discord: https://discord.gg/JFS5fqW
+github:
+  setup_url: https://github.com/jakcodex/muledump/wiki/Installation-and-Setup
+  zip_url: https://github.com/jakcodex/muledump/archive/master.zip
+  online_url: https://jakcodex.github.io/muledump/muledump.html
+  preview_url: https://jakcodex.github.io/muledump-preview/muledump.html

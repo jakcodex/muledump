@@ -14,3 +14,21 @@ h4 {
 strong, code {
   color: #22b7da;
 }
+
+#header {
+  top: initial !important;
+  bottom: 0 !important;
+}
+
+#header nav li a {
+  background-color: #1d79bd !important;
+  border: 1px solid #0b4f91 !important;
+}
+
+#header nav li a:hover {
+  background-color: #1b69a9 !important;
+}
+
+section {
+  margin-top: 20px !important;
+}

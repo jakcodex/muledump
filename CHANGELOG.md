@@ -3,24 +3,36 @@
 - Bug Fixes
   * Totals counting empty backpack data on chars with no backpacks (#79)
   * Deleted accounts were not being removed from client config (#83)
-  * Characters with no backpacks still getting counted as empty slots (#79)
   * MP Pot div misaligned on wide Mules (#85)
+  * Character lists not detecting and removing dead characters (#87)
+  * Hover menus (options, export) close prematurely (#100)
+
+- New Features
+  * Character skins and missing textiles added to portraits (#82) [tuvior]
+  * Added active time to character sort options (#88)
+  * Added maxed stats to character sort options (#95) [curlip] 
+  * Feed power filter added to options for totals (#78)
+  * Added ST, UT, and Soulbound filters (#97)
+  * Totals display width now adjustable (#89)
+  * Create images of Mules (#99)
+  * Added Mule Menu button and context menu accessible from anywhere on a mule (#105)
+  * Renders update assistant helps Muledump Local users update to latest renders
 
 - Improvements
-  * Character skins and missing textiles added to portraits (#82) [tuvior]
-  * Feed power filter added to options for totals (#78)
-  * Added active time to character sort options (#88)
-  * Added maxed stats to character sort options and char description (#94, #95) [curlip]
-  * Totals display width now adjustable (#89)
+  * Added maxed stats to char description (#94) [curlip]
+  * Muledump menu now always visible at top of window (#98) [curlip]
   * Added notices button for user information notification (#91)
+  * Adding displaying Mule IGN to options (#101)
+  * Added new vault layout 'Simple' (#76)
+  * Version detection improved for Muledump Local users (#86)
   * Various styling changes (#92) [curlip]
   * Cleaned up dungeon portal names
   
 - Added hash navigation for linking to Muledump SetupTools pages (#74)
 - Added optional usage analytics (#90)
-- Hover menus (options, export) less likely to close accidentally
 - Various other styling changes
 - Renders updated to X20.1.0
+- Added html2canvas v1.0.0-alpha.5
 
 **2017-12-01** version 0.8.3.2
 

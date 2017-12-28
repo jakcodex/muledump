@@ -12,6 +12,7 @@
 	<script type="application/javascript" src="vendor/sha256.js"></script>
 	<script type="application/javascript" src="vendor/featherlight.min.js" charset="utf-8"></script>
 	<script src="vendor/clipboard.min.js"></script>
+	<script src="vendor/html2canvas.min.js"></script>
 	<script type="application/javascript" src="lib/constants.js"></script>
 	<script type="application/javascript" src="lib/sheets.js"></script>
 	<script type="application/javascript" src="lib/portrait.js"></script>
@@ -41,12 +42,13 @@
 <body>
 	<img id="renders" alt="renders" src="lib/renders.png" style="display:none">
 	<span id="accopts" style="display: none;" class="menu"></span>
+	<div class="handle"><span id="options" class="menu"></span></div>
 	<div id="fix">
 		<div id="stickynotice"></div>
 		<div id="top">
-			<div id="cnt" style="display: none;">running requests: <span id="counter"></span></div>
+			<div id="cnt" style="display: none;">MuleQueue running...</div>
 			<div id="notice" style="display: none;">Notice</div>
-			<div class="handle"><span>Options</span><span id="options" class="menu"></span></div>
+			<div class="handle options"><span>Options</span></div>
 			<div id="setuptools">Setup</div>
 			<div id="reloader">Reload All</div>
 			<div id="resume" style="display: none;">Resume Reload</div>
@@ -56,7 +58,6 @@
 		</div>
 	</div>
 	<div id="main">
-
 		<div id="techreport"></div>
 		<div id="totals"></div>
 		<div id="errors"></div>

@@ -16,6 +16,8 @@ Currently due to how Deca handles requests to ROTMG servers a browser extension 
 
 See the [Requirements](REQUIREMENTS.md) page for more information.
 
+### Head over to [Installation and Setup](https://github.com/jakcodex/muledump/wiki/Installation-and-Setup) in the wiki for a detailed setup guide.
+
 ## Release Information
 
 The current version is Jakcodex/Muledump v9.0.0.
@@ -23,15 +25,6 @@ The current version is Jakcodex/Muledump v9.0.0.
 Muledump Online is available hosted on Github [here](https://jakcodex.github.io/muledump/muledump.html).
 
 All released versions are available for download [here](https://github.com/jakcodex/muledump/releases).
-
-Head over to [Installation and Setup](https://github.com/jakcodex/muledump/wiki/Installation-and-Setup) in the wiki for a detailed setup guide.
-
-## Local Download Version
-
-- Unzip the latest muledump release
-- Open **`muledump.html`**
-- First time users will be guided thru Muledump setup
-- Returning users are ready to go immediately
 
 ## Muledump Online Version
 
@@ -41,6 +34,13 @@ Head over to [Installation and Setup](https://github.com/jakcodex/muledump/wiki/
 - This version runs entirely on your local computer and is updated automatically with new releases
 - All data submitted and stored in this version never leave your computer
 
+## Muledump Local Version
+
+- Unzip the latest muledump release
+- Open **`muledump.html`**
+- First time users will be guided thru Muledump setup
+- Returning users are ready to go immediately
+
 ## Main Features
 
 - Manage all of your ROTMG accounts from a single interface
@@ -48,8 +48,10 @@ Head over to [Installation and Setup](https://github.com/jakcodex/muledump/wiki/
 - [Groups Manager](docs/setuptools/groups-manager/manager.md) - Account grouping and ordering utility to customize the Muledump accounts list
 - [Muledump Online](https://jakcodex.github.io/muledump/muledump.html) - Load Muledump directly from Github using SetupTools
 - MuleQueue - Task queuing to control the flow of requests from Muledump
-- Vault display is now fully customizable and comes with three pre-defined layouts
-- Character Sorting by fame, exp, total fame, class, and custom lists
+- Vault display is now fully customizable and comes with four pre-defined layouts
+- Full character skin and dye support in portraits
+- Totals filtering on fame bonus, feed power, soulbound, ut, and st
+- Character Sorting by fame, exp, total fame, class, active time, maxed stats, and custom lists
 - Character Lists allow you to create custom Muledump account layouts showing only characters you specify 
 - Exporting works with the following modes: text, csv, json, image, imgur
 - Fully compliant with Deca rate limiting

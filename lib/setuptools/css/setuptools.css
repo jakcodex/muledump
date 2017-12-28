@@ -380,9 +380,9 @@ a.setuptools.app.config.settings.action.eraseCache:hover {
     position: absolute;
     z-index: 2147483647;
     width: 200px;
-    background-color: rgb(21, 31, 53);
+    background-color: rgb(28, 45, 85);
     overflow: hidden;
-    box-shadow: #111 0 0 1px 3px;
+    box-shadow: #111 0 0 1px 4px;
 }
 
 .setuptools.header.noselect {
@@ -406,7 +406,7 @@ a.setuptools.app.config.settings.action.eraseCache:hover {
 }
 
 .setuptools.div.menu > div:not(:last-child) {
-    border-bottom: 3px solid #000;
+    border-bottom: 3px solid #111;
 }
 
 .setuptools.div.menu > div:not(.noselect):not(.input):hover {
@@ -593,7 +593,9 @@ div.setuptools.div.pageControls div.editor.control.massSwitch:hover {
     user-select: initial !important;
 }
 
-.noselect, .featherlight-content {
+.noselect,
+.featherlight-content,
+#top > div {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -1067,10 +1069,10 @@ div.tooltip div.bagType {
 img.boost {
     width: 14px;
     height: 15px;
-    margin-top: 7px;
+    margin-top: 10px;
+    margin-right: 5px;
     overflow: hidden;
-    position: relative;
-    float: right;
+    float: left;
     border: 0;
     cursor: pointer;
     z-index: 450;
@@ -1105,7 +1107,7 @@ img.hidden {
 
 .nobackground .featherlight-content {
     border: #000 solid 2px;
-    box-shadow: 0 0 1px 3px #000;
+    box-shadow: 0 0 1px 4px #000;
 }
 
 .flex-container {

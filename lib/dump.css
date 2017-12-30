@@ -90,7 +90,11 @@ body {
 .menu:not(.setuptools) div { overflow: hidden; }
 .menu:not(.setuptools) div>div>div { padding-left: 15px; }
 
-#export { width: auto; text-align: center; }
+#export {
+    width: auto;
+    text-align: center;
+    z-index: 2000;
+}
 #export div { padding: 0 5px; }
 
 #totals, .mule, .guid, .reload, .item { display: inline-block; }

@@ -112,12 +112,37 @@ This currently consists of a single key. `setuptools.config.muledump.corsAttempt
 #### setuptools.config.updatecheckURL
 `[default: string|https://api.github.com/repos/jakcodex/muledump/tags]`
 
-The Github API URI for accessing Muledump repo tags.
+The Github API URL for accessing Muledump repo tags.
 
 #### setuptools.config.updatecheckTTL
 `[default: number|600000]`
 
 The length of time in miliseconds to cache Github Tags API response data.
+
+#### setuptools.config.totalsItemWidth
+`[default: number|0]`
+
+Width of each item in the totals block.
+
+#### setuptools.config.ga
+`[default: string|empty]`
+
+The Google Analytics site ID.
+
+#### setuptools.config.gaInterval
+`[default: number|300000]`
+
+The analytics background ping rate in miliseconds.
+
+#### setuptools.config.gaFuncName
+`[default: string|analytics]`
+
+The function name to assign Google Analytics.
+
+#### setuptools.config.noticesMonitorMaxAge
+`[default: number|60]`
+
+The number of seconds the notices monitor will run before exiting.
 
 #### setuptools.config.regex
 A list of RegExp objects used throughout the program
@@ -219,10 +244,45 @@ How many accounts to display per page during pagination.
 
 How to merge accounts configured in the groups manager (0=off, 1=parallel, 2=serial).
 
-#### setuptools.data.config.accountReloadDays
+#### setuptools.data.config.autoReloadDays
 `[default: number|0]`
 
 How old cache data can be before it is considered stale (only applies to accounts with autoReload=true).
+
+#### setuptools.data.config.tooltip
+`[default: number|500]`
+
+Time to wait in miliseconds before displaying a tooltip on hover.
+
+#### setuptools.data.config.totalswidth
+`[default: number|0]`
+
+Number of items to display per row in totals. A value of 0 will default to whole screen usable width.
+
+#### setuptools.data.config.ga
+`[default: boolean|false]`
+
+Whether or not Usage Analytics is enabled (Muledump Online only). If disabled, all enabled GA settings are disabled at runtime.
+
+#### setuptools.data.config.gaPing
+`[default: boolean|true]`
+
+Whether or not to participate in Usage Analytics background ping.
+
+#### setuptools.data.config.gaErrors
+`[default: boolean|true]`
+
+Whether or not to participate in Usage Analytics error reporting.
+
+#### setuptools.data.config.gaOptions
+`[default: boolean|true]`
+
+Whether or not to participate in Usage Analytics feature usage reporting.
+
+#### setuptools.data.config.gaTotals
+`[default: boolean|true]`
+
+Whether or not to participate in Usage Analytics totals usage reporting.
 
 ## <a id="muledumpaccounts" href="#"></a>Muledump Accounts Configuration - setuptools.data.accounts
 
@@ -647,6 +707,19 @@ Function or array of functions to execute.
 
 Object passed to ActionContext functions.
 
+#### setuptools.lightbox.tooltip(jQuery parent, html content[, object modifiers])
+
+Displays a tooltip above the parent element. 
+
+##### Possible Modifiers 
+
+```js
+var Modifiers = {
+    classes: 'string',      // classes to insert into the tooltip div
+    heightFrom: 'string'    // where to get height data from; options are: tooltip, parent (default: parent)
+}
+```
+
 #### setuptools.lightbox.status(object self, string string, number duration)
 
 Replaces provided self with supplied string for the specified duration before resetting the label.
@@ -664,6 +737,48 @@ Display the application index page (or first time user page for new users)
 #### setuptools.app.checknew()
 
 Determine if the user is completely new or not
+
+#### setuptools.app.hashnav()
+
+Reads the location.hash to direct users to specified pages on request.
+
+##### Supported Hashes
+
+* about
+* accounts
+* accounts-export
+* accounts-mass
+* accounts-massSwitch
+* accountsjs
+* backups
+* backups-create
+* backups-restore
+* backups-upload
+* groups
+* groups-create
+* groups-select-all
+* groups-select-disabled
+* groups-select-enabled
+* groups-disableAll
+* groups-enableAll
+* help-cors
+* settings
+* settings-<ClientConfigKeyName>
+* settings-assistants
+* settings-setuptools
+* settings-system
+
+#### setuptools.app.ga(string command[, mixed action, mixed value1, mixed value2, mixed value3, mixed value4, mixed value5])
+
+Handles all commands for Usage Analytics. Blocks commands when Usage Analytics is disabled. If command!==init then action is required.
+
+The first value is checked against a list of approved values to sort them into categories that users can enable/disable.
+
+This is a wrapper for the Universal Analytics function.
+
+#### setuptools.app.gaReview()
+
+Provided to users new to Usage Analytics to explain to them what it is and offer them the option to opt-out.
 
 ### <a id="setuptools.app.accounts" href="#"></a>Accounts Management Utilities - setuptools.app.accounts
 

@@ -6,6 +6,7 @@
   * MP Pot div misaligned on wide Mules (#85)
   * Character lists not detecting and removing dead characters (#87)
   * Hover menus (options, export) close prematurely (#100)
+  * Options throwing errors (#75, again)
 
 - New Features
   * Character skins and missing textiles added to portraits (#82) [tuvior]

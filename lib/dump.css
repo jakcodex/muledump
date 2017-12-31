@@ -100,7 +100,7 @@ body {
 #totals, .mule, .guid, .reload, .item { display: inline-block; }
 
 #totals {
-    margin: 10px 22px;
+    margin: 10px 0 10px 25px    ;
     display: block;
     border: solid 2px #555;
     line-height: 0;
@@ -349,14 +349,14 @@ td.cont > div {
     display: inline-block;
 }
 
-.giftchest .itemsc {
+.gifts .itemsc {
     background-color: #8b4513;
     margin-left: 0;
     margin-right: 0;
     padding: 2px;
 }
 
-.giftchest .item {
+.gifts .item {
     background-color: #daa520;
 }
 

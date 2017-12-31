@@ -63,6 +63,7 @@ All released versions are available for download [here](https://github.com/jakco
 - ctrl-click account name to temporarily hide it from totals
 - logins thru muledump count towards daily login calendar
 - account settings include automatic reload, login-only (daily calendar only), and cache disable
+- right click anywhere on a mule to access the mule menu
 
 ## Check out the [Frequently Asked Questions](https://github.com/jakcodex/muledump/wiki/Frequently-Asked-Questions) and explore the [wiki](https://github.com/jakcodex/muledump/wiki) for more information!
 

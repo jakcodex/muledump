@@ -144,6 +144,11 @@ The function name to assign Google Analytics.
 
 The number of seconds the notices monitor will run before exiting.
 
+#### setuptools.config.oneclickHelp
+`[default: string|https://github.com/jakcodex/muledump/wiki/One-Click-Login]`
+
+URL to the One-click login wiki page.
+
 #### setuptools.config.regex
 A list of RegExp objects used throughout the program
 

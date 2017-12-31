@@ -141,7 +141,9 @@ body {
     color: #ccc;
     background: #303030;
     border: solid 1px #888;
+    padding: 2px;
     font-family: monospace;
+    box-sizing: border-box;
     width: 100%;
 }
 

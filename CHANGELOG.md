@@ -1,4 +1,4 @@
-**2017-??-??** version 9.0.0
+**2017-12-31** version 9.0.0
 
 - Bug Fixes
   * Totals counting empty backpack data on chars with no backpacks (#79)

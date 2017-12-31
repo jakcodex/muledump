@@ -1,6 +1,6 @@
 ### Effective Date: December 20, 2017
 
-Thank you for choosing and trusting Jakcodex/Muledump. Traditionally no information at all has been collected and with the introduction of anonymous analytics we want to be absolutely clear about what it means for you.
+Thank you for choosing and trusting Jakcodex/Muledump. Traditionally no information at all has been collected and with the introduction of Usage Analytics we want to be absolutely clear about what it means for you.
 
 ## Short version
 

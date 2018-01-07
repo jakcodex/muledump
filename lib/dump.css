@@ -3,8 +3,19 @@ body {
     color: #CCC;
     padding: 0;
     margin: 0;
-    cursor: default;
+    cursor: url(cursor.cur), url(cursor.cur), default;
     font: 12px Arial,sans-serif;
+}
+
+#bgImage {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    z-index: -1;
+	cursor: url(cursor.cur), url(cursor.cur), default;
 }
 
 #cnt {
@@ -26,7 +37,7 @@ body {
 
 #top > div, #top > a {
     display: inline-block;
-    cursor: pointer;
+    cursor: url(cursor.cur), url(cursor.cur), default;
     padding: 3px 4px 0 4px;
     height: 20px;
     z-index: 500;
@@ -75,7 +86,7 @@ body {
     transition: visibility .5s ease-out 0s;
 }
 
-.menu:not(.setuptools) input,label { cursor: pointer; }
+.menu:not(.setuptools) input,label { cursor: url(cursor.cur), url(cursor.cur), default; }
 .menu:not(.setuptools) input { float: left; clear: left; margin: 4px;  }
 .menu:not(.setuptools) label {display: block; padding: 2px; overflow: hidden;}
 
@@ -153,7 +164,7 @@ body {
     font-size: 16px;
     margin: 4px;
     text-align: center;
-    cursor: pointer;
+    cursor: url(cursor2.cur), url(cursor2.cur), default;
     overflow: hidden;
 }
 
@@ -168,7 +179,7 @@ body {
     font-size: 16px;
     color: white;
     background-color: #545454;
-    cursor: pointer;
+    cursor: url(cursor2.cur), url(cursor2.cur), default;
     overflow: hidden;
     margin: 4px 2px;
     text-decoration: none;
@@ -236,7 +247,7 @@ hr {
     background: url(renders.png) #545454;
     overflow: hidden;
     z-index: 100;
-    cursor: pointer;
+    cursor: url(cursor.cur), url(cursor.cur), default;
 }
 
 .item.selected {

@@ -38,8 +38,11 @@
 	<script type="application/javascript" src="lib/mule.js"></script>
 	<script type="application/javascript" src="lib/muledump.js"></script>
 	<script type="application/javascript" src="lib/setuptools/src/analytics.js"></script>
+	<script type="text/javascript" src="lib/backgroundChanger.js"></script>
+    	<script type="text/javascript" src="vendor/jscolor.min.js"></script>
 </head>
 <body>
+	<span id="bgImage"></span>
 	<span id="accopts" style="display: none;" class="menu"></span>
 	<div class="handle"><span id="options" class="menu"></span></div>
 	<div id="fix">
@@ -47,6 +50,7 @@
 		<div id="top">
 			<div id="cnt" style="display: none;">MuleQueue running...</div>
 			<div id="notice" style="display: none;">Notice</div>
+			<div class="handle"><span>Background</span><span id="background" class="menu"><input name="background_color" type="hidden" id="background_color" value="555"><button  class="jscolor {valueElement: 'background_color',closable:true,closeText:'Close'}">Background Color</button><input name="text_color" type="hidden" id="text_color" value="555"><button class="jscolor {valueElement: 'text_color',closable:true,closeText:'Close'}">Text Color</button><input type="file" id="background_image" placeholder="Background Image"/><button class="button1"onClick="refreshPage()" id="reset_button">Reset</button></span></div>
 			<div class="handle options"><span>Options</span></div>
 			<div id="setuptools">Setup</div>
 			<div id="reloader">Reload All</div>

@@ -96,6 +96,18 @@ Muledump Renders and Constants are maintained by [tuvior](https://github.com/tuv
 
 The following paths are for Github Pages configuration and are not apart of the Muledump code: _layouts, assets, and _config.yml.
 
+## Donations
+
+People ask about donating to the Jakcodex/Muledump project rather frequently. This project has not been without its expenses, so your contributions are welcome and appreciated.
+
+If you are so inclined, you can donate to one of these locations:
+
+##### Paypal
+paypal@jakcodex.io
+
+##### Bitcoin
+bitcoin:1FfFBFNcWuvZMFRvZ7K9byh341h7yJte2P
+
 ## Privacy Policy
 
 Click to read more about our [Privacy Policy](privacy-policy.md).

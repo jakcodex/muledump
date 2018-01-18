@@ -24,7 +24,7 @@ body {
     text-align: right;
 }
 
-#top > div, #top > a {
+#top > div:not(#spinner), #top > a {
     display: inline-block;
     cursor: pointer;
     padding: 3px 4px 0 4px;
@@ -463,12 +463,21 @@ td.cont > div {
     background-color: #F44336;
 }
 
+#previewnotice {
+    padding: 4px;
+    font: 14px Arial,sans-serif;
+    text-align: center;
+    color: #EEE;
+    background-color: #2196F3;
+}
+
 #top {
     z-index: 1002;
     padding: 5px;
 }
 
-#stickynotice:empty {
+#stickynotice:empty,
+#previewnotice:empty {
     display: none;
 }
 

@@ -35,29 +35,27 @@
 	<script type="application/javascript" src="lib/setuptools/src/muledump.js"></script>
 	<script type="application/javascript" src="lib/setuptools/src/storage.js"></script>
 	<script type="application/javascript" src="lib/setuptools/src/upgrade.js"></script>
+	<script type="application/javascript" src="lib/setuptools/src/mulequeue.js"></script>
 	<script type="application/javascript" src="lib/mule.js"></script>
 	<script type="application/javascript" src="lib/muledump.js"></script>
 	<script type="application/javascript" src="lib/setuptools/src/analytics.js"></script>
 </head>
 <body>
-	<span id="accopts" style="display: none;" class="menu"></span>
 	<div class="handle"><span id="options" class="menu"></span></div>
 	<div id="fix">
+		<div id="previewnotice"></div>
 		<div id="stickynotice"></div>
 		<div id="top">
-			<div id="cnt" style="display: none;">MuleQueue running...</div>
 			<div id="notice" style="display: none;">Notice</div>
 			<div class="handle options"><span>Options</span></div>
 			<div id="setuptools">Setup</div>
-			<div id="reloader">Reload All</div>
-			<div id="resume" style="display: none;">Resume Reload</div>
+			<div id="mulequeue">MuleQueue</div>
 			<div class="handle"><span>Export</span><span id="export" class="menu"></span></div>
 			<div id="about">About</div>
 			<a href="https://github.com/jakcodex/muledump" target="_blank">Home</a>
 		</div>
 	</div>
 	<div id="main">
-		<div id="techreport"></div>
 		<div id="totals" style="display: none;"></div>
 		<div id="errors"></div>
 		<div id="stage"></div>

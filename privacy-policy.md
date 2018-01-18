@@ -14,6 +14,10 @@ This version collects absolutely no data and is ineligible to participate in Usa
 
 This version is eligible to participate in Usage Analytics which can be disabled in the [Settings Manager](https://jakcodex.github.io/muledump/muledump.html#settings-ga).
 
+#### Muledump CORS Adapter
+
+The Chrome web store extension does not collect any usage analytics or any other sort of data.
+
 ## About Usage Analytics in Jakcodex/Muledump
 
 Usage Analytics is an optional feature that utilizes Google Analytics to get an overall view of how many users are using Muledump Online, the features in use, and errors encountered. 

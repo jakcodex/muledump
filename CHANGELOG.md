@@ -1,3 +1,14 @@
+**2018-01-??** version 9.1.0
+
+- New Features
+  * MuleQueue v2 - In progress! (#71)
+  * Jakcodex/Muledump CORS Adapter - Chrome Extension (#122)
+  
+- Improvements
+  * Usage Analytics updates (#115)
+  
+- Various improvements to SetupTools apis
+
 **2017-12-31** version 9.0.0
 
 - Bug Fixes

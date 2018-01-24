@@ -4,11 +4,11 @@
   "description": "A utility for managing all of your ROTMG mules.",
   "homepage": "https://jakcodex.github.io/muledump/",
   "dependencies": {
-    "jquery": "^3.2.1",
-    "clipboard": "^1.7.1",
-    "masonry-layout": "^4.2.0",
-    "featherlight": "^1.7.8",
-    "html2canvas": "^1.0.0"
+    "jquery/jquery": "^3.2.1",
+    "zenorocha/clipboard": "^1.7.1",
+    "desandro/masonry-layout": "^4.2.0",
+    "noelboss/featherlight": "^1.7.8",
+    "niklasvh/html2canvas": "^1.0.0"
   },
   "repository": {
     "type": "git",

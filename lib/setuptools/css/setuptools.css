@@ -1,5 +1,3 @@
-@import url('animations.css');
-
 a.setuptools {
     color: #0094ff !important;
     text-decoration: none !important;
@@ -355,7 +353,7 @@ a.setuptools.app.config.settings.action.eraseCache:hover {
     height: 24px;
 }
 
-.setuptools.div.pageControls div,
+.setuptools.div.pageControls > div,
 .setuptools.div.groupControls div {
     float: left;
     border: #707070 solid 2px;
@@ -370,7 +368,7 @@ a.setuptools.app.config.settings.action.eraseCache:hover {
     height: 24px;
 }
 
-.setuptools.div.pageControls div:not(.selected),
+.setuptools.div.pageControls > div:not(.selected),
 .setuptools.div.groupControls div:not(.selected),
 .setuptools.div.accountControls div:not(.selected) {
     background-color: #333;
@@ -566,14 +564,14 @@ div.setuptools.div.pageControls.full {
     width: 100%;
 }
 
-div.setuptools.div.pageControls div {
+div.setuptools.div.pageControls > div {
     padding-top: 0 !important;
     font-size: 14px;
     font-weight: bold;
 }
 
-div.setuptools.div.pageControls div:hover,
-div.setuptools.div.pageControls div:active {
+div.setuptools.div.pageControls > div:hover,
+div.setuptools.div.pageControls > div:active {
     background-color: #0c0870;
 }
 
@@ -901,8 +899,7 @@ div.AccountsList > div.controller.exportAccountsJS:hover,
 }
 
 .fl-MuleQueueManager .featherlight-content {
-    min-width: 450px;
-    max-width: 800px;
+    width: 650px;
 }
 
 .fl-BackupsManager .featherlight-content {
@@ -955,6 +952,10 @@ div.AccountsList > div.controller.exportAccountsJS:hover,
 }
 
 /* other */
+
+.ml5 {
+    margin-left: 5px;
+}
 
 .mb5 {
     margin-bottom: 5px;
@@ -1158,8 +1159,14 @@ img.hidden {
 .flex-container {
     width: 100%;
     display: flex;
-    justify-content: center;
+}
+
+.flex-container:not(.noFlexAutoAlign) {
     align-items: center;
+}
+
+.flex-container:not(.noFlexAutoJustify) {
+    justify-content: center;
 }
 
 .notifyPulse {

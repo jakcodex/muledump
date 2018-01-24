@@ -5,6 +5,7 @@ body {
     margin: 0;
     cursor: default;
     font: 12px Arial,sans-serif;
+    overflow-y: scroll;
 }
 
 #cnt {

@@ -1,13 +1,20 @@
 **2018-01-??** version 9.1.0
 
+- Bug Fixes
+  * Deleted accounts are not getting removed from groups (#124)
+  * Certain window resolutions can encounter high-contrast flickering when using the top menu (#125)
+  * Email address validation format simplified (#126)
+
 - New Features
   * MuleQueue v2 - In progress! (#71)
   * Jakcodex/Muledump CORS Adapter - Chrome Extension (#122)
   
 - Improvements
+  * Browser detection and upgrade assistant added (#110)
   * Usage Analytics updates (#115)
   
 - Various improvements to SetupTools apis
+- CORS Assistant updated
 
 **2017-12-31** version 9.0.0
 

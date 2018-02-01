@@ -109,6 +109,7 @@ input.setuptools.app.wideinput {
     background-color: #333;
     padding: 3px;
     color: #ffffff;
+    outline: none;
 }
 
 .setuptools textarea, textarea.setuptools {
@@ -570,8 +571,8 @@ div.setuptools.div.pageControls > div {
     font-weight: bold;
 }
 
-div.setuptools.div.pageControls > div:hover,
-div.setuptools.div.pageControls > div:active {
+div.setuptools.div.pageControls > div:hover:not(.nohover),
+div.setuptools.div.pageControls > div:active:not(.nohover) {
     background-color: #0c0870;
 }
 
@@ -593,9 +594,9 @@ div.setuptools.div.pageControls div.editor.control.massSwitch:hover {
     user-select: initial !important;
 }
 
-.noselect,
-.featherlight-content,
-#top > div {
+.noselect:not(.select),
+.featherlight-content:not(.select),
+#top:not(.select) > div {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -756,6 +757,10 @@ div.massSwitch > div.link {
 
 /* button types */
 
+.menuStyleHover:hover {
+    color: #00ceff;
+}
+
 .menuStyle {
     float: left;
     cursor: pointer;
@@ -855,11 +860,11 @@ div.AccountsList > div.controller.exportAccountsJS:hover,
 
 /* generic positioning */
 .fleft {
-    float: left;
+    float: left !important;
 }
 
 .fright {
-    float: right;
+    float: right !important;
 }
 
 .cfleft {
@@ -900,6 +905,10 @@ div.AccountsList > div.controller.exportAccountsJS:hover,
 
 .fl-MuleQueueManager .featherlight-content {
     width: 650px;
+}
+
+.fl-MuleQueueHistory .featherlight-content {
+    width: 800px;
 }
 
 .fl-BackupsManager .featherlight-content {
@@ -1143,6 +1152,15 @@ img.hidden {
     }
 }
 
+@keyframes pausedPulse {
+    0% {
+        background-color: #2bac00;
+    }
+    100% {
+        background-color: #424242;
+    }
+}
+
 .center .featherlight-content {
     text-align: center;
 }
@@ -1157,8 +1175,11 @@ img.hidden {
 }
 
 .flex-container {
-    width: 100%;
     display: flex;
+}
+
+.flex-container:not(.noFlexAutoWidth) {
+    width: 100%;
 }
 
 .flex-container:not(.noFlexAutoAlign) {
@@ -1175,13 +1196,28 @@ img.hidden {
     animation-direction: alternate;
 }
 
-.rateLimited {
+.rateLimited:not(.nopulse) {
     animation: rateLimitedPulse 3s infinite;
     animation-direction: alternate;
 }
 
+a.rateLimited {
+    color: #ff0000;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+a.rateLimited:hover {
+    color: #ff0000;
+}
+
 .running {
     animation: runningPulse 3s infinite;
+    animation-direction: alternate;
+}
+
+.paused {
+    animation: pausedPulse 3s infinite;
     animation-direction: alternate;
 }
 
@@ -1328,6 +1364,113 @@ div.QueueList > div.list > div.queuetask > div:not(:last-child) {
     margin-right: 5px;
 }
 
+div.mulequeue.progress:not(.AReduced) {
+    background-image: url(../../media/mulequeue-loadingbar-background.svg);
+}
+
+div.mulequeue.progress > div.bar:not(.rateLimited) {
+    background-image: url(../../media/mulequeue-loading-foreground.svg);
+}
+
+div.mulequeue.progress:not(.AReduced) > div.bar:not(.rateLimited) > div {
+    background-image: url(../../media/mulequeue-loading-foreground-overlay.svg);
+}
+
+div.mulequeue.progress:not(.AReduced) > div.bar.rateLimited {
+    width: 100% !important;
+    background-image: url(../../media/mulequeue-loading-rateLimited-foreground.svg);
+}
+
+div.QueueList div.queuetask > div:first-child {
+    flex-basis: 27px;
+    height: 24px;
+}
+
+div.QueueList div.queuetask > div:nth-child(2) {
+    flex-basis: 539px;
+    justify-content: space-between;
+    border: 0;
+}
+
+div.QueueList div.queuetask > div:nth-child(2) > div:first-child {
+    flex-basis: 439px;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+div.QueueList div.queuetask > div:nth-child(2) > div:last-child {
+    flex-basis: 100px;
+    text-align: right;
+    justify-content: flex-end;
+}
+
+div.QueueList div.queuetask > div:nth-child(3) {
+    flex-basis: 30px;
+    height: 24px;
+    justify-content: flex-end;
+}
+
+div.QueueList div.queuetask > div:nth-child(3) > div:first-child {
+    flex-basis: 25px;
+}
+
+div.mulequeue.progress {
+    position: relative;
+    box-shadow: 0 0 2px 2px #000000;
+    height: 30px;
+    margin: 10px 0;
+    justify-content: center;
+}
+
+div.mulequeue.progress > div.percentage {
+    z-index: 5000;
+    text-shadow: 1px 1px #000000;
+    background: rgba(0, 0, 0, 0.15);
+    padding: 2px;
+}
+
+div.mulequeue.progress > div.bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+}
+
+div.mulequeue.main.menu.reload {
+    padding: 0;
+}
+
+div.mulequeue.main.menu {
+    font-size: 12px !important;
+    font-weight: normal !important;
+}
+
+div.setuptools.mulequeue.link.history {
+    font-size: 16px !important;
+}
+
+div.mulequeue.queueCount {
+    cursor: initial !important;
+    width: auto !important;
+    font-size: 12px !important;
+    padding: 0 5px !important;
+    font-weight: normal !important;
+}
+
+div.QueueHistory > div.list > div.historyitem {
+    padding: 0 2px;
+}
+
+img.spinner {
+    width: 19px;
+    height: 19px;
+}
+
+#stickynotice.rateLimited {
+    background: url(../../media/top-rateLimited.svg);
+}
+
 .buttonStyle {
     border: #707070 solid 2px;
     text-align: center;
@@ -1343,4 +1486,17 @@ div.QueueList > div.list > div.queuetask > div:not(:last-child) {
 
 .textLeft {
     text-align: left;
+}
+
+.pagesearch.result {
+    width: 100px;
+    height: 30px;
+    padding: 5px;
+    margin: 5px;
+    position: absolute;
+    box-shadow: #000000 2px 2px;
+    background: #00c1e3;
+    font-weight: bold;
+    text-shadow: 1px 1px #000000;
+    z-index: 5002;
 }

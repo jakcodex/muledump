@@ -1,20 +1,32 @@
-**2018-01-??** version 9.1.0
+**2018-02-??** version 9.1.0
 
 - Bug Fixes
+  * Totals not stretching with window resizing when set to automatic width (#116)
+  * Tooltip can crash on too many items (#119)
   * Deleted accounts are not getting removed from groups (#124)
   * Certain window resolutions can encounter high-contrast flickering when using the top menu (#125)
   * Email address validation format simplified (#126)
 
 - New Features
   * MuleQueue v2 - In progress! (#71)
+  * MuleQueue resumes upon reload after being interrupted
   * Jakcodex/Muledump CORS Adapter - Chrome Extension (#122)
+  * Page Search for easily finding accounts on-screen (#121)
   
 - Improvements
+  * Full screen overlay when nomasonry=1 removed (#33)
+  * Search by IGN added to account search tool (#62)
+  * Retaining additional account data (SalesForce, OwnedSkins) (#111)
+  * Add OwnedSkins and Purchased Gold stats to Account Info (#112)
   * Browser detection and upgrade assistant added (#110)
-  * Usage Analytics updates (#115)
+  * Usage Analytics updates (#113)
   
 - Various improvements to SetupTools apis
 - CORS Assistant updated
+- Default rendersVersion added if not detected (#115)
+- Top menu now uses Flex and menuPosition=left reverses menu layout
+- JQuery updated to 3.3.1
+- html2canvas updated to 1.0.0-alpha.9
 
 **2017-12-31** version 9.0.0
 

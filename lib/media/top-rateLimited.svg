@@ -1,0 +1,12 @@
+<svg class="ldp-stripe" width="45px"  height="100px"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" style="background: none;"><defs>
+  <pattern id="ldp-be17269c5e5ce" x="0" y="0" width="45" height="100" patternUnits="userSpaceOnUse">
+    <path d="M 45 0 L 0 100 L 22.5 100 L 67.5 0 Z" transform="translate(-53.25 0)" fill="#9c0404">
+  <animateTransform attributeName="transform" type="translate" values="-90 0;-45 0" keyTimes="0;1" dur="1s" repeatCount="indefinite"></animateTransform>
+</path> <path d="M 45 0 L 0 100 L 22.5 100 L 67.5 0 Z" transform="translate(-8.25 0)" fill="#9c0404">
+  <animateTransform attributeName="transform" type="translate" values="-45 0;0 0" keyTimes="0;1" dur="1s" repeatCount="indefinite"></animateTransform>
+</path> <path d="M 45 0 L 0 100 L 22.5 100 L 67.5 0 Z" transform="translate(36.75 0)" fill="#9c0404">
+  <animateTransform attributeName="transform" type="translate" values="0 0;45 0" keyTimes="0;1" dur="1s" repeatCount="indefinite"></animateTransform>
+</path>
+  </pattern>
+</defs>
+<rect x="0" y="0" width="100%" height="100%" fill="url(#ldp-be17269c5e5ce)"></rect></svg>

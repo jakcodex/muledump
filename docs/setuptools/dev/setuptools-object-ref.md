@@ -65,25 +65,10 @@ Various assistant states.
 
 ## <a id="serverconfigkeys" href="#"></a>Server Configuration Keys - setuptools.config
 
-#### setuptools.config.keyPrefix
-`[default: string|muledump:setuptools:]`
+#### setuptools.config.actoken
+`[default: string|jcmd]`
 
-Prefix used for all local storage objects accessed in SetupTools
-
-#### setuptools.config.hostedDomain
-`[default: string|jakcodex.github.io]`
-
-Hostname for Muledump Online
-
-#### setuptools.config.url
-`[default: string|https://jakcodex.github.io/muledump]`
-
-URL for Muledump Online
-
-#### setuptools.config.errorColor
-`[default: string|#ae0000]`
-
-Hex color used for error texts outside of css
+An identifier placed in certain local storage keys to identify the specific Muledump fork generating the data.
 
 #### setuptools.config.devForcePoint
 `[default: string|empty]`
@@ -92,15 +77,60 @@ Used for forcing redirection within code. For example, setuptools.storage.test()
 
 Basically, if you want to test alternative paths such as errors and fallbacks, this will let you simulate those events.
 
-#### setuptools.config.reloadDelay
-`[default: number|3]`
+#### setuptools.config.errorColor
+`[default: string|#ae0000]`
 
-How many seconds to wait before triggering automatic window reloads
+Hex color used for error texts outside of css
 
-#### setuptools.config.actoken
-`[default: string|jcmd]`
+#### setuptools.config.ga
+`[default: string|empty]`
 
-An identifier placed in certain local storage keys to identify the specific Muledump fork generating the data.
+The Google Analytics site ID.
+
+#### setuptools.config.gaFuncName
+`[default: string|analytics]`
+
+The function name to assign Google Analytics.
+
+#### setuptools.config.gaInterval
+`[default: number|300000]`
+
+The analytics background ping rate in milliseconds.
+
+#### setuptools.config.hostedDomain
+`[default: string|jakcodex.github.io]`
+
+Hostname for Muledump Online
+
+#### setuptools.config.keyPrefix
+`[default: string|muledump:setuptools:]`
+
+Prefix used for all local storage objects accessed in SetupTools
+
+#### setuptools.config.mqBGDelay
+`[default: number|1000]`
+
+Time in milliseconds to run the background task.
+
+#### setuptools.config.mqBGHealthDelay
+`[default: number|5000]`
+
+Time in milliseconds to run the background task health checker.
+
+#### setuptools.config.mqDefaultConfig
+`[default: object|{action: 'query', ignore_cache: false, cache_only: false]`
+
+The base config object to use when creating MuleQueue requests.
+
+#### setuptools.config.mqRateLimitExpiration
+`[default: number|300000]`
+
+Time in milliseconds that a rate limit lasts for.
+
+#### setuptools.config.mqStaleCache
+`[default: number|86400000]`
+
+Time in milliseconds after which mulequeue cache data is considered stale.
 
 #### setuptools.config.muledump
 `[default: object]`
@@ -108,36 +138,6 @@ An identifier placed in certain local storage keys to identify the specific Mule
 An object for storing Muledump-specific feature server configuration data.
 
 This currently consists of a single key. `setuptools.config.muledump.corsAttempts` which determines how many failed preflight requests may occur before triggering CORS Assistant.
-
-#### setuptools.config.updatecheckURL
-`[default: string|https://api.github.com/repos/jakcodex/muledump/tags]`
-
-The Github API URL for accessing Muledump repo tags.
-
-#### setuptools.config.updatecheckTTL
-`[default: number|600000]`
-
-The length of time in miliseconds to cache Github Tags API response data.
-
-#### setuptools.config.totalsItemWidth
-`[default: number|0]`
-
-Width of each item in the totals block.
-
-#### setuptools.config.ga
-`[default: string|empty]`
-
-The Google Analytics site ID.
-
-#### setuptools.config.gaInterval
-`[default: number|300000]`
-
-The analytics background ping rate in miliseconds.
-
-#### setuptools.config.gaFuncName
-`[default: string|analytics]`
-
-The function name to assign Google Analytics.
 
 #### setuptools.config.noticesMonitorMaxAge
 `[default: number|60]`
@@ -149,75 +149,91 @@ The number of seconds the notices monitor will run before exiting.
 
 URL to the One-click login wiki page.
 
+#### setuptools.config.perfLoadTime
+`[default: number|3000]`
+
+Time in milliseconds after which to consider load time a performance issue.
+
+#### setuptools.config.perfMinCPUs
+`[default: number|4]`
+
+Minimum number of recommended CPU cores.
+
+#### setuptools.config.rateLimitHelp
+`[default: string|https://github.com/jakcodex/muledump/wiki/Rate-Limiting]`
+
+URL to the Rate Limiting information wiki page.
+
 #### setuptools.config.regex
 A list of RegExp objects used throughout the program
 
+#### setuptools.config.reloadDelay
+`[default: number|3]`
+
+How many seconds to wait before triggering automatic window reloads
+
+#### setuptools.config.totalsItemWidth
+`[default: number|0]`
+
+Width of each item in the totals block.
+
+#### setuptools.config.updatecheckTTL
+`[default: number|600000]`
+
+The length of time in milliseconds to cache Github Tags API response data.
+
+#### setuptools.config.updatecheckURL
+`[default: string|https://api.github.com/repos/jakcodex/muledump/tags]`
+
+The Github API URL for accessing Muledump repo tags.
+
+#### setuptools.config.url
+`[default: string|https://jakcodex.github.io/muledump]`
+
+URL for Muledump Online
+
 ## <a id="clientconfigkeys" href="#"></a>Client Configuration Keys - setuptools.data.config
 
-#### setuptools.data.config.enabled
-`[default: boolean|false]`
+#### setuptools.data.config.accountAssistant
+`[default: number|1]`
 
-Whether or not SetupTools is enabled
-
-#### setuptools.data.config.preventAutoDownload
-`[default: boolean|true]`
-
-Whether or not to prevent browser automatic, no-confirm downloads (dangerous given our usage; sensitive files don't belong in Downloads)
-
-#### setuptools.data.config.maximumBackupCount
-`[default: number|10]`
-
-Number of non-protected backups to keep in local storage before automatically removing old backups
-
-#### setuptools.data.config.automaticBackups
-`[default: boolean|true]`
-
-Enable creation of an automatic backup if more than 24 hours has past since the last backup by any method.
-
-#### setuptools.data.config.rowlength
-`[default: number|7]`
-
-Number of items to display in a single row in Muledump (combo of chars+accounts)
-
-#### setuptools.data.config.testing
-`[default: number|0]`
-
-Whether to use the testing server instead of production
-
-#### setuptools.data.config.prices
-`[default: number|0]`
-
-Whether to display pricing in tooltips (this feature was never actually added in original Muledump despite the key)
-
-#### setuptools.data.config.mulelogin
-`[default: number|0]`
-
-Whether or not one-click login is enabled
-
-#### setuptools.data.config.nomasonry
-`[default: number|0]`
-
-Whether or not to disable Masonry page layout
+Whether or not the account assistant is enabled.
 
 #### setuptools.data.config.accountLoadDelay
 `[default: number|0]`
 
-How many seconds to delay between account loads with Deca (setting to 0 will cause SetupTools to auto-determine the best value for you)
+How many seconds to delay between account loads with Deca. Supports two automatic modes which set a time based on number of accounts:
 
-#### setuptools.data.config.debugging
-`[default: boolean|false]`
+##### Automatic (Throttled)
+Seconds set to 0 - Targets 25 requests per 10 minutes on the high end.
 
-Whether or not to log debugging information to the browser console
+##### Automatic (Aggressive)
+Seconds set to -1 - Targets 35 requests per 10 minutes on the high end.
+
+#### setuptools.data.config.accountsPerPage
+`[default: number|5]`
+
+How many accounts to display per page during pagination.
 
 #### setuptools.data.config.alertNewVersion
 `[default: number|1]`
 
 Whether or not to alert on new versions (0=off, 1=releases, 2=all versions).
 
-#### setuptools.data.config.menuPosition
-`[default: number|2]`
+#### setuptools.data.config.animations
+`[default: boolean|true]`
 
-Position of the menu between left, center, and right.
+Whether or not to show full or reduced animations where applicable.
+
+#### setuptools.data.config.automaticBackups
+`[default: boolean|true]`
+
+Enable creation of an automatic backup if more than 24 hours has past since the last backup by any method.
+
+#### setuptools.data.config.autoReloadDays
+`[default: number|0]`
+
+How old cache data can be before it is considered stale (only applies to accounts with autoReload=true).
 
 #### setuptools.data.config.backupAssistant
 `[default: number|14]`
@@ -229,55 +245,30 @@ How many days between backup assistant alerts.
 
 Whether or not the CORS assistant is enabled.
 
-#### setuptools.data.config.accountAssistant
-`[default: number|1]`
+#### setuptools.data.config.debugging
+`[default: boolean|false]`
 
-Whether or not the account assistant is enabled.
+Whether or not to log debugging information to the browser console
 
-#### setuptools.data.config.longpress
-`[default: number|1000]`
+#### setuptools.data.config.enabled
+`[default: boolean|false]`
 
-How long a long left click must last to register as a longpress.
-
-#### setuptools.data.config.accountsPerPage
-`[default: number|5]`
-
-How many accounts to display per page during pagination.
-
-#### setuptools.data.config.groupsMergeMode
-`[default: number|1]`
-
-How to merge accounts configured in the groups manager (0=off, 1=parallel, 2=serial).
-
-#### setuptools.data.config.autoReloadDays
-`[default: number|0]`
-
-How old cache data can be before it is considered stale (only applies to accounts with autoReload=true).
-
-#### setuptools.data.config.tooltip
-`[default: number|500]`
-
-Time to wait in miliseconds before displaying a tooltip on hover.
-
-#### setuptools.data.config.totalswidth
-`[default: number|0]`
-
-Number of items to display per row in totals. A value of 0 will default to whole screen usable width.
+Whether or not SetupTools is enabled
 
 #### setuptools.data.config.ga
 `[default: boolean|false]`
 
 Whether or not Usage Analytics is enabled (Muledump Online only). If disabled, all enabled GA settings are disabled at runtime.
 
-#### setuptools.data.config.gaPing
-`[default: boolean|true]`
-
-Whether or not to participate in Usage Analytics background ping.
-
 #### setuptools.data.config.gaErrors
 `[default: boolean|true]`
 
 Whether or not to participate in Usage Analytics error reporting.
+
+#### setuptools.data.config.gaPing
+`[default: boolean|true]`
+
+Whether or not to participate in Usage Analytics background ping.
 
 #### setuptools.data.config.gaOptions
 `[default: boolean|true]`
@@ -288,6 +279,76 @@ Whether or not to participate in Usage Analytics feature usage reporting.
 `[default: boolean|true]`
 
 Whether or not to participate in Usage Analytics totals usage reporting.
+
+#### setuptools.data.config.groupsMergeMode
+`[default: number|1]`
+
+How to merge accounts configured in the groups manager (0=off, 1=parallel, 2=serial).
+
+#### setuptools.data.config.longpress
+`[default: number|1000]`
+
+How long a long left click must last to register as a longpress.
+
+#### setuptools.data.config.maximumBackupCount
+`[default: number|10]`
+
+Number of non-protected backups to keep in local storage before automatically removing old backups
+
+#### setuptools.data.config.menuPosition
+`[default: number|2]`
+
+Position of the menu between left, center, and right.
+
+#### setuptools.data.config.mqBGTimeout
+`[default: number|180]`
+
+Maximum amount of time in seconds the background task can run without pinging before being considered stale (presently not user changeable).
+
+#### setuptools.data.config.mqConcurrent
+`[default: number|1]`
+
+Maximum number of concurrent requests to run in MuleQueue (presently not user changeable).
+
+#### setuptools.data.config.mqKeepHistory
+`[default: number|100]`
+
+Maximum number of MuleQueue history records to keep.
+
+#### setuptools.data.config.mulelogin
+`[default: number|0]`
+
+Whether or not one-click login is enabled
+
+#### setuptools.data.config.nomasonry
+`[default: number|0]`
+
+Whether or not to disable Masonry page layout
+
+#### setuptools.data.config.preventAutoDownload
+`[default: boolean|true]`
+
+Whether or not to prevent browser automatic, no-confirm downloads (dangerous given our usage; sensitive files don't belong in Downloads)
+
+#### setuptools.data.config.rowlength
+`[default: number|7]`
+
+Number of items to display in a single row in Muledump (combo of chars+accounts)
+
+#### setuptools.data.config.testing
+`[default: number|0]`
+
+Whether to use the testing server instead of production
+
+#### setuptools.data.config.tooltip
+`[default: number|500]`
+
+Time to wait in milliseconds before displaying a tooltip on hover.
+
+#### setuptools.data.config.totalswidth
+`[default: number|0]`
+
+Number of items to display per row in totals. A value of 0 will default to whole screen usable width.
 
 ## <a id="muledumpaccounts" href="#"></a>Muledump Accounts Configuration - setuptools.data.accounts
 

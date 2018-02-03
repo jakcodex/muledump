@@ -1,4 +1,4 @@
-**2018-02-??** version 9.1.0
+**2018-02-03** version 9.1.0
 
 - Bug Fixes
   * Totals not stretching with window resizing when set to automatic width (#116)
@@ -8,8 +8,10 @@
   * Email address validation format simplified (#126)
 
 - New Features
-  * MuleQueue v2 - In progress! (#71)
-  * MuleQueue resumes upon reload after being interrupted
+  * MuleQueue v2 - Streamlined account data management with a full user interface (#71)
+    - Start, stop, pause, and manage account data tasks
+    - Queue can be resumed uninterrupted after closing and reloading Muledump later
+    - View history and statistics of account requests
   * Jakcodex/Muledump CORS Adapter - Chrome Extension (#122)
   * Page Search for easily finding accounts on-screen (#121)
   
@@ -20,7 +22,8 @@
   * Add OwnedSkins and Purchased Gold stats to Account Info (#112)
   * Browser detection and upgrade assistant added (#110)
   * Usage Analytics updates (#113)
-  
+
+- Rate Limited bar restyled
 - Various improvements to SetupTools apis
 - CORS Assistant updated
 - Default rendersVersion added if not detected (#115)

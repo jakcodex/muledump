@@ -1,5 +1,7 @@
 # SetupTools Object Reference
 
+Last Updated: 2018-02-01
+
 SetupTools started off large and will only get larger. This document outlines all the methods and keys found in SetupTools in an effort to make understanding it easier on future development and new devs.
 
 For the method reference, arguments contained in brackets [...] are optional.
@@ -42,11 +44,17 @@ For the method reference, arguments contained in brackets [...] are optional.
 
 These are keys which report state information about SetupTools current runtime. All values are boolean.
 
+#### setuptools.state.assistant
+Various assistant states.
+
+#### setuptools.state.ctrlKey
+Whether or not the control key is being pressed.
+
 #### setuptools.state.error
 Whether or not SetupTools has entered an error state.
 
-#### setuptools.state.loaded
-Whether or not SetupTools has successfully loaded client configuration.
+#### setuptools.state.extension
+Whether or not the user has been detected as having or not having the Muledump CORS Adapter.
 
 #### setuptools.state.firsttime
 Whether or not the user is detected as being a first time user.
@@ -54,14 +62,14 @@ Whether or not the user is detected as being a first time user.
 #### setuptools.state.hosted
 Whether or not the user is running local or hosted Muledump
 
-#### setuptools.state.ctrlKey
-Whether or not the control key is being pressed.
+#### setuptools.state.loaded
+Whether or not SetupTools has successfully loaded client configuration.
 
 #### setuptools.state.notifier
 Whether or not any notifier is running.
 
-#### setuptools.state.assistant
-Various assistant states.
+#### setuptools.state.preview
+Whether or not the system has detected we're in preview mode.
 
 ## <a id="serverconfigkeys" href="#"></a>Server Configuration Keys - setuptools.config
 
@@ -221,9 +229,9 @@ How many accounts to display per page during pagination.
 Whether or not to alert on new versions (0=off, 1=releases, 2=all versions).
 
 #### setuptools.data.config.animations
-`[default: boolean|true]`
+`[default: number|1]`
 
-Whether or not to show full or reduced animations where applicable.
+Whether or not to show full (1), reduced (0), or minimal (-1) animations where applicable.
 
 #### setuptools.data.config.automaticBackups
 `[default: boolean|true]`
@@ -324,6 +332,11 @@ Whether or not one-click login is enabled
 `[default: number|0]`
 
 Whether or not to disable Masonry page layout
+
+#### setuptools.data.config.pagesearch
+`[default: number|2]`
+
+Whether or not to display the full Page Search bar (2), expanding bar (1), or no bar (0).
 
 #### setuptools.data.config.preventAutoDownload
 `[default: boolean|true]`

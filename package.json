@@ -1,6 +1,6 @@
 {
   "name": "Muledump",
-  "version": "9.0.0",
+  "version": "9.1.0",
   "description": "A utility for managing all of your ROTMG mules.",
   "homepage": "https://jakcodex.github.io/muledump/",
   "dependencies": {

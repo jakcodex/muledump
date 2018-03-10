@@ -1,0 +1,8 @@
+<svg class="ldp-sunflag" width="2000px"  height="23px"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" style="background: none;"><defs>
+  <pattern id="ldp-f855f16241dc7" x="0" y="0" width="2000" height="23" patternUnits="userSpaceOnUse">
+    <g transform="translate(1000 11.5)"><g transform="rotate(185)"><path d="M0 0L750 0 L675.7266509268144 325.4128043381686 Z" fill="rgba(100%,0%,0%,0.15)"></path><path d="M0 0L467.6173513940502 586.3736118510224 L166.89070046723583 731.1959341363677 Z" fill="rgba(100%,0%,0%,0.15)"></path><path d="M0 0L-166.89070046723575 731.1959341363677 L-467.6173513940501 586.3736118510225 Z" fill="rgba(100%,0%,0%,0.15)"></path><path d="M0 0L-675.7266509268143 325.41280433816866 L-750 9.184850993605149e-14 Z" fill="rgba(100%,0%,0%,0.15)"></path><path d="M0 0L-675.7266509268144 -325.4128043381685 L-467.6173513940503 -586.3736118510222 Z" fill="rgba(100%,0%,0%,0.15)"></path><path d="M0 0L-166.89070046723594 -731.1959341363677 L166.890700467235 -731.1959341363679 Z" fill="rgba(100%,0%,0%,0.15)"></path><path d="M0 0L467.61735139405005 -586.3736118510225 L675.7266509268145 -325.41280433816814 Z" fill="rgba(100%,0%,0%,0.15)"></path><animateTransform attributeName="transform" type="rotate" values="0 0 0;360 0 0" keyTimes="0;1" dur="6s" repeatCount="indefinite"></animateTransform>
+</g>
+</g>
+  </pattern>
+</defs>
+<rect x="0" y="0" width="100%" height="100%" fill="url(#ldp-f855f16241dc7)"></rect></svg>

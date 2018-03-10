@@ -8,6 +8,10 @@ body {
     overflow-y: scroll;
 }
 
+body:not(.AReduced) {
+    background: #212121 url(../media/main-background.svg);
+}
+
 #cnt {
     /*position: fixed;
     top: 4px;
@@ -239,7 +243,7 @@ hr {
     width: 40px;
     height: 40px;
     margin: 2px;
-    background: url(renders.png) #545454;
+    background: url(../renders.png) #545454;
     overflow: hidden;
     z-index: 100;
     cursor: pointer;
@@ -288,12 +292,12 @@ hr {
 }
 
 .hp {
-	background-image: url(hp.png);
+	background-image: url(../media/hp.png);
 	margin: 0 2px 4px 4px;
 }
 
 .mp {
-	background-image: url(mp.png);
+	background-image: url(../media/mp.png);
 	margin: 0 4px 4px 2px;
 }
 
@@ -461,19 +465,25 @@ td.cont > div {
     border: none;
 }
 
-#stickynotice {
+#stickynotice,
+.stickynotice {
     padding: 4px;
     font: 14px Arial,sans-serif;
     text-align: center;
     color: #EEE;
 }
 
-#fix:not(.rateLimited) > #stickynotice {
+#fix:not(.rateLimited) > #stickynotice,
+.stickynotice {
     background-color: #a82f27;
 }
 
 #fix.rateLimited {
-    background: #222222 url(./media/top-rateLimited.svg) !important;
+    background: #222222 url(../media/top-rateLimited.svg) !important;
+}
+
+.stickynotice:not(.AReduced) {
+    background: #a82f27 url(../media/top-rateLimited.svg) !important;
 }
 
 #previewnotice {
@@ -490,6 +500,7 @@ td.cont > div {
 }
 
 #stickynotice:empty,
+.stickynotice:empty,
 #previewnotice:empty {
     display: none;
 }

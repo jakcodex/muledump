@@ -2,27 +2,30 @@
 <html>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="description" content="A complete management system for all your ROTMG mules">
 	<title>Muledump</title>
-	<link type="text/css" rel="stylesheet" href="lib/dump.css">
+	<script type="application/javascript" src="vendor/jtimer.js"></script>
+	<script type="application/javascript" src="lib/muledump/timing.js"></script>
+	<link type="text/css" rel="stylesheet" href="lib/muledump/dump.css">
 	<link type="text/css" rel="stylesheet" href="vendor/featherlight.css">
 	<link type="text/css" rel="stylesheet" href="lib/setuptools/css/setuptools.css">
-	<link type="image/png" rel="shortcut icon" href="lib/favicon.png">
+	<link type="image/png" rel="shortcut icon" href="lib/media/favicon.png">
 	<script type="application/javascript" src="vendor/jquery.min.js"></script>
 	<script type="application/javascript" src="vendor/masonry-4.2.0.pkgd.min.js"></script>
-	<script type="application/javascript" src="vendor/sha256.js"></script>
 	<script type="application/javascript" src="vendor/featherlight.min.js" charset="utf-8"></script>
+	<script type="application/javascript" src="vendor/seasalt.min.js"></script>
 	<script src="vendor/clipboard.min.js"></script>
 	<script src="vendor/html2canvas.min.js"></script>
 	<script type="application/javascript" src="lib/constants.js"></script>
 	<script type="application/javascript" src="lib/sheets.js"></script>
-	<script type="application/javascript" src="lib/portrait.js"></script>
-	<script type="application/javascript" src="lib/pcstats.js"></script>
-	<script type="application/javascript" src="lib/export.js"></script>
-	<script type="application/javascript" src="lib/staticvars.js"></script>
+	<script type="application/javascript" src="lib/muledump/portrait.js"></script>
+	<script type="application/javascript" src="lib/muledump/pcstats.js"></script>
+	<script type="application/javascript" src="lib/muledump/export.js"></script>
+	<script type="application/javascript" src="lib/muledump/staticvars.js"></script>
 	<script type="application/javascript" src="accounts.js"></script>
-	<script type="application/javascript" src="lib/realmapi.js"></script>
-	<script type="application/javascript" src="lib/options.js"></script>
-	<script type="application/javascript" src="lib/totals.js"></script>
+	<script type="application/javascript" src="lib/muledump/realmapi.js"></script>
+	<script type="application/javascript" src="lib/muledump/options.js"></script>
+	<script type="application/javascript" src="lib/muledump/totals.js"></script>
 	<script type="application/javascript" src="lib/setuptools/src/setuptools.js"></script>
 	<script type="application/javascript" src="lib/setuptools/src/accounts.js"></script>
 	<script type="application/javascript" src="lib/setuptools/src/app.js"></script>
@@ -35,12 +38,13 @@
 	<script type="application/javascript" src="lib/setuptools/src/muledump.js"></script>
 	<script type="application/javascript" src="lib/setuptools/src/storage.js"></script>
 	<script type="application/javascript" src="lib/setuptools/src/upgrade.js"></script>
+	<script type="application/javascript" src="lib/setuptools/src/mulecrypt.js"></script>
 	<script type="application/javascript" src="lib/setuptools/src/mulequeue.js"></script>
-	<script type="application/javascript" src="lib/mule.js"></script>
-	<script type="application/javascript" src="lib/muledump.js"></script>
+	<script type="application/javascript" src="lib/muledump/mule.js"></script>
+	<script type="application/javascript" src="lib/muledump/muledump.js"></script>
 	<script type="application/javascript" src="lib/setuptools/src/analytics.js"></script>
 </head>
-<body>
+<body class="AReduced">
 	<span id="accopts" style="display: none;" class="menu"></span>
 	<div class="handle"><span id="options" class="menu"></span></div>
 	<div id="fix">
@@ -65,5 +69,6 @@
 		<div id="stage"></div>
 		<div id="lightbox"></div>
 	</div>
+	<script type="application/javascript" src="vendor/sodium.sumo.js" async></script>
 </body>
 </html>

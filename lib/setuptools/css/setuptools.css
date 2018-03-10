@@ -960,6 +960,15 @@ div.AccountsList > div.controller.exportAccountsJS:hover,
     width: 384px;
 }
 
+.fl-MuleCrypt .featherlight-content {
+    width: 600px;
+}
+
+.fl-MuleCryptAnimated.featherlight {
+    background: rgba(0, 0, 0, 0.8) url('../../media/mulecrypt-background.svg') !important;
+    transition: background-color 2s ease;
+}
+
 /* other */
 
 .ml5 {
@@ -1093,7 +1102,7 @@ span.tooltip.famebonus.value {
 }
 
 div.tooltip div.bagType {
-    background: url(../../bagTypes.png) #2c2c2c;
+    background: url(../../media/bagTypes.png) #2c2c2c;
     overflow: hidden;
     width: 26px;
     height: 26px;
@@ -1499,4 +1508,12 @@ img.spinner {
     font-weight: bold;
     text-shadow: 1px 1px #000000;
     z-index: 5002;
+}
+
+strong.negative {
+    color: #da281e;
+}
+
+.realmeyeBorder {
+    background-color: #00b0fc;
 }

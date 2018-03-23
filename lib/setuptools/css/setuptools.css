@@ -131,21 +131,24 @@ div.setuptools.app.uploadData {
 
 
 .featherlight-content::-webkit-scrollbar-track,
-.scrollbar::-webkit-scrollbar-track
+.scrollbar::-webkit-scrollbar-track,
+.setuptools.div.menu::-webkit-scrollbar-track
 {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     background-color: #002464;
 }
 
 .featherlight-content::-webkit-scrollbar,
-.scrollbar::-webkit-scrollbar
+.scrollbar::-webkit-scrollbar,
+.setuptools.div.menu::-webkit-scrollbar
 {
     width: 10px;
     background-color: #F5F5F5;
 }
 
 .featherlight-content::-webkit-scrollbar-thumb,
-.scrollbar::-webkit-scrollbar-thumb
+.scrollbar::-webkit-scrollbar-thumb,
+.setuptools.div.menu::-webkit-scrollbar-thumb
 {
     background-color: #254adf;
 
@@ -179,7 +182,6 @@ div.setuptools.app.uploadData {
 .setuptools.app.config.settings select {
     clear: right;
     float: right;
-    height: 24px;
 }
 
 .setuptools.app.save {
@@ -404,6 +406,7 @@ a.setuptools.app.config.settings.action.eraseCache:hover {
 
 .setuptools.div.menu > div:not(.input) {
     padding-left: 10px;
+    padding-right: 10px;
 }
 
 .setuptools.div.menu > div:not(:last-child) {
@@ -431,6 +434,16 @@ a.setuptools.app.config.settings.action.eraseCache:hover {
     padding: 0;
     margin: 0;
     overflow: hidden;
+}
+
+.setuptools.div.menu div.select > select {
+    font-size: 12px;
+    width: 100%;
+    border: #707070 solid 2px;
+    background-color: #333;
+    padding: 3px;
+    color: #ffffff;
+    outline: none;
 }
 
 .setuptools.div.menu div.input > div > div:first-child {
@@ -784,7 +797,7 @@ div.massSwitch > div.link {
     color: #2386ff;
 }
 
-div.AccountsList > div.controller.saveAccounts:hover,
+div.AccountsList > div.controller.saveAccounts:not(.saveNotice):hover,
 div.AccountsList > div.controller.importAccountsJS:hover,
 div.AccountsList > div.controller.exportAccountsJS:hover,
 .menuStyle:hover {
@@ -809,6 +822,17 @@ div.AccountsList > div.controller.exportAccountsJS:hover,
 
 .menuStyle.negative:hover {
     background-color: #3c0e19 !important;
+}
+
+.menuStyle.ack {
+    opacity: 0.9;
+    font-weight: normal;
+    color: #95f8ff;
+    background-color: #25394b;
+}
+
+.menuStyle.ack:hover {
+    background-color: #1d535f !important;
 }
 
 .menuStyle.positive {
@@ -1134,6 +1158,15 @@ img.hidden {
     padding: 5px;
 }
 
+@keyframes savepulse {
+    0% {
+        background-color: #213154;
+    }
+    100% {
+        background-color: #225b7f;
+    }
+}
+
 @keyframes notifypulse {
     0% {
         background-color: #0094ff;
@@ -1205,6 +1238,11 @@ img.hidden {
     animation-direction: alternate;
 }
 
+.savePulse {
+    animation: savepulse 3s infinite;
+    animation-direction: alternate;
+}
+
 .rateLimited:not(.nopulse) {
     animation: rateLimitedPulse 3s infinite;
     animation-direction: alternate;
@@ -1245,7 +1283,8 @@ a.rateLimited:hover {
     text-decoration: none !important;
 }
 
-.mulequeue-topMenu {
+.mulequeue-topMenu,
+.totalsMenu {
     background-color: #2c2c2c !important;
 }
 

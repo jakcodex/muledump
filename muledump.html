@@ -26,6 +26,7 @@
 	<script type="application/javascript" src="lib/muledump/realmapi.js"></script>
 	<script type="application/javascript" src="lib/muledump/options.js"></script>
 	<script type="application/javascript" src="lib/muledump/totals.js"></script>
+	<script type="application/javascript" src="lib/setuptools/src/classes.js"></script>
 	<script type="application/javascript" src="lib/setuptools/src/setuptools.js"></script>
 	<script type="application/javascript" src="lib/setuptools/src/accounts.js"></script>
 	<script type="application/javascript" src="lib/setuptools/src/app.js"></script>
@@ -44,7 +45,7 @@
 	<script type="application/javascript" src="lib/muledump/muledump.js"></script>
 	<script type="application/javascript" src="lib/setuptools/src/analytics.js"></script>
 </head>
-<body class="AReduced">
+<body>
 	<span id="accopts" style="display: none;" class="menu"></span>
 	<div class="handle"><span id="options" class="menu"></span></div>
 	<div id="fix">
@@ -55,6 +56,7 @@
 			<div id="pagesearch" class="searchName full">
 				<input type="text" name="searchName" placeholder="Email or Username">
 			</div>
+			<div id="totalsMenu" style="overflow: hidden;"><div>&#9751;</div><div>Totals</div></div>
 			<div class="handle options"><span>Options</span></div>
 			<div id="setuptools">Setup</div>
 			<div id="mulequeue">MuleQueue</div>
@@ -64,7 +66,7 @@
 		</div>
 	</div>
 	<div id="main">
-		<div id="totals" style="display: none;"></div>
+		<div id="totals" style="display: none;"><div class="noTotals">No matching data found for totals.</div></div>
 		<div id="errors"></div>
 		<div id="stage"></div>
 		<div id="lightbox"></div>

@@ -2,39 +2,60 @@
 
 ### Muledump Settings
 
+#### ```Account Load Delay in Seconds```
+Delay between account load times when contacting Deca servers.
+
 #### ```Characters Displayed per Row```
-The maximum numbers of characters to be displayed in on the webpage per row. 
+The maximum numbers of characters to be displayed in on the webpage per row.
+
+#### ```Display Errors```
+Display error messages when encountered.
 
 #### ```Enable One-click Login```
 Whether or not to enable the support of muledump:// links.
 
-#### ```Price Display in Tooltips```
-Show pricing information on screen.
+#### ```Gift Chests Width````
+Numbers of gift chests to display per row.
+
+#### ```Page Search```
+Format to display page search: Full width, shortened, or off.
+
+#### ```Totals Width```
+Number of items to display per row in totals. Whole screen automatically adjusts to current size of the browser window.
 
 #### ```Use Smart Layout```
 Whether or not to use Masonry to generate the page layout.
-
-#### ```Testing```
-Whether or not you're connecting to the production or testing ROTMG servers.
 
 ### SetupTools Settings
 
 #### ```SetupTools Enabled```
 Whether or not to utilize SetupTools features or fallback on the traditional accounts.js format.
 
-#### ```Account Load Delay in Seconds```
-Delay between account load times when contacting Deca servers. 
-
 Setting this to Automatic will determine the value based on number of enabled accounts.
 
+Muledump Local only
+
+#### ```Accounts Displayed per Page```
+Number of accounts to display per page in UI managers.
+
 #### ```Alert on New Version```
-Whether or not to display a notice on a new version or patch release. *Muledump Online only
+Whether or not to display a notice on a new version or patch release.
 
-#### ```Automatic Daily Backups```
-Automatically create a daily backup of your configuration stored in browser local storage.
+Muledump Online only
 
-#### ```Enable Debug Logging```
-Whether or not to output the debug log to the console.
+#### ```Animations```
+Whether or not to display all animations, reduced animations, or minimal animations.
+
+#### ```Auto Complete for Password Managers```
+When disabled this prevents passwords managers from interfering with username and password fields.
+
+Warning: This setting might get ignored by your browser making the setting useless.
+
+#### ```Automatic Backups```
+Automatically create daily backups of your configuration stored in browser local storage.
+
+#### ```Debug Logging```
+Whether or not to output the debug logs to the browser console.
 
 #### ```Groups Manager Mode```
 Which mode Groups Manager is running in. Possible modes are:
@@ -76,6 +97,9 @@ Displays a reminder to download a backup if a certain period of time has gone by
 Displays an assistant to help resolve CORS problems when they are detected. 
 
 ### System Settings
+
+#### ```Reset Muledump Options```
+Erases current options and resets it to the default Muledump options.
 
 #### ```Erase SetupTools```
 Erases all SetupTools-specific configuration and restores Muledump to its original state.

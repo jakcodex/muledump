@@ -1,6 +1,6 @@
 {
   "name": "Muledump",
-  "version": "9.1.0",
+  "version": "9.2.0",
   "description": "A utility for managing all of your ROTMG mules.",
   "homepage": "https://jakcodex.github.io/muledump/",
   "dependencies": {
@@ -10,7 +10,7 @@
     "featherlight": "git://github.com/noelboss/featherlight.git^1.7.8",
     "html2canvas": "git://github.com/niklasvh/html2canvas.git^1.0.0",
     "libsodium.js": "git://github.com/jedisct1/libsodium.js.git^0.7.3",
-    "seasalt": "git://github.com/jakcodex/seasalt.git^0.0.2",
+    "seasalt": "git://github.com/jakcodex/seasalt.git^0.1.0",
     "jtimer-tools": "git://github.com/jakcodex/jtimer-tools.git^0.1.0"
   },
   "repository": {

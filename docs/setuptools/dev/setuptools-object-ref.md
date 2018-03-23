@@ -1,6 +1,6 @@
 # SetupTools Object Reference
 
-Last Updated: 2018-02-01
+Last Updated: 2018-03-21
 
 SetupTools started off large and will only get larger. This document outlines all the methods and keys found in SetupTools in an effort to make understanding it easier on future development and new devs.
 
@@ -38,7 +38,9 @@ For the method reference, arguments contained in brackets [...] are optional.
 
 <a href="#setuptools.other">setuptools.*</a>
 
-#### Muledump Code Reference
+#### <a href="#muledump.code.reference">Muledump Code Reference</a>
+
+#### <a href="#jquery.event.namespaces">jQuery Event Namespaces</a>
 
 ## <a id="serverstate" href="#"></a>SetupTools State Information - setuptools.state
 
@@ -78,12 +80,27 @@ Whether or not the system has detected we're in preview mode.
 
 An identifier placed in certain local storage keys to identify the specific Muledump fork generating the data.
 
+#### setuptools.config.appspotProd
+`[default: string|https://realmofthemadgodhrd.appspot.com/]`
+
+Full URL for Appspot production server endpoint.
+
+#### setuptools.config.appspotTesting
+`[default: string|https://rotmgtesting.appspot.com/]`
+
+Full URL for Appspot testing server endpoint.
+
 #### setuptools.config.devForcePoint
 `[default: string|empty]`
 
 Used for forcing redirection within code. For example, setuptools.storage.test() listens for devForcePoint='storage-test' and will always force a test failure if present.
 
 Basically, if you want to test alternative paths such as errors and fallbacks, this will let you simulate those events.
+
+#### setuptools.config.encryption
+`[default: boolean|false]`
+
+Whether or not Mulecrypt is enabled.
 
 #### setuptools.config.errorColor
 `[default: string|#ae0000]`
@@ -105,6 +122,26 @@ The function name to assign Google Analytics.
 
 The analytics background ping rate in milliseconds.
 
+#### setuptools.config.giftsWarningThreshold
+`[default: number|6500]`
+
+The number of items in a single gift chest required to trigger the Gift Chests vault bug.
+
+#### setuptools.config.giftChestsBugHelp
+`[default: string|https://github.com/jakcodex/muledump/wiki/Gift+Chests+Bug]`
+
+The URL to link users for explaining the Gift Chests bug.
+
+#### setuptools.config.githubArchive
+`[default: string|https://github.com/jakcodex/muledump/archive/]`
+
+The URL to the Muledump Github archive (for linking release downloads).
+
+#### setuptools.config.githubRawUrl
+`[default: string|https://raw.githubusercontent.com/jakcodex/muledump]`
+
+The URL to the Muledump Github raw archive (for linking single-file downloads).
+
 #### setuptools.config.hostedDomain
 `[default: string|jakcodex.github.io]`
 
@@ -114,6 +151,28 @@ Hostname for Muledump Online
 `[default: string|muledump:setuptools:]`
 
 Prefix used for all local storage objects accessed in SetupTools
+
+#### setuptools.config.mcMinimumEntropy
+`[default: number|6]`
+
+Minimum unique characters in user-provided password.
+
+#### setuptools.config.mcMinimumKeyLength
+`[default: number|12]`
+
+Minimum user-provided password length.
+
+#### setuptools.config.mcMinimumKeyStrength
+`[default: number|2]`
+
+Minimum user-provided password strength.
+
+#### setuptools.config.muledump
+`[default: object]`
+
+An object for storing Muledump-specific feature server configuration data.
+
+This currently consists of a single key. `setuptools.config.muledump.corsAttempts` which determines how many failed preflight requests may occur before triggering CORS Assistant.
 
 #### setuptools.config.mqBGDelay
 `[default: number|1000]`
@@ -140,12 +199,11 @@ Time in milliseconds that a rate limit lasts for.
 
 Time in milliseconds after which mulequeue cache data is considered stale.
 
-#### setuptools.config.muledump
-`[default: object]`
+#### setuptools.config.noEncryptKeys
+`[default: array|['mulecrypt:keychain']]`
 
-An object for storing Muledump-specific feature server configuration data.
+Which storage keys Mulecrypt should not encrypt.
 
-This currently consists of a single key. `setuptools.config.muledump.corsAttempts` which determines how many failed preflight requests may occur before triggering CORS Assistant.
 
 #### setuptools.config.noticesMonitorMaxAge
 `[default: number|60]`
@@ -171,6 +229,16 @@ Minimum number of recommended CPU cores.
 `[default: string|https://github.com/jakcodex/muledump/wiki/Rate-Limiting]`
 
 URL to the Rate Limiting information wiki page.
+
+#### setuptools.config.realmeyeUrl
+`[default: string|https://www.realmeye.com]`
+
+URL to use for linking to Realmeye.
+
+#### setuptools.config.realmeyeOfferIds
+`[default: array]`
+
+An array of item ids of items currently tradable on Realmeye. A better solution will be implemented at a later time.
 
 #### setuptools.config.regex
 A list of RegExp objects used throughout the program
@@ -213,13 +281,13 @@ Whether or not the account assistant is enabled.
 How many seconds to delay between account loads with Deca. Supports two automatic modes which set a time based on number of accounts:
 
 ##### Automatic (Throttled)
-Seconds set to 0 - Targets 25 requests per 10 minutes on the high end.
+Seconds set to 0 - Targets 30 requests per 5 minutes on the high end.
 
 ##### Automatic (Aggressive)
-Seconds set to -1 - Targets 35 requests per 10 minutes on the high end.
+Seconds set to -1 - Targets 50 requests per 5 minutes on the high end.
 
 #### setuptools.data.config.accountsPerPage
-`[default: number|5]`
+`[default: number|10]`
 
 How many accounts to display per page during pagination.
 
@@ -263,6 +331,11 @@ Whether or not to log debugging information to the browser console
 
 Whether or not SetupTools is enabled
 
+#### setuptools.data.config.errors
+`[default: boolean|true]`
+
+Whether or not to display account errors instead of just logging them.
+
 #### setuptools.data.config.ga
 `[default: boolean|false]`
 
@@ -273,25 +346,35 @@ Whether or not Usage Analytics is enabled (Muledump Online only). If disabled, a
 
 Whether or not to participate in Usage Analytics error reporting.
 
-#### setuptools.data.config.gaPing
-`[default: boolean|true]`
-
-Whether or not to participate in Usage Analytics background ping.
-
 #### setuptools.data.config.gaOptions
 `[default: boolean|true]`
 
 Whether or not to participate in Usage Analytics feature usage reporting.
+
+#### setuptools.data.config.gaPing
+`[default: boolean|true]`
+
+Whether or not to participate in Usage Analytics background ping.
 
 #### setuptools.data.config.gaTotals
 `[default: boolean|true]`
 
 Whether or not to participate in Usage Analytics totals usage reporting.
 
+#### setuptools.data.config.giftChestWidth
+`[default: number|0]`
+
+Number of gift chests to display per row. If set to zero it will match the row length.
+
 #### setuptools.data.config.groupsMergeMode
 `[default: number|1]`
 
 How to merge accounts configured in the groups manager (0=off, 1=parallel, 2=serial).
+
+#### setuptools.data.config.loginOnlyTotals
+`[default: boolean|true]`
+
+Whether or not accounts marked loginOnly count towards displayed totals.
 
 #### setuptools.data.config.longpress
 `[default: number|1000]`
@@ -405,25 +488,40 @@ setuptools.data.accounts = {
 }
 ```
 
-##### setuptools.data.accounts.accounts[guid].enabled
-`[default: boolean|true]`
-
-Whether or not the specified account is enabled.
-
-##### setuptools.data.accounts.accounts[guid].loginOnly
+##### setuptools.data.accounts.accounts[guid].autoReload
 `[default: boolean|false]`
 
-Accounts marked as login only will connect to Deca to reload account data but will not display in Muledump.
+Accounts marked as auto reload will reload account data whose cache is determined to be too old.
+
+##### setuptools.data.accounts.accounts[guid].banned
+`[default: boolean|false]`
+
+Whether or not the specified account is detected as being banned.
 
 ##### setuptools.data.accounts.accounts[guid].cacheEnabled
 `[default: boolean|true]`
 
 Disabling the data cache forces an account to reload its account data every time Muledump is ran.
 
-##### setuptools.data.accounts.accounts[guid].autoReload
+##### setuptools.data.accounts.accounts[guid].enabled
+`[default: boolean|true]`
+
+Whether or not the specified account is enabled.
+
+##### setuptools.data.accounts.accounts[guid].giftBugsAck
 `[default: boolean|false]`
 
-Accounts marked as auto reload will reload account data whose cache is determined to be too old.
+Whether or not the user has acknowledged a detected gift chests bug event.
+
+##### setuptools.data.accounts.accounts[guid].loginOnly
+`[default: boolean|false]`
+
+Accounts marked as login only will connect to Deca to reload account data but will not display in Muledump.
+
+##### setuptools.data.accounts.accounts[guid].testing
+`[default: boolean|false]`
+
+Whether or not the account connects to the testing server endpoint.
 
 #### Converting Formats
 
@@ -1060,7 +1158,7 @@ Performs all SetupTools client configuration upgrades necessary to bring the use
 #### setuptools.originalAccountsJS
 If an accounts.js file was successfully loaded into Muledump then the accounts var is cloned here; otherwise, its value is false.
 
-## Muledump Code Reference
+## <a id="muledump.code.reference" href="#"></a>Muledump Code Reference
 
 #### setuptools.app.muledump.chsortcustomDedupAndValidate(string CustomList, object mule)
 
@@ -1069,3 +1167,191 @@ Process a CustomList and validate its char ids against the Mule's char id list.
 #### setuptools.app.muledump.chsortcustom(object mule)
 
 Displays a page for management custom character sorting lists.
+
+## <a id="jquery.event.namespaces" href="#"></a>jQuery Event Namespaces
+
+Event namespaces are used to allow multiple identical events to be bound to the same elements.
+
+The following is a basic list of event namespaces and their associated selectors.
+
+This list is presently not exhaustive and not all event handlers have been converted to use namespaces yet.
+
+### lib/muledump/muledump.js Events
+
+#### click.muledump.itemFilter
+```js
+$('body')
+```
+
+#### click.muledump.guidFilter
+```js
+$('body')
+```
+
+#### click.muledump.totalsMenu
+```js
+$('#totalsMenu')
+```
+
+#### mouseover.muledump.totalsMenu
+```js
+$('#totalsMenu')
+```
+
+#### click.muledump.mulequeue
+```js
+$('#mulequeue')
+```
+
+#### mouseover.muledump.mulequeue
+```js
+$('#mulequeue')
+```
+
+#### click.muledump.about
+```js
+$('#about')
+```
+
+#### click.muledump.aboutdocs
+```js
+$('.drawhelp.docs')
+```
+
+### lib/muledump/export.js Events
+
+#### click.muledump.exportMenu
+```js
+$('#export')
+```
+
+### lib/muledump/mule.js Events
+
+#### click.muledump.reloader
+```js
+$('.button.reloader')
+```
+
+#### click.muledump.mulemenu
+```js
+$('.button.muleMenu')
+```
+
+#### contextmenu.muledump.mulemenu
+```js
+$('div.mule > div.name')
+$('.mule')
+```
+
+#### click.muledump.errorAck
+```js
+$('div.mule[data-guid="guid"] > div.setuptools.link.errorAck')
+```
+
+#### click.muledump.muleAccountName
+```js
+$('div.mule[data-guid="guid"] > div.name')
+```
+
+#### mouseenter.muledump.boostTooltip
+```js
+$('div.boost')
+```
+
+#### mouseleave.muledump.boostTooltip
+```js
+$('div.boost')
+```
+
+### lib/muledump/options.js Events
+
+#### change.muledump.options
+```js
+$('div#options input');
+```
+
+#### change.muledump.options.radio
+```js
+$('div#options input');
+```
+
+#### change.muledump.options.radioContainer
+```js
+$('div#options input');
+```
+
+#### mouseenter.muledump.options.accopts
+```js
+$('#accopts')
+```
+
+#### mouseleave.muledump.options.accopts
+```js
+$('#accopts')
+```
+
+#### mouseenter.options.display
+```js
+$('#options')
+```
+
+#### mouseleave.options.display
+```js
+$('#options')
+```
+
+#### mouseenter.options.menuButton
+```js
+$('.handle.options')
+```
+
+#### mouseleave.options.menuButton
+```js
+$('.handle.options')
+```
+
+### lib/setuptools/src/setuptools.js Events
+
+#### mouseover.muledump.mainMenu
+```js
+$('#top > div:not(.notice)')
+```
+
+#### mouseenter.muledump.mainMenu
+```js
+$('#top > div:not(.handle.options)')
+```
+
+#### resize.muledump.totalsWidth
+```js
+$('window')
+```
+
+#### click.muledump.clickTrack
+```js
+$('document')
+```
+
+#### keydown.muledump.keydownTrack
+```js
+$('document')
+```
+
+#### keyup.muledump.keyupTrack
+```js
+$('document')
+```
+
+#### click.setuptools.corsAssistant
+```js
+$('.setuptools.link.cors')
+```
+
+#### click.setuptools.menuButton
+```js
+$('#setuptools')
+```
+
+### `lib/setuptools/src/accounts.js` Events
+
+

@@ -54,7 +54,7 @@ All released versions are available for download [here](https://github.com/jakco
 - MuleQueue - Task queuing to control the flow of requests from Muledump
 - Vault display is now fully customizable and comes with four pre-defined layouts
 - Full character skin and dye support in portraits
-- Totals filtering on fame bonus, feed power, soulbound, ut, and st
+- Totals filtering on fame bonus, feed power, soulbound, ut, and st, and specified accounts
 - Character Sorting by fame, exp, total fame, class, active time, maxed stats, and custom lists
 - Character Lists allow you to create custom Muledump account layouts showing only characters you specify 
 - Exporting works with the following modes: text, csv, json, image, imgur
@@ -65,6 +65,8 @@ All released versions are available for download [here](https://github.com/jakco
 - click on item to filter accounts that hold it
 - click on account name for individual options menu
 - ctrl-click account name to temporarily hide it from totals
+- ctrl-click on an item to open its Realmeye menu
+- ctrl-click on two items to open the Realmeye Trading menu
 - logins thru muledump count towards daily login calendar
 - account settings include automatic reload, login-only (daily calendar only), and cache disable
 - right click anywhere on a mule to access the mule menu

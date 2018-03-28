@@ -1,3 +1,13 @@
+**2018-04-??** version 9.3.0
+
+- New Features
+  * Totals can be displayed with items disabled on mules (#169)
+  * Totals in global mode can find accounts with specific items
+  * White Bag tracker in progress (#168)
+
+- Improvements
+  * Calculation of totals data is now cached to reduce cpu usage (#127)
+
 **2018-03-22** version 9.2.0
 
 - Bug Fixes

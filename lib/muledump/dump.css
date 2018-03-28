@@ -623,3 +623,59 @@ div.noTotals {
     display: none;
     padding: 5px 0;
 }
+
+div#whitebagTracker {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+div#whitebagTracker:empty {
+    display: none;
+}
+
+div#whitebagTracker > div.wbstage {
+    display: flex;
+    margin: 10px 0 10px 25px;
+    background-color: #333;
+    box-shadow: 2px 2px 8px #111;
+    width: 528px;
+    padding: 5px;
+    flex-wrap: wrap;
+}
+
+div#whitebagTracker > div.wbstage > div {
+    width: 100%;
+}
+
+div#whitebagTracker > div.wbstage > div:not(.items) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div#whitebagTracker > div.wbstage > div:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+div#whitebagTracker > div.wbstage > div.header {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+div#whitebagTracker > div.wbstage > div.header:not(:first-child) {
+    font-size: 14px;
+}
+
+/*.item.wb.selected {
+    background-color: #bcfff1;
+    outline: 2px solid #dcf7fe;
+    outline-offset: -1px;
+}*/
+
+.item.wb.have {
+    background-color: #51fcff;
+    outline: 2px solid #8de2e8;
+    outline-offset: -1px;
+}

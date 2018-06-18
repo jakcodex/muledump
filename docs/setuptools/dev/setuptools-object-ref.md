@@ -90,12 +90,27 @@ Full URL for Appspot production server endpoint.
 
 Full URL for Appspot testing server endpoint.
 
+#### setuptools.config.backupAssistantDelay
+`[default: number|30000]`
+
+Delay before Backup Assistant will popup on screen.
+
+#### setuptools.config.defaultSlotOrder
+`[default: object|...]`
+
+Default order of item group IDs when displaying totals.
+
 #### setuptools.config.devForcePoint
 `[default: string|empty]`
 
 Used for forcing redirection within code. For example, setuptools.storage.test() listens for devForcePoint='storage-test' and will always force a test failure if present.
 
 Basically, if you want to test alternative paths such as errors and fallbacks, this will let you simulate those events.
+
+#### setuptools.config.disqualifiedItemIds
+`[default: array|...]`
+
+List of item IDs that are disqualified from Muledump.
 
 #### setuptools.config.encryption
 `[default: boolean|false]`
@@ -142,15 +157,30 @@ The URL to the Muledump Github archive (for linking release downloads).
 
 The URL to the Muledump Github raw archive (for linking single-file downloads).
 
+#### setuptools.config.goHomeSkip
+`[default: array|...]`
+
+A list of lightbox pages which will not have the goHome button drawn.
+
 #### setuptools.config.hostedDomain
 `[default: string|jakcodex.github.io]`
 
-Hostname for Muledump Online
+Hostname for Muledump Online.
+
+#### setuptools.config.httpErrorHelp
+`[default: string|https://github.com/jakcodex/muledump/wiki/Frequently+Asked+Questions#http-error-was-returned-by-rotmg-servers]`
+
+The URL for help regarding generic HTTP errors received by RealmAPI.
 
 #### setuptools.config.keyPrefix
 `[default: string|muledump:setuptools:]`
 
 Prefix used for all local storage objects accessed in SetupTools
+
+#### setuptools.config.masonryOptions
+`[default: object|...]`
+
+Masonry configuration options.
 
 #### setuptools.config.mcMinimumEntropy
 `[default: number|6]`
@@ -230,6 +260,11 @@ Minimum number of recommended CPU cores.
 
 URL to the Rate Limiting information wiki page.
 
+#### setuptools.config.realmApiParams
+`[default: object|...]`
+
+Default request parameters added to all RealmAPI requests.
+
 #### setuptools.config.realmeyeUrl
 `[default: string|https://www.realmeye.com]`
 
@@ -248,10 +283,30 @@ A list of RegExp objects used throughout the program
 
 How many seconds to wait before triggering automatic window reloads
 
+#### setuptools.config.totalsDefaultIcon
+`[default: array|[880, 40]]`
+
+Default icon position for Totals Settings Manager - Item Group Sorting menu.
+
 #### setuptools.config.totalsItemWidth
 `[default: number|0]`
 
 Width of each item in the totals block.
+
+#### setuptools.config.totalsFilterKeysIndex
+`[default: number|9]`
+
+Position on setuptools.config.totalsSaveKeys where totalsFilter keys begins (typically setuptools.config.totalsSaveKeys.length)
+
+#### setuptools.config.totalsSaveKeys
+`[default: array|...]`
+
+List of primary totals options keys (sbfilter, stfilter, fpfilter, fbfilter, etc).
+
+#### setuptools.config.totalsKeyObjects
+`[default: object|...]`
+
+List of default values for various totals configuration keys.
 
 #### setuptools.config.updatecheckTTL
 `[default: number|600000]`
@@ -267,6 +322,16 @@ The Github API URL for accessing Muledump repo tags.
 `[default: string|https://jakcodex.github.io/muledump]`
 
 URL for Muledump Online
+
+#### setuptools.config.vstIndex
+`[default: number|10]`
+
+Index on constants data identifying the item group number.
+
+#### setuptools.config.wikiUrl
+`[default: string|https://github.com/jakcodex/muledump/wiki]`
+
+The URL to the Github wiki.
 
 ## <a id="clientconfigkeys" href="#"></a>Client Configuration Keys - setuptools.data.config
 
@@ -371,15 +436,25 @@ Number of gift chests to display per row. If set to zero it will match the row l
 
 How to merge accounts configured in the groups manager (0=off, 1=parallel, 2=serial).
 
-#### setuptools.data.config.loginOnlyTotals
-`[default: boolean|true]`
+#### setuptools.data.config.hideHeaderText
+`[default: boolean|false]`
 
-Whether or not accounts marked loginOnly count towards displayed totals.
+Whether or not to hide the Muledump product information from the top bar.
+
+#### setuptools.data.config.lazySave
+`[default: number|10000]`
+
+The time in miliseconds between lazySave cycles.
 
 #### setuptools.data.config.longpress
 `[default: number|1000]`
 
 How long a long left click must last to register as a longpress.
+
+#### setuptools.data.config.lowStorageSpace
+`[default: boolean|true]`
+
+Whether or not to display a notice when low storage space is detected.
 
 #### setuptools.data.config.maximumBackupCount
 `[default: number|10]`
@@ -411,6 +486,11 @@ Maximum number of MuleQueue history records to keep.
 
 Whether or not one-click login is enabled
 
+#### setuptools.data.config.muleMenu
+`[default: boolean|true]`
+
+Whether or not to display the Mule Menu icon in the UI.
+
 #### setuptools.data.config.nomasonry
 `[default: number|0]`
 
@@ -430,11 +510,6 @@ Whether or not to prevent browser automatic, no-confirm downloads (dangerous giv
 `[default: number|7]`
 
 Number of items to display in a single row in Muledump (combo of chars+accounts)
-
-#### setuptools.data.config.testing
-`[default: number|0]`
-
-Whether to use the testing server instead of production
 
 #### setuptools.data.config.tooltip
 `[default: number|500]`

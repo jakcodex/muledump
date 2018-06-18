@@ -9,7 +9,7 @@ The email or ID (such as steamworks) for this account.
 
 Steam users can go to the [Steam Users Setup Guide](https://github.com/jakcodex/muledump/wiki/Steam-Users-Setup-Guide) for help locating their account information.
 
-### Account Options
+## Account Options
 
 #### ```Reveal Password```
 [default: disabled]
@@ -37,11 +37,11 @@ Download the account data stored on your browser for this account.
 #### ```Copy to Clipboard```
 Copy the account id to your clipboard.
 
-### Mass Switch
+## Mass Switch
 All account settings can be mass enabled or disabled using the Mass Switch menu icon left of the Next Page button.
 
-### Import Accounts.js
+## Import Accounts.js
 Upload an accounts.js and add any unknown accounts from it to the Accounts Manager.
 
-### Export Accounts.js
+## Export Accounts.js
 Generates an accounts.js from your Muledump configuration

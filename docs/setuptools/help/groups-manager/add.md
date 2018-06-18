@@ -1,4 +1,4 @@
-## Create Group
+# Create Group
 
 #### ```Group Name```
 

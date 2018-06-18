@@ -33,16 +33,20 @@ The following types of information can be collected by Usage Analytics:
 1. Pageviews for all pages within the application
 2. The types and locations of errors encountered
 3. The options and features in use
-4. Total number of accounts and groups configured
+4. Account rank
 
 ## What information is *not* collected by Jakcodex/Muledump
 
 1. Your IP address
 2. Your account information (email addresses, guids, passwords, etc)
-3. Your system information
+3. Your identifying system information
 
 ## How collected information is stored
 
 Usage Analytics utilizes the Google Analytics service for tracking website activity. The information collected by Google Analytics and how it is used can be found in their [Terms of Service](https://www.google.com/analytics/terms/us.html).
 
 All collected information is processed and anonymized. Once available for display it cannot be used to identify you.
+
+#### Google Analytics Opt-Out
+
+Google Analytics provides a tool to opt-out of some or all of their analytics tracking. Visit [GA Opt-Out](https://tools.google.com/dlpage/gaoptout/) for more information.

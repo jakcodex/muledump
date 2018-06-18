@@ -4,7 +4,7 @@
 
 ## Welcome
 
-This is a fork of Atomizer's [Muledump](https://github.com/atomizer) made to address the required changes since the most recent upstream release.
+This is a fork of Atomizer's [Muledump](https://github.com/atomizer) continuing the project into a new age.
 
 You can read about the reasoning for a new fork in the [upstream notes](UPSTREAM.md).
 
@@ -54,7 +54,7 @@ All released versions are available for download [here](https://github.com/jakco
 - MuleQueue - Task queuing to control the flow of requests from Muledump
 - Vault display is now fully customizable and comes with four pre-defined layouts
 - Full character skin and dye support in portraits
-- Totals filtering on fame bonus, feed power, soulbound, ut, and st, and specified accounts
+- Totals filtering on fame bonus, feed power, soulbound, tradeable, ut, and st, and specified accounts
 - Character Sorting by fame, exp, total fame, class, active time, maxed stats, and custom lists
 - Character Lists allow you to create custom Muledump account layouts showing only characters you specify 
 - Exporting works with the following modes: text, csv, json, image, imgur
@@ -71,6 +71,7 @@ All released versions are available for download [here](https://github.com/jakco
 - account settings include automatic reload, login-only (daily calendar only), and cache disable
 - right click anywhere on a mule to access the mule menu
 - active mulequeue can be resumed if muledump is closed
+- See a full list of available actions at the [Keyboard and Mouse Controls](https://github.com/jakcodex/muledump/wiki/Keyboard-and-Mouse-Controls) wiki
 
 ## Check out the [Frequently Asked Questions](https://github.com/jakcodex/muledump/wiki/Frequently-Asked-Questions) and explore the [wiki](https://github.com/jakcodex/muledump/wiki) for more information!
 

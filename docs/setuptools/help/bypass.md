@@ -1,4 +1,4 @@
-## Bypass Mode
+# Bypass Mode
 
 SetupTools is installed and configured but currently disabled. Furthermore, no account data was located in any accounts.js file.
 

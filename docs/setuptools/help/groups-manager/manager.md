@@ -1,6 +1,16 @@
-## Groups Manager
+# Groups Manager
 
-### Available Actions
+[Available Actions](#aa)
+
+[Existing Groups Manager](#egm)
+
+[Group Menu](#gm)
+
+[Selection Menu](#sm)
+
+[Group Editor](#ge)
+
+## <a href="#" id="aa"></a>Available Actions
 
 #### ```Create Group```
 
@@ -14,7 +24,7 @@ Enable all groups.
 
 Disable all groups.
 
-### Existing Groups Manager
+## <a href="#" id="egm"></a>Existing Groups Manager
 
 Left click a group to select it.
 
@@ -28,7 +38,7 @@ Right click to open group menu.
 
 Groups can be sorted in order of priority (highest priority is farthest to the left). They can be moved left or right one spot, or to the start or end of the list.
 
-### Group Menu
+## <a href="#" id="gm"></a>Group Menu
 
 #### ```Edit```
 
@@ -74,7 +84,7 @@ Merge two or more selected groups into a new group.
 
 Delete selected groups.
 
-### Selection Menu
+## <a href="#" id="sm"></a>Selection Menu
 
 #### ```Select All```
 
@@ -92,7 +102,7 @@ Select all enabled groups.
 
 Select all disabled groups.
 
-## Group Editor
+## <a href="#" id="ge"></a>Group Editor
 
 The Group Editor consists of two columns: Available Accounts and Group Members. Columns are paginated to make navigation of accounts easier.
 

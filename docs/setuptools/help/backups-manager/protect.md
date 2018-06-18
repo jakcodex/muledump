@@ -1,4 +1,4 @@
-## Backup Protection
+# Backup Protection
 
 Protecting a backup marks it as not deletable. The automatic backup cleanup policy does not consider protected backups.
 

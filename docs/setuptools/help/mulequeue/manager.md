@@ -6,7 +6,7 @@ Each task has a countdown timer telling you how long you will need to wait for i
 
 If you reload Muledump while in the middle of a queue it will resume where it left off.
 
-### Task Menu
+## Task Menu
 
 #### ```Run Task Immediately```
 

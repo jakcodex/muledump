@@ -1,4 +1,4 @@
-## New User Setup
+# New User Setup
 
 #### No Errors
 

@@ -1,4 +1,4 @@
-## Merge Groups
+# Merge Groups
 
 Merge two or more groups into a new group. Maintains account ordering and deduplicates merged accounts.
 

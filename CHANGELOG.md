@@ -1,12 +1,43 @@
-**2018-04-??** version 9.3.0
+**2018-06-18** version 9.3.0
+
+- Bug Fixes
+  * toggle_filter does not work when type is off globally but on locally (#179)
+  * Mules sometimes overlap when the layout changes (#187)
+  * About page opens when update check fails (#200)
 
 - New Features
-  * Totals can be displayed with items disabled on mules (#169)
-  * Totals in global mode can find accounts with specific items
-  * White Bag tracker in progress (#168)
+  * Global Totals added to display items even when disabled on mules (#169)
+  * Items can be permanently hidden from display in totals (#172)
+  * Massively expanded totals filtering options (#174)
+  * Named totals configurations can be named and switched between (#178)
+  * Customize sort order of items (#186)
+  * Customize sort order of item groups (#188)
+  * Sorting Mode options: feed power, fame bonus, alphabetical, standard (#192)
+  * Added new Standard Filter for Non-Soulbound Items (#202)
+  * Alert users when localStorage problems are detected (#208)
+  * Disabled mules state now persists on reload (#213)
+  * Added screenshot menu to generate a variety of Muledump screenshots (#215)
 
 - Improvements
   * Calculation of totals data is now cached to reduce cpu usage (#127)
+  * Client configuration lazy saving option added (#173)
+  * Account Filter list added to Totals Settings Status UI (#175)
+  * Item groups now identified better with virtualSlotType (#176)
+  * Added Total Living Death Fame and All Time Account Fame to Account Info (#180, #181)
+  * Account errors do not display for users with no data cache (#183)
+  * RealmAPI HTTP errors now properly reported (#184)
+  * Totals can be reinitialized to accept new sorting orders (#191)
+  * Mule Menu button can be hidden (#193)
+  * Quick access context menu added to body (#195)
+  * Backup Assistant is delayed to prevent hiding of startup errors (#203)
+  * Selected gift items more easily recognizable in display (#206)
+  * Added Help Menu (#209)
+
+- Diagnostics tools added for localStorage (#207)
+- Renders updated to X26.1.0
+- Shift+Click mechanics now prevent random text selection
+- Product name and version added to top bar with setting to hide it
+- Various styling improvements
 
 **2018-03-22** version 9.2.0
 
@@ -201,7 +232,7 @@
 **2017-10-29** version 0.8.1-7
 
 - Updated renders/constants (does not include Halloween update)
-``
+
 **2017-10-12** version 0.8.1-6
 
 - Bug Fixes

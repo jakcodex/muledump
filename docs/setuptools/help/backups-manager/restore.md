@@ -1,4 +1,4 @@
-## Backup Restore
+# Backup Restore
 
 Restoring a backup replaces the current configuration with the backup configuration.
 

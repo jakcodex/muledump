@@ -1,8 +1,8 @@
-## Backup Manager
+# Backup Manager
 
 Backups are important for quickly getting setup with Muledump again in the future.
 
-### Available Actions
+## Available Actions
 
 #### ```Create New Backup```
 Creates a new stored backup and generates a download link for you. Automatic backup cleanup policy applies.

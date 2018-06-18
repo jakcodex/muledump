@@ -1,4 +1,4 @@
-## Backup Upload
+# Backup Upload
 
 If you want to restore a previously downloaded backup then you can upload it using this tool.
 

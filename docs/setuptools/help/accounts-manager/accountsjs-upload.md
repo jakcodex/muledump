@@ -1,4 +1,4 @@
-## Accounts.js Upload
+# Accounts.js Upload
 
 You can upload and import one or many accounts.js files. Their contents can be merged into your existing accounts or replace it entirely.
 

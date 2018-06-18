@@ -12,12 +12,12 @@ a.red {
 
 a.red:hover {
     letter-spacing: 1px;
-    color: #0094ff !important;
+    color: #5aaeff !important;
     text-decoration: underline !important;
 }
 
 a.setuptools:hover {
-    color: #0094ff !important;
+    color: #5aaeff !important;
 }
 
 a.setuptools:not(.save):hover {
@@ -135,7 +135,7 @@ div.setuptools.app.uploadData {
 .setuptools.div.menu::-webkit-scrollbar-track
 {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    background-color: #002464;
+    background: rgb(44, 74, 96);
 }
 
 .featherlight-content::-webkit-scrollbar,
@@ -143,6 +143,7 @@ div.setuptools.app.uploadData {
 .setuptools.div.menu::-webkit-scrollbar
 {
     width: 10px;
+    height: 10px;
     background-color: #F5F5F5;
 }
 
@@ -150,8 +151,7 @@ div.setuptools.app.uploadData {
 .scrollbar::-webkit-scrollbar-thumb,
 .setuptools.div.menu::-webkit-scrollbar-thumb
 {
-    background-color: #254adf;
-
+    background: rgb(59, 134, 180);
 }
 
 .setuptools.app.config.settings:not(a) {
@@ -388,7 +388,7 @@ a.setuptools.app.config.settings.action.eraseCache:hover {
     box-shadow: #111 0 0 1px 4px;
 }
 
-.setuptools.header.noselect {
+.setuptools.header {
     background-color: #222;
 }
 
@@ -398,6 +398,25 @@ a.setuptools.app.config.settings.action.eraseCache:hover {
     width: 100%;
     box-sizing: border-box;
     padding: 7px;
+}
+
+.smallMenuCells > div {
+    padding: 5px !important;
+}
+
+.smallMenuCells > div.header:not(.noselect):hover {
+    background-color: #383838 !important;
+}
+
+.smallMenuCells div:hover,
+.smallMenuCells div:hover > a {
+    color: #56a7ff !important;
+    text-decoration: none !important;
+    transition-duration: 0.5s;
+}
+
+.smallMenuCells div:hover > a:hover {
+    text-decoration: none !important;
 }
 
 .setuptools.div.menu > div:not(.noselect) {
@@ -784,6 +803,7 @@ div.massSwitch > div.link {
     background-color: #12182b;
     border: #000 solid 2px;
     margin-right: 5px;
+    transition: 0.3s linear;
 }
 
 .formStyle {
@@ -845,8 +865,8 @@ div.AccountsList > div.controller.exportAccountsJS:hover,
 }
 
 .menuStyle.disabled {
-    color: #65676a;
-    background-color: #37393d;
+    color: #65676a !important;
+    background-color: #37393d !important;
 }
 
 .menuStyle.disabled:hover {
@@ -948,6 +968,10 @@ div.AccountsList > div.controller.exportAccountsJS:hover,
     width: 370px;
 }
 
+.fl-Totals .featherlight-content {
+    width: 810px;
+}
+
 .fl-IndexCentered .featherlight-content {
     width: 370px;
     text-align: center;
@@ -1035,6 +1059,10 @@ div.AccountsList > div.controller.exportAccountsJS:hover,
     height: 100%;
 }
 
+.p5 {
+    padding: 5px;
+}
+
 input[type="checkbox"] {
     width: auto;
 }
@@ -1076,9 +1104,9 @@ input[type="checkbox"] {
     margin-right: 0 !important;
 }
 
-.dragbox div.selected, .selected {
-    background-color: #040f51;
-    color: #22b7da;
+.dragbox div.selected, .selected:not(.item) {
+    background-color: #040f51 !important;
+    color: #22b7da !important;
 }
 
 div.tooltip {
@@ -1089,6 +1117,11 @@ div.tooltip {
     text-align: left;
     background-color: #2c2c2c;
     height: 36px;
+}
+
+.hiddenItemsTooltip,
+.itemSubsortingTooltip {
+    z-index: 9999999999 !important;
 }
 
 div.tooltip > div:not(.ignore) {
@@ -1150,6 +1183,11 @@ img.boost {
 
 img.hidden {
     display: none;
+}
+
+.tooltip-textiles {
+    height: auto !important;
+    padding: 5px;
 }
 
 .tooltip-boost {
@@ -1553,6 +1591,130 @@ strong.negative {
     color: #da281e;
 }
 
+strong.info {
+    color: #af23da;
+}
+
 .realmeyeBorder {
     background-color: #00b0fc;
+}
+
+#itemSubsortingBox {
+    max-height: 440px;
+    overflow-y: scroll;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#itemSubsortingBox > div {
+    transition: 0.3s linear;
+    cursor: pointer;
+}
+
+#itemSubsortingBox > div:hover {
+    background-color: #3e6a7d;
+}
+
+#itemSlotTypeSorting {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+#itemSlotTypeSorting > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 135px;
+    height: 44px;
+    padding: 10px;
+    margin: 10px 5px 5px 5px;
+    background-color: #333;
+    border: #000000 solid 1px;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+.mule.filteringEnabled,
+.itemSlotTypeSorting.enabled {
+    border: #00eaff solid 1px !important;
+}
+
+.dragging,
+.dragging:hover {
+    background-color: #3a7078 !important;
+}
+
+.dragging.bright,
+.dragging.bright:hover {
+    background-color: #4b879b !important;
+}
+
+#itemSlotTypeSorting > div:active,
+#itemSlotTypeSorting > div:hover {
+    background-color: #3d4f55;
+}
+
+.expansion {
+    cursor: pointer;
+}
+
+.expansion:hover {
+    color: #00ceff;
+}
+
+#accountFilterList {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#accountFilterList > div {
+    display: flex;
+    justify-content: center;
+    margin: 5px 5px 0 0;
+    padding: 5px;
+    border: #000000 solid 1px;
+    background-color: #333;
+    transition: 0.3s linear;
+}
+
+#accountFilterList > div:hover {
+    background-color: #3d4f55;
+    cursor: pointer;
+}
+
+#hiddenItems:empty {
+    height: 0 !important;
+    overflow: hidden !important;
+}
+
+#drawhelpBox h2 {
+    border-bottom: 1px solid #ffffff;
+}
+
+#drawhelpBox h3 {
+    color: #90ccff;
+    background-color: #333;
+}
+
+#drawhelpBox h4 {
+    color: #90ccff;
+}
+
+
+.systemsReport > div:first-child {
+    width: 60%;
+}
+
+.systemsReport > div:last-child {
+    width: 40%;
+    text-align: right;
+}
+
+div.systemsReport:nth-child(even) > div {
+    background-color: #111;
+}
+
+div.systemsReport:nth-child(odd) > div {
+    color: #90ccff;
 }

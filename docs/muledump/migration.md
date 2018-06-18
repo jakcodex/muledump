@@ -1,4 +1,4 @@
-## Account Migration
+# Account Migration
 
 Realm accounts that haven't been migrated need to in order to work.
 

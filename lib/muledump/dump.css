@@ -37,6 +37,7 @@ body {
     background-color: #424242;
     box-shadow: 2px 2px 8px #111;
     border: none;
+    letter-spacing: 0.02em;
 }
 
 #top > a {
@@ -104,7 +105,7 @@ body {
 #totals, .mule, .guid, .reload, .item { display: inline-block; }
 
 #totals {
-    margin: 10px 0 10px 25px    ;
+    margin: 10px 3px;
     display: block;
     border: solid 2px #555;
     line-height: 0;
@@ -176,9 +177,10 @@ body {
     background-color: #545454;
     cursor: pointer;
     overflow: hidden;
-    margin: 4px 2px;
+    margin: 2px;
     text-decoration: none;
 }
+
 
 .portrait {
     float: left;
@@ -340,6 +342,7 @@ hr {
 .mule.disabled { opacity: 0.5; }
 
 .mule > table {
+    background-color: #333;
     margin: 0;
     padding: 2px;
     border-spacing: 0;
@@ -349,10 +352,15 @@ td.cont {
     vertical-align: top;
     text-align: center;
     padding: 0;
+    background-color: #333;
 }
 td.cont > div {
     text-align: left;
     display: inline-block;
+}
+
+table.chars {
+    background-color: #333;
 }
 
 .gifts .itemsc {
@@ -366,6 +374,11 @@ td.cont > div {
     background-color: #daa520;
 }
 
+.itemsc.gifts .item.selected {
+    outline: 2px solid #ffffff !important;
+    background-color: #f6ff50;
+}
+
 /* stars */
 .scont {
     background-color: #222;
@@ -374,7 +387,7 @@ td.cont > div {
     padding: 1px 1px 1px 4px;
     font-weight: normal;
     font-size: 14px;
-    margin: 4px 2px;
+    margin: 2px;
 }
 .scont .star {
     font-size: 1.2em;
@@ -436,7 +449,8 @@ td.cont > div {
 /*Curlip*/
 
 #stage, #errors {
-    margin: 5px 22px;
+    margin: 10px 0;
+    background-color: #212121;
 }
 
 #errors > div {
@@ -451,6 +465,7 @@ td.cont > div {
 
 #main {
     margin: 10px;
+    background-color: #212121;
 }
 
 .mule:not(.setuptools),
@@ -491,7 +506,7 @@ td.cont > div {
     font: 14px Arial,sans-serif;
     text-align: center;
     color: #EEE;
-    background-color: #2196F3;
+    background-color: #3b86b4;
 }
 
 #top {
@@ -559,11 +574,10 @@ td.cont > div {
 }
 
 div.mule > div.stats {
-    max-width: 250px;
+    width: 250px;
     margin: 0 1px 1px 1px;
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
     justify-content: space-between !important;
 }
 
@@ -586,37 +600,7 @@ div.mule > div.stats > div.flex-container:nth-child(even) {
 
 div.mule > div.stats > div.flex-container:nth-child(odd) {
     color: #90ccff;
-}
-
-div#totalsMenu {
-    display: flex !important;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer !important;
-    padding: 2px 2px 1px 3px !important;
-}
-
-div#totalsMenu:hover {
-    box-shadow: #ffffff 0 0 1px 1px;
-}
-
-div#totalsMenu:hover > div:first-child {
-    box-shadow: #00ceff 0 0 1px 1px;
-}
-
-div#totalsMenu > div:first-child {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: #00ceff 0 0 1px 1px;
-    width: 16px;
-    height: 15px;
-    margin-top: -1px;
-}
-
-div#totalsMenu > div:last-child {
-    margin-left: 5px;
-    letter-spacing: 1px;
+    background-color: #333;
 }
 
 div.noTotals {

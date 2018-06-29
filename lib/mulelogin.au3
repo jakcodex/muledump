@@ -134,7 +134,7 @@ FileClose($search)
 ;;
 
 ; run one-click login thru the browser
-ShellExecute("https://realmofthemadgodhrd.appspot.com/")
+ShellExecute("https://www.realmofthemadgod.com/")
 
 ;;
 ; replace the line above with one of the following if you're using a projector
@@ -143,7 +143,7 @@ ShellExecute("https://realmofthemadgodhrd.appspot.com/")
 ; run one-click login thru flash projector
 ; update the path to your flash projector exe
 ; https://www.adobe.com/support/flashplayer/debug_downloads.html
-;ShellExecute('C:\flashplayer_28_sa.exe', 'https://realmofthemadgodhrd.appspot.com/AssembleeGameClient'&BinaryToString(InetRead("http://realmofthemadgodhrd.appspot.com/version.txt"))&'.swf')
+;ShellExecute('C:\flashplayer_28_sa.exe', 'https://www.realmofthemadgod.com/client')
 
 ; run one-click login thru totalcmd + swfview
 ; https://www.ghisler.com/

@@ -1,3 +1,9 @@
+**2018-06-29** version 9.3.1
+
+- Renders updated to X27.0.0
+- One Click Login updated with new URLs
+- Item groups / slotmap updated
+
 **2018-06-18** version 9.3.0
 
 - Bug Fixes

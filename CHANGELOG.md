@@ -1,3 +1,9 @@
+**2018-07-31** version 9.3.2
+
+- Renders updated to X28.0.0
+- Vault layouts updated for 120 vaults
+- Samurai class fully supported
+
 **2018-06-29** version 9.3.1
 
 - Renders updated to X27.0.0

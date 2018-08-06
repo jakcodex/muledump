@@ -1,4 +1,4 @@
-**2018-08-05??** version 9.4.0
+**2018-08-06** version 9.4.0
 
 - Bug Fixes
   * Mule parse crashes on unknown classes (#218)

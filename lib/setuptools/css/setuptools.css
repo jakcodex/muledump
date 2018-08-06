@@ -412,7 +412,7 @@ a.setuptools.app.config.settings.action.eraseCache:hover {
 .smallMenuCells div:hover > a {
     color: #56a7ff !important;
     text-decoration: none !important;
-    transition-duration: 0.5s;
+    transition: 0.2s linear;
 }
 
 .smallMenuCells div:hover > a:hover {
@@ -955,6 +955,10 @@ div.AccountsList > div.controller.exportAccountsJS:hover,
     width: 800px;
 }
 
+.fl-Chsort .featherlight-content {
+    width: 904px;
+}
+
 .fl-BackupsManager .featherlight-content {
     min-width: 350px;
     max-width: 510px;
@@ -1017,6 +1021,11 @@ div.AccountsList > div.controller.exportAccountsJS:hover,
     transition: background-color 2s ease;
 }
 
+.fl-Exporter .featherlight-content {
+    min-width: 400px;
+    max-width: 80%;
+}
+
 /* other */
 
 .ml5 {
@@ -1025,6 +1034,10 @@ div.AccountsList > div.controller.exportAccountsJS:hover,
 
 .mb5 {
     margin-bottom: 5px;
+}
+
+.mb0 {
+    margin-bottom: 0;
 }
 
 .mr5 {
@@ -1254,6 +1267,11 @@ img.hidden {
     box-shadow: 0 0 1px 4px #000;
 }
 
+.setuptools .featherlight-content {
+    border-bottom: 0;
+    padding: 25px;
+}
+
 .flex-container {
     display: flex;
 }
@@ -1284,6 +1302,10 @@ img.hidden {
 .rateLimited:not(.nopulse) {
     animation: rateLimitedPulse 3s infinite;
     animation-direction: alternate;
+}
+
+.pastebin {
+    text-decoration: line-through;
 }
 
 a.rateLimited {
@@ -1322,12 +1344,21 @@ a.rateLimited:hover {
 }
 
 .mulequeue-topMenu,
-.totalsMenu {
+.totalsMenu,
+.smallMenuCells {
     background-color: #2c2c2c !important;
 }
 
+.exporterMenu {
+    text-align: center;
+}
+
 .mulequeue-topMenu a,
-.mulequeue-topMenu a:hover {
+.mulequeue-topMenu a:hover,
+.exporterMenu a,
+.exporterMenu a:hover,
+.smallMenuCells a,
+.smallMenuCells a:hover {
     color: #fff !important;
     text-decoration: none !important;
     font-weight: normal !important;
@@ -1636,7 +1667,8 @@ strong.info {
 }
 
 .mule.filteringEnabled,
-.itemSlotTypeSorting.enabled {
+.itemSlotTypeSorting.enabled,
+.charsort.enabled {
     border: #00eaff solid 1px !important;
 }
 
@@ -1717,4 +1749,19 @@ div.systemsReport:nth-child(even) > div {
 
 div.systemsReport:nth-child(odd) > div {
     color: #90ccff;
+}
+
+div#charField {
+    height: 225px;
+    overflow-y: scroll;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+div#charField > div.cell {
+    cursor: pointer;
+    width: 200px;
+    flex-grow: 0;
+    margin: 5px;
+    padding: 4px 2px 2px 2px;
 }

@@ -1,8 +1,30 @@
+**2018-08-05??** version 9.4.0
+
+- Bug Fixes
+  * Mule parse crashes on unknown classes (#218)
+  * Dead characters cleaned up from Custom lists (#222)
+  * MuleQueue sometimes fails when loaded accounts list changes during queue (#224)
+  * Disabling SetupTools not handled properly by some features (#229)
+
+- New Features
+  * Upload Totals Export text to paste service (#214)
+  * SetupTools Compression on localStorage (#217)
+  * Accounts.js users can now change SetupTools client configuration (#228)
+
+- Improvements
+  * Character Sorting UI rewritten (#201)
+  * Default export mode now available (#210)
+  * Muledump Exporter with support for Paste uploads (#211)
+  * Detect clock skew and account for it when timing daily login reset (#212)
+  * Totals export width can be customized (#219)
+
+- Renders updated to X28.0.1
+
 **2018-07-31** version 9.3.2
 
+- Samurai class fully supported (#216)
+- Vault layouts updated for 120 vaults (#225)
 - Renders updated to X28.0.0
-- Vault layouts updated for 120 vaults
-- Samurai class fully supported
 
 **2018-06-29** version 9.3.1
 

@@ -95,6 +95,26 @@ Full URL for Appspot testing server endpoint.
 
 Delay before Backup Assistant will popup on screen.
 
+#### compressionMinimum
+`[default:number|1000]`
+
+Minimum size in bytes a string must be before it gets compressed for SetupTools Compression.
+
+#### compressionFormat
+`[default:number|0]`
+
+Compression format to utilize. Presently supports SnappyJS with id 0.
+
+#### compressionLibraries
+`[default:object|{snappy: {}}]`
+
+Each compression algorithm should be defined as an key with an empty object for its data. The key order determines the ids used in `compressionFormat`.
+
+#### corsURL
+`[default:object|{...}]`
+
+Browser-specific URLs to their respective Muledump CORS Adapter browser extension page.
+
 #### setuptools.config.defaultSlotOrder
 `[default: object|...]`
 
@@ -121,6 +141,11 @@ Whether or not Mulecrypt is enabled.
 `[default: string|#ae0000]`
 
 Hex color used for error texts outside of css
+
+#### exporterStoredLinks
+`[default: number|10]`
+
+How many recent links to store in history when uploading to Jakcodex/Paste.
 
 #### setuptools.config.ga
 `[default: string|empty]`
@@ -260,10 +285,20 @@ Minimum number of recommended CPU cores.
 
 URL to the Rate Limiting information wiki page.
 
+#### setuptools.config.remotePasteUrl
+`[default: string|https://paste.jakcodex.io/api/create]`
+
+URL to the remote Paste REST API endpoint.
+
 #### setuptools.config.realmApiParams
 `[default: object|...]`
 
 Default request parameters added to all RealmAPI requests.
+
+#### setuptools.config.realmApiTimeout
+`[default: number|10000]`
+
+Request timeout in milliseconds for all RealmAPI AJAX calls.
 
 #### setuptools.config.realmeyeUrl
 `[default: string|https://www.realmeye.com]`
@@ -283,6 +318,16 @@ A list of RegExp objects used throughout the program
 
 How many seconds to wait before triggering automatic window reloads
 
+#### setuptools.config.timesyncTtl
+`[default: number|2500]`
+
+Time in milliseconds before the Time Sync API request times out.
+
+#### setuptools.config.timesyncUrl
+`[default: string|https://time.jakcodex.io/api/time]`
+
+URL to the remote Time REST API endpoint.
+
 #### setuptools.config.totalsDefaultIcon
 `[default: array|[880, 40]]`
 
@@ -294,7 +339,7 @@ Default icon position for Totals Settings Manager - Item Group Sorting menu.
 Width of each item in the totals block.
 
 #### setuptools.config.totalsFilterKeysIndex
-`[default: number|9]`
+`[default: number|11]`
 
 Position on setuptools.config.totalsSaveKeys where totalsFilter keys begins (typically setuptools.config.totalsSaveKeys.length)
 
@@ -381,6 +426,37 @@ How old cache data can be before it is considered stale (only applies to account
 
 How many days between backup assistant alerts.
 
+#### setuptools.data.config.badaccounts
+`[default: number|-1]`
+
+How to create to accounts that are detected as being bad.
+
+##### -1
+The feature is disabled
+
+##### 0
+Disable invalid accounts
+
+##### 1
+Disable banned accounts
+
+##### 2
+Delete invalid accounts
+
+##### 3
+Delete banned accounts
+
+##### 4
+Disable both invalid and banned accounts
+
+##### 5
+Delete both invalid and banned accounts
+
+#### setuptools.data.config.compression
+`[default: boolean|false]`
+
+Whether or not the SetupTools Compression feature is enabled.
+
 #### setuptools.data.config.corsAssistant
 `[default: number|1]`
 
@@ -389,12 +465,40 @@ Whether or not the CORS assistant is enabled.
 #### setuptools.data.config.debugging
 `[default: boolean|false]`
 
-Whether or not to log debugging information to the browser console
+Whether or not to log debugging information to the browser console.
 
 #### setuptools.data.config.enabled
 `[default: boolean|false]`
 
-Whether or not SetupTools is enabled
+Whether or not SetupTools is enabled.
+
+#### setuptools.data.config.equipSilhouettes
+`[default: boolean|true]`
+
+Whether or not empty equipment slots have item type silhouettes displayed.
+
+#### setuptools.data.config.exportDefault
+`[default: number|4]`
+
+Default action when clicking the Export button.
+
+##### 0
+None, just open the Muledump Exporter menu
+
+##### 1
+Text
+
+##### 2
+CSV
+
+##### 3
+JSON
+
+##### 4
+Image
+
+##### 5
+Imgur
 
 #### setuptools.data.config.errors
 `[default: boolean|true]`
@@ -440,6 +544,17 @@ How to merge accounts configured in the groups manager (0=off, 1=parallel, 2=ser
 `[default: boolean|false]`
 
 Whether or not to hide the Muledump product information from the top bar.
+
+#### setuptools.data.config.keyBindings
+`[default: number|0]`
+
+Which keyboard key binding map to utilize.
+
+##### 0
+Standard - compatible with Windows and Linux
+
+##### 1
+Mac OS - replaces Ctrl with Command key
 
 #### setuptools.data.config.lazySave
 `[default: number|10000]`
@@ -511,15 +626,36 @@ Whether or not to prevent browser automatic, no-confirm downloads (dangerous giv
 
 Number of items to display in a single row in Muledump (combo of chars+accounts)
 
+#### setuptools.data.config.timesync
+`[default: boolean|false]`
+
+Whether or not to use the Time Sync feature to check the correctness of the system clock using a remote REST API service.
+
 #### setuptools.data.config.tooltip
 `[default: number|500]`
 
 Time to wait in milliseconds before displaying a tooltip on hover.
 
+#### setuptools.data.config.totalsExportWidth
+`[default: number|0]`
+
+Size of the Totals export image. Values -1 and 0 are special.
+
+##### -1
+Set to `setuptools.data.config.totalswidth`
+
+##### 0
+Whole screen width
+
 #### setuptools.data.config.totalswidth
 `[default: number|0]`
 
 Number of items to display per row in totals. A value of 0 will default to whole screen usable width.
+
+#### setuptools.data.config.wbTotals
+`[default: boolean|true]`
+
+Whether or not the White Bag Tracker is in Totals or Owned mode.
 
 ## <a id="muledumpaccounts" href="#"></a>Muledump Accounts Configuration - setuptools.data.accounts
 

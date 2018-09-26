@@ -86,7 +86,7 @@ body {
 
 .menu:not(.setuptools) label:hover,
 .menu:not(.setuptools) input:hover ~ label,
-#export div:hover,
+div#export div:hover,
 #top > div:hover, #top > a:hover {
     background: #253c63 !important;
     color: #fff;
@@ -95,12 +95,12 @@ body {
 .menu:not(.setuptools) div { overflow: hidden; }
 .menu:not(.setuptools) div>div>div { padding-left: 15px; }
 
-#export {
+div#export {
     width: auto;
     text-align: center;
     z-index: 2000;
 }
-#export div { padding: 0 5px; }
+div#export div { padding: 0 5px; }
 
 #totals, .mule, .guid, .reload, .item { display: inline-block; }
 
@@ -241,10 +241,25 @@ hr {
     width: 40px;
     height: 40px;
     margin: 2px;
-    background: url(../renders.png) #545454;
     overflow: hidden;
     z-index: 100;
     cursor: pointer;
+}
+
+.item:not(.silhouette) {
+    background: url(../renders.png) #545454;
+}
+
+.item.transbackground {
+    background: url(../renders.png);
+}
+
+.item.silhouette {
+    background: url(../media/itemsilhouettes.png) #545454;
+}
+
+.item.silhouette25p {
+    background: url(../media/itemsilhouettes_25p.png) #545454;
 }
 
 .item.selected {
@@ -608,55 +623,43 @@ div.noTotals {
     padding: 5px 0;
 }
 
-div#whitebagTracker {
+div.wbstage {
     display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-}
-
-div#whitebagTracker:empty {
-    display: none;
-}
-
-div#whitebagTracker > div.wbstage {
-    display: flex;
-    margin: 10px 0 10px 25px;
     background-color: #333;
     box-shadow: 2px 2px 8px #111;
-    width: 528px;
+    max-width: 494px;
     padding: 5px;
     flex-wrap: wrap;
 }
 
-div#whitebagTracker > div.wbstage > div {
+div.wbstage > div {
     width: 100%;
 }
 
-div#whitebagTracker > div.wbstage > div:not(.items) {
+div.wbstage > div:not(.items) {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-div#whitebagTracker > div.wbstage > div:not(:last-child) {
+div.wbstage > div:not(:last-child) {
     margin-bottom: 5px;
 }
 
-div#whitebagTracker > div.wbstage > div.header {
+div.wbstage > div.header {
     font-size: 16px;
     font-weight: bold;
 }
 
-div#whitebagTracker > div.wbstage > div.header:not(:first-child) {
+div.wbstage > div.header:not(:first-child) {
     font-size: 14px;
 }
 
-/*.item.wb.selected {
-    background-color: #bcfff1;
+.item.wb.selected {
+    background-color: #88a09b;
     outline: 2px solid #dcf7fe;
     outline-offset: -1px;
-}*/
+}
 
 .item.wb.have {
     background-color: #51fcff;

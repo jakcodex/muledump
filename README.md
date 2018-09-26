@@ -24,7 +24,7 @@ See the [Requirements](REQUIREMENTS.md) page for more information.
 
 ## Release Information
 
-The current version is Jakcodex/Muledump v9.4.
+The current version is Jakcodex/Muledump v9.5.
 
 Muledump Online is available hosted on Github [here](https://jakcodex.github.io/muledump/muledump.html).
 
@@ -49,11 +49,13 @@ All released versions are available for download [here](https://github.com/jakco
 
 - Manage all of your ROTMG accounts from a single interface
 - [SetupTools](docs/setuptools/index.md) - An easy to use, browser-based user interface for managing Muledump
-- [Groups Manager](docs/setuptools/groups-manager/manager.md) - Account grouping and ordering utility to customize the Muledump accounts list
+- [Groups Manager](docs/setuptools/help/groups-manager/manager.md) - Account grouping and ordering utility to customize the Muledump accounts list
 - [Muledump Online](https://jakcodex.github.io/muledump/muledump.html) - Load Muledump directly from Github using SetupTools
 - [One Click Login](https://github.com/jakcodex/muledump/wiki/One-Click-Login) - Login to your accounts via the browser or Flash Projector with one click
 - [Storage Compression](https://github.com/jakcodex/muledump/wiki/Storage-Compression) - Store more data in the browser than previously possible
 - [Muledump Totals](https://github.com/jakcodex/muledump/wiki/Totals) - Filtering on fame bonus, feed power, soulbound, tradeable, ut, and st, and specified accounts, and easy switching between pre-defined totals configs
+- [White Bag Tracker](docs/muledump/whitebags.md) - Track your white bag collection the way you want to
+- Skin Wardrobe - View all skins owned by your accounts
 - MuleQueue - Task queuing to control the flow of requests from Muledump
 - Vault display is fully customizable and comes with four pre-defined layouts
 - Full character skin and dye support in portraits
@@ -85,9 +87,9 @@ All released versions are available for download [here](https://github.com/jakco
 <a id="jakcodex-supportandcontributions"></a>
 ## Support and Contributions
 
-Jakcodex/Muledump operates its own support Discord server - [https://discord.gg/JFS5fqW](https://discord.gg/JFS5fqW).
+Jakcodex/Muledump operates its own Discord server - [https://discord.gg/JFS5fqW](https://discord.gg/JFS5fqW).
 
-Feel free to join and ask for help getting setup, hear about new updates, offer your suggestions and feedback, or just say hi.
+Feel free to join and ask for help getting setup, hear about new updates, offer your suggestions and feedback, or just say hi. We love to hear from the community!
 
 If you encounter a bug, have a feature request, or have any other feedback you can also check out the [issue tracker](https://github.com/jakcodex/muledump/issues) to see if it's already being discussed. If not then you can [submit a new issue](https://github.com/jakcodex/muledump/issues/new).
 
@@ -107,9 +109,13 @@ Muledump Online always runs the latest version of Muledump with all patches.
 
 Muledump Renders are maintained by [tuvior](https://github.com/tuvior).
 
+Thanks to [Atomizer](https://github.com/atomizer) for all the original Muledump work and for his [endorsement](https://github.com/atomizer/muledump#on-indefinite-hiatus-an-active-fork-is-here).
+
+Thanks to [Wawawa](https://github.com/wawawawawawawa) for his progress tracking feature.
+
 This project uses open source libraries from many projects. See our dependencies to check them out.
 
-This project uses textures and animated graphics courtesey of [Loading.io](https://www.loading.io).
+This project uses textures and animated graphics courtesy of [Loading.io](https://www.loading.io).
 
 ## FYI
 

@@ -1,9 +1,9 @@
 {
   "meta": {
-    "BackupDate": "2018-08-04T00:00:00.000Z",
+    "BackupDate": "2018-09-25T00:00:00.000Z",
     "protected": false,
     "auto": false,
-    "name": "muledump-sample-config-v9.4"
+    "name": "muledump-sample-config-v9.5"
   },
   "config": {
     "accountAssistant": 1,
@@ -15,11 +15,13 @@
     "automaticBackups": true,
     "autoReloadDays": 1,
     "backupAssistant": 14,
+    "badaccounts": -1,
     "compression": false,
     "corsAssistant": 1,
     "debugging": true,
     "enabled": false,
     "encryption": false,
+    "equipSilhouettes": true,
     "exportDefault": 4,
     "errors": true,
     "ga": false,
@@ -30,6 +32,7 @@
     "giftChestWidth": 0,
     "groupsMergeMode": 2,
     "hideHeaderText": false,
+    "keyBindings": 0,
     "lazySave": 10000,
     "longpress": 1000,
     "lowStorageSpace": true,
@@ -48,17 +51,18 @@
     "timesync": false,
     "tooltip": 500,
     "totalsExportWidth": 0,
-    "totalswidth": 0
+    "totalswidth": 0,
+    "wbTotals": true
   },
   "version": {
     "major": 9,
-    "minor": 4,
+    "minor": 5,
     "patch": 0
   },
   "accounts": {
     "meta": {
       "created": 1510135507593,
-      "modified": 1528416000000,
+      "modified": 1537833600000,
       "format": 1,
       "version": 1,
       "encryption": false,
@@ -198,6 +202,7 @@
     "backpack": false,
     "gifts": false,
     "wawawa": false,
+    "shrink": false,
     "totals": true,
     "totalsGlobal": false,
     "famefilter": false,
@@ -208,6 +213,7 @@
     "nonsbfilter": false,
     "utfilter": false,
     "stfilter": false,
+    "wbfilter": false,
     "totalsFilter-empty": true,
     "totalsFilter-swords": true,
     "totalsFilter-daggers": true,
@@ -411,6 +417,7 @@
             "nonsbfilter": false,
             "utfilter": false,
             "stfilter": false,
+            "wbfilter": false,
             "totalsFilter-empty": true,
             "totalsFilter-swords": true,
             "totalsFilter-daggers": true,

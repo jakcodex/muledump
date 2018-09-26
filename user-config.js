@@ -14,6 +14,11 @@
 */
 
 /*
+//  Required to enable feature
+*/
+userConfiguration.enabled = true;
+
+/*
 //  SetupTools Client Configuration
 */
 userConfiguration.config = {

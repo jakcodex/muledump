@@ -31,6 +31,11 @@ Account data is stored on your PC to prevent having to reload it every time you 
 
 Accounts set to login only will reload their data from ROTMG but not display in the window.
 
+#### ```Testing Server```
+[default: disabled]
+
+Account will be loaded from the public testing server instead of prod.
+
 #### ```Export Deep Copy```
 Download the account data stored on your browser for this account.
 

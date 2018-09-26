@@ -1,4 +1,5 @@
 ### Effective Date: December 20, 2017
+##### Modified: September 26, 2018
 
 Thank you for choosing and trusting Jakcodex/Muledump. Traditionally no information at all has been collected and with the introduction of Usage Analytics we want to be absolutely clear about what it means for you.
 
@@ -16,7 +17,7 @@ This version is eligible to participate in Usage Analytics which can be disabled
 
 #### Muledump CORS Adapter
 
-The Chrome web store extension does not collect any usage analytics or any other sort of data.
+The Chrome web store extension and Firefox addon do not collect any usage analytics or any other sort of data.
 
 ## About Usage Analytics in Jakcodex/Muledump
 

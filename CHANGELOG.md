@@ -1,3 +1,29 @@
+**2018-09-26** version 9.5.0
+
+- Bug Fixes
+  * UserConfiguration import not consistent across OS's (#235)
+  * Exporter when Totals disabled producing error (#238)
+  * Account options changes not updating totals (#245)
+
+- New Features
+  * Character portraits show clothing and accessory texture info (#144)
+  * White Bag Tracker (#168)
+  * Skin Wardrobe (#227)
+  * Automatic disable/delete of invalid/banned accounts (#230)
+  * Muledump CORS Adapter for Firefox (#232)
+  * Added new Option for Shrinking Mules (#237)
+  * Added new Standard Filter for White Bag Items (#239)
+
+- Improvements
+  * Mac OS key bindings added (#240)
+  * Empty equipment slots now optionally show item silhouette (#241)
+
+- Settings Manager reorganized
+- Wawawa's Progress Tracker updated to 0.8.4
+- html2canvas updated to 1.0.0-alpha.12
+- Masonry updated to 4.2.2
+- Renders updated to X29.0.1
+
 **2018-08-06** version 9.4.0
 
 - Bug Fixes

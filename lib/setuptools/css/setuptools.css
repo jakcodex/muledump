@@ -101,8 +101,18 @@ input.setuptools.app.wideinput {
     color: #ffffff;
 }
 
+.featherlight-inner select:focus {
+    border: #22b7da solid 2px !important;
+}
+
+.featherlight-inner select:hover {
+    border: #5f9eb1 solid 2px;
+    transition: 0.1s linear;
+}
+
 .featherlight-inner select,
 .featherlight-inner input {
+    transition: 0.1s linear;
     font-size: 12px;
     width: 200px;
     border: #707070 solid 2px;
@@ -800,7 +810,7 @@ div.massSwitch > div.link {
     width: 200px;
     padding: 3px;
     color: #00ceff;
-    background-color: #12182b;
+    background-color: #132236;
     border: #000 solid 2px;
     margin-right: 5px;
     transition: 0.3s linear;
@@ -837,7 +847,7 @@ div.AccountsList > div.controller.exportAccountsJS:hover,
 
 .menuStyle.negative {
     color: #f6a084;
-    background-color: #2b1215;
+    background-color: #321417;
 }
 
 .menuStyle.negative:hover {
@@ -882,7 +892,7 @@ div.AccountsList > div.controller.exportAccountsJS:hover,
 
 .menuStyle.notice {
     color: #c78bff;
-    background-color: #231525;
+    background-color: #2c1d2e;
 }
 
 .menuStyle.notice:hover {
@@ -1016,6 +1026,19 @@ div.AccountsList > div.controller.exportAccountsJS:hover,
     width: 600px;
 }
 
+.fl-Wardrobe .featherlight-content {
+    max-width: 570px;
+}
+
+.fl-Wardrobe.short .featherlight-content {
+    max-width: 75%;
+    max-height: 60%;
+}
+
+.fl-Whitebags .featherlight-content {
+    width: 564px;
+}
+
 .fl-MuleCryptAnimated.featherlight {
     background: rgba(0, 0, 0, 0.8) url('../../media/mulecrypt-background.svg') !important;
     transition: background-color 2s ease;
@@ -1028,20 +1051,24 @@ div.AccountsList > div.controller.exportAccountsJS:hover,
 
 /* other */
 
+.m0 {
+    margin: 0 !important;
+}
+
 .ml5 {
-    margin-left: 5px;
+    margin-left: 5px !important;
 }
 
 .mb5 {
-    margin-bottom: 5px;
+    margin-bottom: 5px !important;
 }
 
 .mb0 {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
 }
 
 .mr5 {
-    margin-right: 5px;
+    margin-right: 5px !important;
 }
 
 .mr0 {
@@ -1049,15 +1076,19 @@ div.AccountsList > div.controller.exportAccountsJS:hover,
 }
 
 .mt10 {
-    margin-top: 10px;
+    margin-top: 10px !important;
 }
 
 .mt5 {
-    margin-top: 5px;
+    margin-top: 5px !important;
 }
 
 .mt15 {
-    margin-top: 15px;
+    margin-top: 15px !important;
+}
+
+.ol1 {
+    margin-left: -1px !important;
 }
 
 .w100 {
@@ -1117,9 +1148,14 @@ input[type="checkbox"] {
     margin-right: 0 !important;
 }
 
-.dragbox div.selected, .selected:not(.item) {
+.dragbox div.selected,
+.selected:not(.item) {
     background-color: #040f51 !important;
     color: #22b7da !important;
+}
+
+div.tooltip:not(.autoHeight) {
+    height: 36px;
 }
 
 div.tooltip {
@@ -1129,12 +1165,28 @@ div.tooltip {
     color: #ffffff;
     text-align: left;
     background-color: #2c2c2c;
-    height: 36px;
 }
 
+.highz,
+.whitebagTrackerTooltip,
+.ownedSkinsTooltip,
 .hiddenItemsTooltip,
 .itemSubsortingTooltip {
     z-index: 9999999999 !important;
+}
+
+.ownedSkinsTooltip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ffffff !important;
+    margin-top: -5px;
+    margin-left: -1px;
+}
+
+div.ownedSkinsTooltip > div {
+    padding: 5px 10px;
+    color: #fff;
 }
 
 div.tooltip > div:not(.ignore) {
@@ -1349,8 +1401,18 @@ a.rateLimited:hover {
     background-color: #2c2c2c !important;
 }
 
-.exporterMenu {
+div.exporterMenu {
     text-align: center;
+}
+
+div.exporterMenu > div:nth-child(1),
+div.exporterMenu > div:nth-child(2) {
+    padding: 0 15px 0 0;
+}
+
+textarea.setuptools.text.exporter {
+    height: 400px;
+    margin: 15px 0 0 0;
 }
 
 .mulequeue-topMenu a,
@@ -1627,7 +1689,7 @@ strong.info {
 }
 
 .realmeyeBorder {
-    background-color: #00b0fc;
+    background-color: #00b0fc !important;
 }
 
 #itemSubsortingBox {
@@ -1666,9 +1728,11 @@ strong.info {
     transition: 0.3s linear;
 }
 
+.ownedSkins img.enabled,
 .mule.filteringEnabled,
 .itemSlotTypeSorting.enabled,
-.charsort.enabled {
+.charsort.enabled,
+.enabled.item.cloth.selector {
     border: #00eaff solid 1px !important;
 }
 
@@ -1725,8 +1789,9 @@ strong.info {
 }
 
 #drawhelpBox h3 {
-    color: #90ccff;
+    color: #74c8ff;
     background-color: #333;
+    padding: 2px 5px;
 }
 
 #drawhelpBox h4 {
@@ -1764,4 +1829,81 @@ div#charField > div.cell {
     flex-grow: 0;
     margin: 5px;
     padding: 4px 2px 2px 2px;
+}
+
+.ownedSkins:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+div.ownedSkins {
+    background-color: #222;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+div.ownedSkins > div:nth-child(1) {
+    justify-content: space-between;
+    padding: 5px;
+    border: 2px solid #000000;
+    background-color: #333;
+}
+
+div.ownedSkins > div:nth-child(1) > div {
+    font-size: 14px;
+}
+
+div.ownedSkins > div:nth-child(1) > div:nth-child(2) {
+    font-weight: bold;
+}
+
+div.item.cloth.selector:hover:not(.enabled),
+div.item.wb:hover:not(.selected),
+img.ownedSkins:hover {
+    outline: solid 2px #ffffff !important;
+    outline-offset: -1px;
+    transition: 0.1s linear;
+}
+
+div.wbmenu {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+div.wbmenu:last-child {
+    margin-bottom: 16px;
+}
+
+div.wbmenu > div:nth-child(1) {
+    width: 45%;
+    justify-content: flex-end;
+}
+
+div.wbmenu > div:nth-child(2) {
+    width: 45%;
+    justify-content: flex-start;
+}
+
+div.wbmenu > div:nth-child(1) > select,
+div.wbmenu > div:nth-child(2) > div {
+    width: 50%;
+    height: 26px;
+}
+
+div.wbimportoptions {
+    justify-content: space-between;
+    margin: 25px 0 0 0;
+    flex-flow: column;
+}
+
+div.wbimportoptions > div {
+    justify-content: space-between;
+}
+
+.bg222 {
+    background-color: #222;
+}
+
+.bg333 {
+    background-color: #333;
 }

@@ -110,22 +110,37 @@ _build()
 
 Local $paths_base[2] = [ _
 	@AppDataDir & "\Macromedia\Flash Player\#SharedObjects\", _
-	_PathFull("../Local", @AppDataDir) & "\Google\Chrome\User Data\Default\Pepper Data\Shockwave Flash\WritableRoot\#SharedObjects\" _
+	@LocalAppDataDir & "\Google\Chrome\User Data\Default\Pepper Data\Shockwave Flash\WritableRoot\#SharedObjects\" _
 ]
-Local $paths[3] = [ _
+Local $paths[4] = [ _
 	"localhost", _
 	"realmofthemadgodhrd.appspot.com", _
-	"www.realmofthemadgod.com" _
+	"www.realmofthemadgod.com", _
+	"#localWithNet" _
 ]
 For $path_base In $paths_base
 	$search = FileFindFirstFile($path_base & "*")
-	$searchPath = FileFindNextFile($search)
-	For $gameDir In $paths
-		$gameFilePath = $path_base & $searchPath & "\" & $gameDir & "\RotMG.sol"
-		$file = FileOpen($gameFilePath,26)
-		FileWrite($file,$string)
-		FileClose($file)
-	Next
+
+	; flash was never run from this application,
+	; prevent generating degenerate folder stucture
+	if @error Then ContinueLoop
+
+	While 1
+		$sandbox = FileFindNextFile($search)
+
+		; no more sandboxes
+		If @error Then ExitLoop
+
+		; verify that the folder name corresponds to a sandbox id (8 uppercase chars)
+		if StringLen($sandbox) = 8 And StringUpper($sandbox) == $sandbox Then
+			For $gameDir In $paths
+				$gameFilePath = $path_base & $sandbox & "\" & $gameDir & "\RotMG.sol"
+				$file = FileOpen($gameFilePath,26)
+				FileWrite($file,$string)
+				FileClose($file)
+			Next
+		EndIf
+	WEnd
 Next
 FileClose($search)
 

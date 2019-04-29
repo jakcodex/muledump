@@ -17,7 +17,18 @@ This version is eligible to participate in Usage Analytics which can be disabled
 
 #### Muledump CORS Adapter
 
-The Chrome web store extension and Firefox addon do not collect any usage analytics or any other sort of data.
+##### Chrome 
+> *Starting with version 1.1.0* 
+
+The Chrome web store extension utilizes Google Analytics to collect basic usage information including: 
+
+1. User interface pageviews and actions  
+1. The base URLs for requests whose response was modified (i.e. the api endpoint)
+
+Absolutely no personally identifying or private information is collected. You can opt-out in the Usage Analytics page of the extension menu.
+
+##### Firefox
+The Firefox addon does not collect any usage analytics or any other sort of data.
 
 ## About Usage Analytics in Jakcodex/Muledump
 

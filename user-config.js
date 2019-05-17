@@ -29,28 +29,44 @@ userConfiguration.config = {
 //      "animations": 1,
 //      "autocomplete": true,
 //      "autoReloadDays": 1,
+//      "badaccounts": -1,
 //      "compression": false,
 //      "corsAssistant": 1,
 //      "debugging": true,
+//      "equipSilhouettes": true,
 //      "exportDefault": 4,
 //      "errors": true,
+//      "ga": true,
+//      "gaErrors": true,
+//      "gaOptions": true,
+//      "gaPing": true,
+//      "gaTotals": true,
 //      "giftChestWidth": 0,
 //      "groupsMergeMode": 2,
 //      "hideHeaderText": false,
+//      "keyBindings": 0,
 //      "lazySave": 10000,
 //      "longpress": 1000,
 //      "lowStorageSpace": true,
 //      "menuPosition": 2,
 //      "mulelogin": 0,
+//      "muleloginCopyLinks": 0,
 //      "muleMenu": true,
 //      "nomasonry": 0,
 //      "pagesearch": 2,
 //      "preventAutoDownload": true,
+//      "recordConsole": 2000,
+//      "recordConsoleTtl": 10000,
 //      "rowlength": 7,
 //      "timesync": false,
 //      "tooltip": 500,
+//      "tooltipClothing": 1,
+//      "tooltipItems": 1,
+//      "tooltipXPBoost": 1,
 //      "totalsExportWidth": 0,
-//      "totalswidth": 0
+//      "totalswidth": 0,
+//      "vaultbuilderAccountViewLimit": 10,
+//      "wbTotals": true
 };
 
 /*
@@ -138,7 +154,7 @@ userConfiguration.muledump.totals.configSets = {
 //          "slotOrder": [],  //  see lib/slotmap.js for a list of item groups and their virtualSlotType; skipping this setting uses default sorting order
 //          "itemFilter": [],  //  item ids in a comma-separated list
 //          "slotSubOrder": {},  //  honestly don't bother attempting this one for now; if you want to the format is {"vst1": [itemid, itemid, itemid], "vst2": [itemid, itemid, itemid]} for each vst you wish to suborder.
-//          "sortingMode": "fb"  //  possibilities are: standard, alphabetical, fb, fp
+//          "sortingMode": "fb"  //  possibilities are: standard, alphabetical, fb, fp, items
 //        }
 //    }
 };

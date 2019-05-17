@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style="height: 100%;">
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<meta name="description" content="A complete management system for all your ROTMG mules">
@@ -15,6 +15,8 @@
 	<script type="application/javascript" src="vendor/featherlight.min.js" charset="utf-8"></script>
 	<script type="application/javascript" src="vendor/seasalt.min.js"></script>
 	<script type="application/javascript" src="vendor/snappyjs.min.js"></script>
+	<script type="application/javascript" src="vendor/FileSaver.js"></script>
+	<script type="application/javascript" src="vendor/jszip.min.js"></script>
 	<script src="vendor/clipboard.min.js"></script>
 	<script src="vendor/html2canvas.min.js"></script>
 	<script type="application/javascript" src="lib/constants.js"></script>
@@ -32,6 +34,7 @@
 	<script type="application/javascript" src="accounts.js"></script>
 	<script type="application/javascript" src="lib/setuptools/src/accounts.js"></script>
 	<script type="application/javascript" src="lib/setuptools/src/app.js"></script>
+	<script type="application/javascript" src="lib/setuptools/src/devtools.js"></script>
 	<script type="application/javascript" src="lib/setuptools/src/assistants.js"></script>
 	<script type="application/javascript" src="lib/setuptools/src/backups.js"></script>
 	<script type="application/javascript" src="lib/setuptools/src/config.js"></script>
@@ -39,6 +42,7 @@
 	<script type="application/javascript" src="lib/setuptools/src/init.js"></script>
 	<script type="application/javascript" src="lib/setuptools/src/lightbox.js"></script>
 	<script type="application/javascript" src="lib/setuptools/src/muledump.js"></script>
+	<script type="application/javascript" src="lib/setuptools/src/vaultbuilder.js"></script>
 	<script type="application/javascript" src="lib/setuptools/src/totals.js"></script>
 	<script type="application/javascript" src="lib/setuptools/src/chsort.js"></script>
 	<script type="application/javascript" src="lib/setuptools/src/storage.js"></script>
@@ -47,7 +51,6 @@
 	<script type="application/javascript" src="lib/setuptools/src/mulequeue.js"></script>
 	<script type="application/javascript" src="lib/muledump/mule.js"></script>
 	<script type="application/javascript" src="lib/muledump/muledump.js"></script>
-	<script type="application/javascript" src="lib/setuptools/src/analytics.js"></script>
 </head>
 <body class="scrollbar">
 	<span id="accopts" style="display: none;" class="menu noselect"></span>
@@ -61,8 +64,9 @@
 			</div>
 			<div id="top" class="flex-container noFlexAutoWidth" style="justify-content: flex-end; flex-flow: row nowrap;">
 				<div id="notice" style="display: none;">Notice</div>
+				<!-- soon -- <div id="pagesearchButton"><div class="pagesearch button account">&nbsp;</div></div>-->
 				<div id="pagesearch" class="searchName full">
-					<input type="text" name="searchName" placeholder="Email or Username">
+					<input type="text" name="searchName" placeholder="Page Search">
 				</div>
 				<div id="totalsMenu">Totals</div>
 				<div class="handle options"><span>Options</span></div>
@@ -77,7 +81,6 @@
 	</div>
 	<div id="main">
 		<div id="totals" class="noselect" style="display: none;"><div class="noTotals">No matching data found for totals.</div></div>
-		<div id="whitebagTracker"></div>
 		<div id="stage"></div>
 		<div id="lightbox"></div>
 	</div>

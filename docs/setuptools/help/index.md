@@ -1,7 +1,5 @@
 # Muledump SetupTools
 
-### What are you looking to do?
-
 #### [Accounts Manager](accounts-manager/index.md)
 Add or remove, enable or disable accounts.
  
@@ -15,3 +13,12 @@ Manage all Muledump and SetupTools settings as well as restoring default setting
 
 #### [Backups Manager](backups-manager/index.md)
 Create, download, and restore backups of your Muledump configuration.
+
+#### [Totals Manager](../../totals-manager.md)
+Manage Totals display and custom configurations.
+
+#### [One Click Login](ocl.md)
+Manage One Click Login profiles and configuration.
+
+#### Dev Tools
+A handful of tools useful for working with the internals of Muledump.

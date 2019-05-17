@@ -4,11 +4,11 @@ Backups are important for quickly getting setup with Muledump again in the futur
 
 ## Available Actions
 
-#### ```Create New Backup```
+#### ```Create Backup```
 Creates a new stored backup and generates a download link for you. Automatic backup cleanup policy applies.
 
-#### ```Toggle Auto Backups```
-A switch for enabling or disabling automatic daily backups.
+#### ```Create Archive```
+Creates a new stored backup and generates a zip file for you with account data cache included. Automatic backup cleanup policy applies.
 
 #### ```Upload Backup```
 Uploading a backup restores its configuration to Muledump.

@@ -164,7 +164,7 @@ div#export div { padding: 0 5px; }
     overflow: hidden;
 }
 
-.button {
+.button:not(.pagesearch):not(.vaultbuilder) {
     display: inline-block;
     float: right;
     width: 18px;
@@ -225,7 +225,7 @@ hr {
 .stat.bad.very { color: #ff0000; }
 .stat.small { font-size: 11px; }
 
-.items {
+.items:not(.pagesearch):not(.vaultbuilder) {
     line-height: 0;
 }
 
@@ -270,9 +270,11 @@ hr {
 
 /* counter */
 .item div {
-    position: absolute;
-    right: 4px;
-    bottom: 1px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
     color: white;
     font: bold 15px Arial,sans-serif;
     text-shadow: -1px 0 3px black, 0 1px 3px black, 1px 0 3px black, 0 -1px 3px black;
@@ -399,7 +401,7 @@ table.chars {
     background-color: #222;
     border-radius: 6px;
     float: left;
-    padding: 1px 1px 1px 4px;
+    padding: 1px 4px 1px 4px;
     font-weight: normal;
     font-size: 14px;
     margin: 2px;
@@ -407,7 +409,7 @@ table.chars {
 .scont .star {
     font-size: 1.2em;
     line-height: 0;
-    margin: 0 0.1em 0 0.2em;
+    margin: 0 0 0 0.2em;
 }
 
 .warn {
@@ -666,3 +668,20 @@ div.wbstage > div.header:not(:first-child) {
     outline: 2px solid #8de2e8;
     outline-offset: -1px;
 }
+
+div.classstats div.cell > div {
+    color: #ffffff;
+}
+
+div.classstats div.cell:first-child {
+    background-color: #153a50;
+}
+
+div.classstats div.cell:last-child {
+    background-color: #162a41;
+}
+
+div.classstats > div.class {
+    background-image: linear-gradient(#153a50, #163249, #162a41) !important;
+}
+

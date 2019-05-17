@@ -2,7 +2,7 @@
 
 If you want to restore a previously downloaded backup then you can upload it using this tool.
 
-Backups include a copy of all your accounts, options, and settings. 
+Backups include a copy of all your accounts, options, and settings. Account data is also included it you have an archive backup zip file.
 
 You can upload the backup by either choosing the file using the browser or pasting it in manual mode.
 

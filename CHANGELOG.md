@@ -1,3 +1,38 @@
+**2019-05-17** version 9.6.0
+
+- Bug Fixes
+  * Rate limiter does not reset MuleQueue state properly (#258)
+  * Ancestor Fame Achievement not working (#262) [tuvior]
+  * One-click Login not working for some browser users (#266) [tuvior]
+  * Skin wardrobe broken due to Golden Archer skin exception (#273)
+  * Unknown items missing from display (#277)
+
+- New Features
+  * Backup Archive - Create and restore backups with all configuration and account data cache (#205)
+  * Added new Sorting Mode: Item Count (#259)
+  * Added new Option for showing Class Stats (best level/fame) (#269)
+  * One Click Login v2 - Profiles, per-account settings, T1 support (#270)
+
+- Improvements
+  * Vault Builder enables managing custom vault layouts in SetupTools (#31)
+  * Added settings to toggle individual tooltips display (#249)
+  * Chain help popup link clicks in ui (#251)
+  * Rate limiting can be manually reset (#254)
+  * Abbreviate long numbers in totals (#265)
+  * Renders Update Notifier includes version dates (#267)
+  * Added new Dev Tool: Config Viewer (#271) 
+  * Added new Dev Tool: Console Viewer (#272)
+  * Usage Analytics enabled in Muledump Local (#276)
+
+- Added Secluded Thicken and Cursed Library to dungeon portal list
+- Timestamps added to console logs
+- Clipboard.js updated to 2.0.4
+- Html2Canvas updated to 1.0.0-rc1
+- JQuery updated to 3.4.1
+- Libsodium.js updated to 0.7.4
+- FileSaver.js 2.0.2 added
+- JSZip 3.2.0 added
+
 **2018-09-26** version 9.5.0
 
 - Bug Fixes

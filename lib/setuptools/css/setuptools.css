@@ -49,7 +49,6 @@ input[name="checkAll"] {
 
 .setuptools .featherlight-content {
     min-width: 20%;
-    max-width: 50%;
 }
 
 .setuptools-small .featherlight-content {
@@ -122,6 +121,15 @@ input.setuptools.app.wideinput {
     outline: none;
 }
 
+.featherlight-inner select:focus {
+    outline: none !important;
+}
+
+select,
+select:focus {
+    outline: none !important
+}
+
 .setuptools textarea, textarea.setuptools {
     background-color: #000;
     color: #fff;
@@ -162,6 +170,20 @@ div.setuptools.app.uploadData {
 .setuptools.div.menu::-webkit-scrollbar-thumb
 {
     background: rgb(59, 134, 180);
+}
+
+.notice.scrollbar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background: rgb(96, 57, 86);
+}
+
+.notice.scrollbar::-webkit-scrollbar-thumb
+{
+    background: rgb(180, 117, 164);
+}
+
+.overflowyScroll {
+    overflow-y: scroll;
 }
 
 .setuptools.app.config.settings:not(a) {
@@ -277,8 +299,18 @@ a.setuptools.app.config.settings.action.eraseCache:hover {
     color: #bb0b00 !important;
 }
 
-.featherlight-content strong, .featherlight-content code {
+.featherlight-content strong,
+.featherlight-content code,
+.featherlight-content span.strong {
     color: #22b7da;
+}
+
+.featherlight-content span.strong {
+    font-weight: normal;
+}
+
+.featherlight-content strong.help {
+    cursor: pointer;
 }
 
 .setuptools.app.backups.options {
@@ -418,14 +450,15 @@ a.setuptools.app.config.settings.action.eraseCache:hover {
     background-color: #383838 !important;
 }
 
-.smallMenuCells div:hover,
-.smallMenuCells div:hover > a {
+
+.smallMenuCells:not(.simpleForm) div:not(.menuStyle):hover,
+.smallMenuCells:not(.simpleForm) div:not(.menuStyle):hover > a {
     color: #56a7ff !important;
     text-decoration: none !important;
     transition: 0.2s linear;
 }
 
-.smallMenuCells div:hover > a:hover {
+.smallMenuCells:not(.simpleForm) div:not(.menuStyle):hover > a:hover {
     text-decoration: none !important;
 }
 
@@ -450,22 +483,22 @@ a.setuptools.app.config.settings.action.eraseCache:hover {
     background-color: #253c63;
 }
 
-.setuptools.div.menu div.input {
+.setuptools.div.menu:not(.simpleForm) div.input {
     padding: 7px;
 }
 
-.setuptools.div.menu strong {
+.setuptools.div.menu strong:not(.nostyle) {
     color: rgb(49, 164, 214);
 }
 
-.setuptools.div.menu div.input > div {
+.setuptools.div.menu:not(.simpleForm) div.input > div {
     width: 100%;
     padding: 0;
     margin: 0;
     overflow: hidden;
 }
 
-.setuptools.div.menu div.select > select {
+.setuptools.div.menu:not(.simpleForm) div.select > select {
     font-size: 12px;
     width: 100%;
     border: #707070 solid 2px;
@@ -475,7 +508,7 @@ a.setuptools.app.config.settings.action.eraseCache:hover {
     outline: none;
 }
 
-.setuptools.div.menu div.input > div > div:first-child {
+.setuptools.div.menu:not(.simpleForm) div.input > div > div:first-child {
     width: auto;
     height: auto;
     margin: 0;
@@ -484,13 +517,13 @@ a.setuptools.app.config.settings.action.eraseCache:hover {
     clear: left;
 }
 
-.setuptools.div.menu div.input > div > div:first-child > input {
+.setuptools.div.menu:not(.simpleForm) div.input > div > div:first-child > input {
     width: 140px !important;
     height: 21px;
     margin: 0;
 }
 
-.setuptools.div.menu div.input > div > div:last-child {
+.setuptools.div.menu:not(.simpleForm) div.input > div:not(.flex-container) > div:last-child {
     width: 31px;
     margin: 3px 0 0 0 !important;
     text-align: center;
@@ -799,10 +832,15 @@ div.massSwitch > div.link {
 
 /* button types */
 
-.menuStyleHover:hover {
+.menuStyleHover:not(.nohover):hover {
     color: #00ceff;
 }
 
+.menuStyle.nohover {
+    cursor: initial !important;
+}
+
+.menuStyle + label,
 .menuStyle {
     float: left;
     cursor: pointer;
@@ -830,38 +868,62 @@ div.massSwitch > div.link {
 div.AccountsList > div.controller.saveAccounts:not(.saveNotice):hover,
 div.AccountsList > div.controller.importAccountsJS:hover,
 div.AccountsList > div.controller.exportAccountsJS:hover,
-.menuStyle:hover {
+.menuStyle:not(.nohover):hover {
     background-color: #142346 !important;
 }
 
-.menuStyle.neutral {
+.menuStyle.bright,
+.menuStyle.bright + label {
+    background-color: #143247;
+}
+
+.menuStyle.bright:not(.nohover):hover,
+.menuStyle.bright:not(.nohover):hover + label,
+.menuStyle.selected.checkbox{
+    background-color: #163f56 !important;
+}
+
+.menuStyle.neutral,
+.menuStyle.neutral + label {
     color: #f6dfb8;
     background-color: #2b2829;
     cursor: initial !important;
 }
 
-.menuStyle.neutral:hover {
+.menuStyle.neutral:not(.nohover):hover {
     background-color: #2b2829 !important;
     cursor: initial !important;
 }
 
-.menuStyle.negative {
+.menuStyle.negative,
+.menuStyle.negative + label {
     color: #f6a084;
     background-color: #321417;
 }
 
-.menuStyle.negative:hover {
-    background-color: #3c0e19 !important;
+.menuStyle.negative:not(.nohover):hover {
+    background-color: #410e19 !important;
 }
 
-.menuStyle.ack {
+.menuStyle.negative.bright,
+.menuStyle.negative.bright + label {
+    color: #f6a084;
+    background-color: #4b181b;
+}
+
+.menuStyle.negative.bright:not(.nohover):hover {
+    background-color: #5a101e !important;
+}
+
+.menuStyle.ack,
+.menuStyle.ack + label {
     opacity: 0.9;
     font-weight: normal;
     color: #95f8ff;
     background-color: #25394b;
 }
 
-.menuStyle.ack:hover {
+.menuStyle.ack:not(.nohover):hover {
     background-color: #1d535f !important;
 }
 
@@ -870,8 +932,17 @@ div.AccountsList > div.controller.exportAccountsJS:hover,
     background-color: #132b1c;
 }
 
-.menuStyle.positive:hover {
+.menuStyle.positive:not(.nohover):hover {
     background-color: #103c29 !important;
+}
+
+.menuStyle.positive.bright {
+    color: #7df67f !important;
+    background-color: #163725 !important;
+}
+
+.menuStyle.positive.bright:not(.nohover):hover {
+    background-color: #124b36 !important;
 }
 
 .menuStyle.disabled {
@@ -879,12 +950,12 @@ div.AccountsList > div.controller.exportAccountsJS:hover,
     background-color: #37393d !important;
 }
 
-.menuStyle.disabled:hover {
+.menuStyle.disabled:not(.nohover):hover {
     color: #5b6876 !important;
     background-color: #3a434d !important;
 }
 
-.menuStyle.disabled.truly:hover {
+.menuStyle.disabled.truly:not(.nohover):hover {
     color: #65676a !important;
     background-color: #37393d !important;
     cursor: initial !important;
@@ -895,8 +966,17 @@ div.AccountsList > div.controller.exportAccountsJS:hover,
     background-color: #2c1d2e;
 }
 
-.menuStyle.notice:hover {
+.menuStyle.notice:not(.nohover):hover {
     background-color: #302532 !important;
+}
+
+.menuStyle.notice.bright {
+     color: #c78bff;
+     background-color: #3a2b3c;
+ }
+
+.menuStyle.notice.bright:not(.nohover):hover {
+    background-color: #48374a !important;
 }
 
 .menuSmall {
@@ -1018,6 +1098,14 @@ div.AccountsList > div.controller.exportAccountsJS:hover,
     width: 497px;
 }
 
+.fl-SettingsLarge .featherlight-content {
+    width: 800px;
+}
+
+.fl-OclManager .featherlight-content {
+    width: 900px;
+}
+
 .fl-SettingsSmall .featherlight-content {
     width: 384px;
 }
@@ -1049,10 +1137,27 @@ div.AccountsList > div.controller.exportAccountsJS:hover,
     max-width: 80%;
 }
 
+.fl-VaultBuilder .featherlight-content {
+    max-width: 90%;
+}
+
+.fl-ConsoleViewer .featherlight-content {
+    width: 60%;
+    min-width: 900px;
+}
+
 /* other */
 
 .m0 {
     margin: 0 !important;
+}
+
+.m5 {
+    margin: 5px !important;
+}
+
+.ml0 {
+    margin-left: 0px !important;
 }
 
 .ml5 {
@@ -1063,12 +1168,20 @@ div.AccountsList > div.controller.exportAccountsJS:hover,
     margin-bottom: 5px !important;
 }
 
+.mb10 {
+    margin-bottom: 10px !important;
+}
+
 .mb0 {
     margin-bottom: 0 !important;
 }
 
 .mr5 {
     margin-right: 5px !important;
+}
+
+.mr10 {
+    margin-right: 10px !important;
 }
 
 .mr0 {
@@ -1089,6 +1202,15 @@ div.AccountsList > div.controller.exportAccountsJS:hover,
 
 .ol1 {
     margin-left: -1px !important;
+}
+
+
+.w50 {
+    width: 50% !important;
+}
+
+.w75 {
+    width: 75% !important;
 }
 
 .w100 {
@@ -1149,14 +1271,11 @@ input[type="checkbox"] {
 }
 
 .dragbox div.selected,
-.selected:not(.item) {
+.selected:not(.item):not(.menuStyle) {
     background-color: #040f51 !important;
     color: #22b7da !important;
 }
 
-div.tooltip:not(.autoHeight) {
-    height: 36px;
-}
 
 div.tooltip {
     z-index: 500;
@@ -1215,8 +1334,12 @@ span.tooltip.feed {
     color: #fc8642;
 }
 
-span.tooltip.generic.text {
+span.generic.text {
     color: #b3b3b3;
+}
+
+span.generic.text.dark {
+    color: #9b9b9b;
 }
 
 span.tooltip.famebonus.value {
@@ -1229,9 +1352,7 @@ div.tooltip div.bagType {
     width: 26px;
     height: 26px;
     position: relative;
-    margin-left: 6px;
-    margin-right: 2px;
-    margin-top: 5px;
+    margin-right: 6px;
 }
 
 img.boost {
@@ -1370,6 +1491,16 @@ a.rateLimited:hover {
     color: #ff0000;
 }
 
+a.rateLimited.orange {
+    color: #ffbcb9;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+a.rateLimited.orange:hover {
+    color: #02faff;
+}
+
 .running {
     animation: runningPulse 3s infinite;
     animation-direction: alternate;
@@ -1397,8 +1528,12 @@ a.rateLimited:hover {
 
 .mulequeue-topMenu,
 .totalsMenu,
-.smallMenuCells {
+.smallMenuCells:not(.bright) {
     background-color: #2c2c2c !important;
+}
+
+.smallMenuCells.bright {
+    background-color: #3f3f3f !important;
 }
 
 div.exporterMenu {
@@ -1650,7 +1785,8 @@ img.spinner {
     background: url(../../media/top-rateLimited.svg);
 }
 
-.buttonStyle {
+.buttonStyle,
+.buttonStyle + label {
     border: #707070 solid 2px;
     text-align: center;
     vertical-align: middle;
@@ -1678,6 +1814,24 @@ img.spinner {
     font-weight: bold;
     text-shadow: 1px 1px #000000;
     z-index: 5002;
+}
+
+div.pagesearch.account.button {
+    background: url(../../media/character-change-right-18x18.png);
+    width: 18px;
+    height: 18px;
+}
+
+div.pagesearch.items.button {
+    background: url(../../media/vault-18x16.png);
+    width: 18px;
+    height: 16px;
+}
+
+div.vaultbuilder.button {
+    background: url(../../media/vaultportal-16x18.png);
+    width: 16px;
+    height: 18px;
 }
 
 strong.negative {
@@ -1906,4 +2060,290 @@ div.wbimportoptions > div {
 
 .bg333 {
     background-color: #333;
+}
+
+#vaultbuilder {
+    flex-wrap: wrap;
+    min-width: 600px;
+}
+
+#vaultbuilder > div.manager {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#vaultbuilder > div.manager > div {
+    width: 46px;
+    height: 46px;
+    margin: 5px;
+    padding: 2px 4px;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    cursor: pointer;
+    transition: 0.15s linear;
+}
+
+#vaultbuilder > div.manager > div:hover {
+    box-shadow: 0 0 6px #000000 inset;
+}
+
+#vaultbuilder > div.manager > div > span {
+    width: 42px;
+    height: 14px;
+}
+
+#vaultbuilder > div.manager > div > span > input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+}
+
+#vaultbuilder > div.manager > div.blank {
+    background-color: #444;
+}
+
+#vaultbuilder > div.manager > div.blank:hover {
+    background-color: #555;
+}
+
+#vaultbuilder > div.manager > div.blank.drag.bright:hover {
+    background-color: #777;
+}
+
+#vaultbuilder > div.manager > div.opened {
+    background: url(../../media/chest-opened.png) #3a88a5;
+}
+
+#vaultbuilder > div.manager > div.opened:hover {
+    background-color: #8cc1cd;
+}
+
+#vaultbuilder > div.manager > div.opened.drag.bright:hover {
+    background-color: #a4dae6;
+}
+
+#vaultbuilder > div.manager > div.closed {
+    background: url(../../media/chest-closed.png) #666;
+}
+
+#vaultbuilder > div.manager > div.closed:hover {
+    background-color: #a58c36;
+}
+
+#vaultbuilder > div.manager > div.closed.drag.bright:hover {
+    background-color: #cdb43a;
+}
+
+#vaultbuilder div.uimenu {
+    justify-content: space-evenly;
+    width: 600px;
+    height: 120px;
+    background-color: #333;
+    border: #555 solid 2px;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+#vaultbuilder div.uimenu > div {
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+#vaultbuilder div.uimenu > div > div:not(:last-child) {
+    width: 33%;
+    flex-flow: column;
+    justify-content: flex-start;
+}
+
+#vaultbuilder div.uimenu > div > div:last-child {
+    width: 33%;
+    flex-flow: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+div.simpleForm.vaultbuilder input,
+div.simpleForm.vaultbuilder select {
+    width: 100%;
+    text-align: center;
+}
+
+div.simpleForm.vaultbuilder input.half {
+    width: 72px !important;
+}
+
+div.simpleForm.vaultbuilder div.menuStyle.half {
+    width: 74px;
+    height: 17px;
+}
+
+.conflict {
+    border: 2px red dashed !important;
+}
+
+.simpleForm .selected {
+    border: 2px #BBBBBB dashed !important;
+}
+
+div.simpleForm > div.input > div {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+div.simpleForm input,
+div.simpleForm select {
+    background-color: transparent;
+    outline: 0;
+    border: solid 2px #707070;
+    padding: 4px;
+    color: #ffffff;
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+/*
+.inputfile + label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background-color: black;
+    display: inline-block;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: red;
+}
+*/
+
+div.ocl.manager {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+div.ocl.manager input {
+    padding-left: 7px;
+}
+
+div.ocl.manager select,
+div.ocl.manager input {
+    width: 100%;
+    display: flex;
+    flex-shrink: 1;
+}
+
+div.ocl.manager > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+div.ocl.manager > div:first-child {
+    width: 60%;
+}
+
+div.ocl.manager > div:last-child {
+    width: 40%;
+}
+
+div.ocl.configuration > div {
+    justify-content: flex-start;
+    display: flex;
+    width: 100%;
+}
+
+div.ocl.configuration > div:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+div.ocl.configuration > div > div {
+    display: flex;
+    align-items: center;
+}
+
+div.ocl.configuration > div > div:first-child {
+    width: 30%;
+}
+
+div.ocl.configuration > div > div:last-child {
+    justify-content: center;
+    width: 70%;
+}
+
+div.ocl.profiles {
+    margin-left: 20px;
+    border: #00b0fc solid 2px;
+    flex-wrap: wrap;
+    max-height: 250px;
+}
+
+div.ocl.profiles > div:not(:first-child) {
+    cursor: pointer;
+}
+
+div.ocl.profiles > div:first-child {
+    background-color: #1f2a34;
+    font-size: 14px;
+}
+
+div.ocl.profiles > div.link {
+    background-color: #28333b;
+    transition: 0.2s linear;
+}
+
+div.ocl.profiles > div.link:hover {
+    background-color: #2b3441;
+}
+
+div.ocl.profiles > div {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    transition: 0.2s linear;
+}
+
+div.ocl.profiles > div:not(:first-child):not(.link):nth-child(even) {
+    background-color: #333333;
+}
+
+div.ocl.profiles > div:not(:first-child):not(.link):nth-child(even):hover {
+    background-color: #393939;
+}
+
+div.ocl.profiles > div:not(:first-child):not(.link):nth-child(odd) {
+    background-color: #222222;
+}
+
+div.ocl.profiles > div:not(:first-child):not(.link):nth-child(odd):hover {
+    background-color: #292929;
+}
+
+div.muledump.configviewer:nth-child(even),
+div.muledump.consoleviewer:nth-child(even){
+    background-color: #444444;
+}
+
+div.muledump.configviewer:nth-child(odd),
+div.muledump.consoleviewer:nth-child(odd){
+    background-color: #333333;
 }

@@ -1,5 +1,7 @@
 # Error Codes and Messages
 
+> This page is very outdated
+
 ## Code Usage Errors
 These errors should only be present during development and are meant to aid in debugging. Appears of these error codes in production should be considered a serious bug.
 

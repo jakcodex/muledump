@@ -8,6 +8,8 @@
 
 [Assistants](#as)
 
+[Analytics](#al)
+
 [System](#ss)
 
 ## <a href="#" id="ms"></a>Muledump Settings
@@ -21,17 +23,14 @@ The maximum numbers of characters to be displayed in on the webpage per row.
 ### ```Display Errors```
 Display error messages when encountered.
 
-### ```Enable One Click Login```
-Whether or not to enable the support of muledump:// links.
-
-### ```Equipment Silhouettes```
-Whether or not to display equipment silhouettes in empty slots.
-
 ### ```Export Default Mode```
 What export mode to utilize if you click the Export button without selecting a format.
 
 ### ```Gift Chests Width```
 Numbers of gift chests to display per row.
+
+### ```One Click Login```
+Whether or not to enable One Click Login mode.
 
 ### ```Page Search```
 Format to display page search: Full width, shortened, or off.
@@ -83,28 +82,31 @@ Groups Manager accounts are merged with their order arranged by overall order
 
 Example: [a, b, c] + [d, e, f] + [g, h, i] = [a, b, c, d, e, f, g, h, i]
 
-### ```Hide Muledump Version Text```
-Hides the `Jakcodex / Muledump v1.2.3` text in the Muledump header.
-
 ### ```Maximum Backups in Local Storage```
 SetupTools stores backups in your browser's local storage. This utilizes disk space on your computer. This feature limits the maximum number of exposed backups to keep before auto-deleting the oldest.
-
-### ```Menu Position```
-Position of the Muledump menu.
 
 ## <a href="#" id="advs"></a>Advanced Settings
 
 ### ```Animations```
 Whether or not to display all animations, reduced animations, or minimal animations.
 
-### ```Auto Complete for Password Managers```
-When disabled this prevents passwords managers from interfering with username and password fields.
-
 ### ```Automatic Backups```
 Automatically create daily backups of your configuration stored in browser local storage.
 
+### ```Auto Complete for Password Managers```
+When disabled this prevents passwords managers from interfering with username and password fields.
+
 ### ```Debug Logging```
 Whether or not to output the debug logs to the browser console.
+
+### ```Equipment Silhouettes```
+Whether or not to display equipment silhouettes in empty slots.
+
+### ```Hide Muledump Version Text```
+Hides the `Jakcodex / Muledump v1.2.3` text in the Muledump header.
+
+### ```Key Bindings```
+Sets which key map to use for hotkeys. Offers Windows and MacOS key maps.
 
 ### ```Lazily Save Minor Config Changes```
 Length of time between lazySave requests (to reduce storage write volume on auto saving features).
@@ -118,8 +120,14 @@ Whether or not to warn you if browser storage space is running out.
 ### ```Mule Menu```
 Whether or not to display the Mule Menu icon on mules.
 
+### ```Menu Position```
+Position of the Muledump menu.
+
 ### ```Prevent Auto Download```
 When downloading data from SetupTools, this feature prevents you from accidentally downloading a backup of sensitive account information to your Downloads folder.
+
+### ```Record Console History```
+Records the Muledump debug log and keeps a specified number of entries. 
 
 ### ```Storage Compression```
 Whether or not to use SetupTools Compression to reduce size of data stored in browser storage.
@@ -141,13 +149,30 @@ Displays a reminder to download a backup if a certain period of time has gone by
 ### ```CORS Assistant```
 Displays an assistant to help resolve CORS problems when they are detected. 
 
+### ```Clothing Tooltip Assistant```
+Whether or not to show the character clothing and dye information panel.
+
+### ```Items Tooltip Assistant```
+Whether or not to show the item information panel.
+
+### ```XP Boosters Tooltip Assistant```
+Whether or not to show the XP Boosters information panel.
+
+## <a href="#" id="al"></a>Analytics Settings
+
+### ```Enable Analytics```
+Master on/off switch for Usage Analytics.
+
+### ```Activity Ping```
+Activity ping tells analytics Muledump is running.
+
+### ```Errors and Bugs```
+The types of errors and bugs encountered.
+
+### ```Options and Features```
+The options and features that are being used.
+
 ## <a href="#" id="ss"></a>System Settings
-
-### ```View System Report```
-Displays current storage usage information and other system information.
-
-### ```Compression Utility```
-Analyze and synchronize storage to match the current Storage Compression setting.
 
 ### ```Reset Muledump Options```
 Erases current options and resets it to the default Muledump options.

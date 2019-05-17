@@ -11,6 +11,10 @@ Steam users can go to the [Steam Users Setup Guide](https://github.com/jakcodex/
 
 ## Account Options
 
+#### ```OCL```
+
+Opens a submenu to select which One Click Login profile to associate with this account. Only available for email-based users.
+
 #### ```Reveal Password```
 [default: disabled]
 

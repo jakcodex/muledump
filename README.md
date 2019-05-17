@@ -1,12 +1,8 @@
-![Jakcodex/Muledump](https://img.shields.io/badge/jakcodex-muledump-blue.svg?style=flat-square)
-[![Muledump Online](https://img.shields.io/badge/dynamic/json.svg?label=online&colorB=9e43f9&prefix=v&suffix=&query=$.version&uri=https%3A%2F%2Fjakcodex.github.io%2Fmuledump%2Fpackage.json)](https://jakcodex.github.io/muledump/muledump.html)
-[![Muledump Preview](https://img.shields.io/badge/dynamic/json.svg?label=preview&colorB=5942f4&prefix=v&suffix=&query=$.version&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fjakcodex%2Fmuledump-preview%2Fmaster%2Fpackage.json)](https://jakcodex.github.io/muledump-preview/muledump.html)
+# Jakcodex / Muledump
 
 ## Welcome
 
-This is a fork of Atomizer's [Muledump](https://github.com/atomizer) continuing the project into a new age.
-
-You can read about the reasoning for a new fork in the [upstream notes](UPSTREAM.md).
+This is a fork of Atomizer's [Muledump](https://github.com/atomizer).
 
 ## Synopsis
 
@@ -22,9 +18,15 @@ See the [Requirements](REQUIREMENTS.md) page for more information.
 
 ### Head over to [Installation and Setup](https://github.com/jakcodex/muledump/wiki/Installation-and-Setup) in the wiki for a detailed setup guide.
 
+[Steam Users Setup Guide](https://github.com/jakcodex/muledump/wiki/Steam-Users-Setup-Guide)
+
+[Kongregate Users Setup Guide](https://github.com/jakcodex/muledump/wiki/Kongregate-Users-Setup-Guide)
+
+[One Click Login Setup Guide](https://github.com/jakcodex/muledump/wiki/One-Click-Login)
+
 ## Release Information
 
-The current version is Jakcodex/Muledump v9.5.
+The current version is Jakcodex/Muledump v9.6.
 
 Muledump Online is available hosted on Github [here](https://jakcodex.github.io/muledump/muledump.html).
 
@@ -55,6 +57,7 @@ All released versions are available for download [here](https://github.com/jakco
 - [Storage Compression](https://github.com/jakcodex/muledump/wiki/Storage-Compression) - Store more data in the browser than previously possible
 - [Muledump Totals](https://github.com/jakcodex/muledump/wiki/Totals) - Filtering on fame bonus, feed power, soulbound, tradeable, ut, and st, and specified accounts, and easy switching between pre-defined totals configs
 - [White Bag Tracker](docs/muledump/whitebags.md) - Track your white bag collection the way you want to
+- Archive Backups - Backup and restore Muledump with account data to prevent having to reload unnecessarily
 - Skin Wardrobe - View all skins owned by your accounts
 - MuleQueue - Task queuing to control the flow of requests from Muledump
 - Vault display is fully customizable and comes with four pre-defined layouts
@@ -75,14 +78,10 @@ All released versions are available for download [here](https://github.com/jakco
 - logins thru muledump count towards daily login calendar
 - account settings include automatic reload, login-only (daily calendar only), and cache disable
 - right click anywhere on a mule to access the mule menu
-- active mulequeue can be resumed if muledump is closed
+- active mulequeue can be resumed if muledump is closed or reloaded
 - See a full list of available actions at the [Keyboard and Mouse Controls](https://github.com/jakcodex/muledump/wiki/Keyboard-and-Mouse-Controls) wiki
 
 ## Check out the [Frequently Asked Questions](https://github.com/jakcodex/muledump/wiki/Frequently-Asked-Questions) and explore the [wiki](https://github.com/jakcodex/muledump/wiki) for more information!
-
-[Steam Users Setup Guide](https://github.com/jakcodex/muledump/wiki/Steam-Users-Setup-Guide)
-
-[Kongregate Users Setup Guide](https://github.com/jakcodex/muledump/wiki/Kongregate-Users-Setup-Guide)
 
 <a id="jakcodex-supportandcontributions"></a>
 ## Support and Contributions

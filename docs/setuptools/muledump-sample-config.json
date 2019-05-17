@@ -1,9 +1,9 @@
 {
   "meta": {
-    "BackupDate": "2018-09-25T00:00:00.000Z",
+    "BackupDate": "2019-05-10T00:00:00.000Z",
     "protected": false,
     "auto": false,
-    "name": "muledump-sample-config-v9.5"
+    "name": "muledump-sample-config-v9.6"
   },
   "config": {
     "accountAssistant": 1,
@@ -12,19 +12,15 @@
     "alertNewVersion": 1,
     "animations": 1,
     "autocomplete": true,
-    "automaticBackups": true,
     "autoReloadDays": 1,
-    "backupAssistant": 14,
     "badaccounts": -1,
     "compression": false,
     "corsAssistant": 1,
     "debugging": true,
-    "enabled": false,
-    "encryption": false,
     "equipSilhouettes": true,
     "exportDefault": 4,
     "errors": true,
-    "ga": false,
+    "ga": true,
     "gaErrors": true,
     "gaOptions": true,
     "gaPing": true,
@@ -36,33 +32,35 @@
     "lazySave": 10000,
     "longpress": 1000,
     "lowStorageSpace": true,
-    "maximumBackupCount": 5,
     "menuPosition": 2,
-    "mqBGTimeout": 180,
-    "mqConcurrent": 1,
-    "mqDisplayIgn": false,
-    "mqKeepHistory": 100,
     "mulelogin": 0,
+    "muleloginCopyLinks": 0,
     "muleMenu": true,
     "nomasonry": 0,
     "pagesearch": 2,
     "preventAutoDownload": true,
+    "recordConsole": 2000,
+    "recordConsoleTtl": 10000,
     "rowlength": 7,
     "timesync": false,
     "tooltip": 500,
+    "tooltipClothing": 1,
+    "tooltipItems": 1,
+    "tooltipXPBoost": 1,
     "totalsExportWidth": 0,
     "totalswidth": 0,
+    "vaultbuilderAccountViewLimit": 10,
     "wbTotals": true
   },
   "version": {
     "major": 9,
-    "minor": 5,
+    "minor": 6,
     "patch": 0
   },
   "accounts": {
     "meta": {
       "created": 1510135507593,
-      "modified": 1537833600000,
+      "modified": 1557446400000,
       "format": 1,
       "version": 1,
       "encryption": false,
@@ -76,6 +74,7 @@
         "autoReload": false,
         "cacheEnabled": true,
         "giftsBugAck": false,
+        "oclProfile": false,
         "testing": false,
         "password": "mypassword",
         "group": 0
@@ -87,6 +86,7 @@
         "autoReload": false,
         "cacheEnabled": true,
         "giftsBugAck": false,
+        "oclProfile": false,
         "testing": false,
         "password": "testingtesting1",
         "group": 0
@@ -98,6 +98,7 @@
         "autoReload": false,
         "cacheEnabled": true,
         "giftsBugAck": false,
+        "oclProfile": false,
         "testing": false,
         "password": "klHSJFo3yuflkshLHFSkfh3oislhfslhfOFHY=",
         "group": 0
@@ -109,6 +110,7 @@
         "autoReload": false,
         "cacheEnabled": true,
         "giftsBugAck": false,
+        "oclProfile": false,
         "testing": false,
         "password": "2spooky3mee",
         "group": 0
@@ -120,6 +122,7 @@
         "autoReload": false,
         "cacheEnabled": true,
         "giftsBugAck": false,
+        "oclProfile": false,
         "testing": false,
         "password": "helloworld5",
         "group": 0
@@ -131,6 +134,7 @@
         "autoReload": false,
         "cacheEnabled": true,
         "giftsBugAck": false,
+        "oclProfile": false,
         "testing": false,
         "password": "accounttesting88",
         "group": 0
@@ -142,6 +146,7 @@
         "autoReload": false,
         "cacheEnabled": true,
         "giftsBugAck": false,
+        "oclProfile": false,
         "testing": false,
         "password": "blahblahblahdoodoodeedoodooo",
         "group": 0
@@ -153,6 +158,7 @@
         "autoReload": false,
         "cacheEnabled": true,
         "giftsBugAck": false,
+        "oclProfile": "Browser",
         "testing": false,
         "password": "yaybadpassword",
         "group": 0
@@ -317,12 +323,6 @@
     ],
     "itemFilter": [],
     "slotSubOrder": {},
-    "potions": true,
-    "candies": true,
-    "stars": true,
-    "scepters": true,
-    "spells": true,
-    "skulls": true,
     "accountFilter": [],
     "sortingMode": "standard",
     "typeOrder": {},

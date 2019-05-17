@@ -95,22 +95,22 @@ Full URL for Appspot testing server endpoint.
 
 Delay before Backup Assistant will popup on screen.
 
-#### compressionMinimum
+#### setuptools.config.compressionMinimum
 `[default:number|1000]`
 
 Minimum size in bytes a string must be before it gets compressed for SetupTools Compression.
 
-#### compressionFormat
+#### setuptools.config.compressionFormat
 `[default:number|0]`
 
 Compression format to utilize. Presently supports SnappyJS with id 0.
 
-#### compressionLibraries
+#### setuptools.config.compressionLibraries
 `[default:object|{snappy: {}}]`
 
 Each compression algorithm should be defined as an key with an empty object for its data. The key order determines the ids used in `compressionFormat`.
 
-#### corsURL
+#### setuptools.config.corsURL
 `[default:object|{...}]`
 
 Browser-specific URLs to their respective Muledump CORS Adapter browser extension page.
@@ -142,7 +142,7 @@ Whether or not Mulecrypt is enabled.
 
 Hex color used for error texts outside of css
 
-#### exporterStoredLinks
+#### setuptools.config.exporterStoredLinks
 `[default: number|10]`
 
 How many recent links to store in history when uploading to Jakcodex/Paste.
@@ -265,6 +265,41 @@ Which storage keys Mulecrypt should not encrypt.
 
 The number of seconds the notices monitor will run before exiting.
 
+#### setuptools.config.oclAdmin
+`[default: boolean|false]`
+
+Default OCL admin setting.
+
+#### setuptools.config.oclAllPaths
+`[default: array|["localhost", "www.realmofthemadgod.com", "test.realmofthemadgod.com"]]`
+
+All possible OCL update paths.
+
+#### setuptools.config.oclClient
+`[default: string|https://www.realmofthemadgod.com/client]`
+
+Default OCL client URL (used with Flash Projector mode).
+
+#### setuptools.config.oclDebug
+`[default: boolean|false]`
+
+Default OCL debug setting.
+
+#### setuptools.config.oclDefault
+`[default: string|Browser]`
+
+Default OCL mode setting.
+
+#### setuptools.config.oclPath
+`[default: string|https://www.realmofthemadgod.com/]`
+
+Default OCL game path URL (in Browser mode) or Flash Projector exe path.
+
+#### setuptools.config.oclPaths
+`[default: string|www.realmofthemadgod.com]`
+
+Ddefault OCL path for file updates.
+
 #### setuptools.config.oneclickHelp
 `[default: string|https://github.com/jakcodex/muledump/wiki/One-Click-Login]`
 
@@ -310,6 +345,16 @@ URL to use for linking to Realmeye.
 
 An array of item ids of items currently tradable on Realmeye. A better solution will be implemented at a later time.
 
+#### setuptools.config.recordConsoleMinimum
+`[default: number|15]`
+
+Minimum number of records to store for the history console.
+
+#### setuptools.config.recordConsolePerPage
+`[default: number|15]`
+
+Number of records to display per page in the history console.
+
 #### setuptools.config.regex
 A list of RegExp objects used throughout the program
 
@@ -317,6 +362,11 @@ A list of RegExp objects used throughout the program
 `[default: number|3]`
 
 How many seconds to wait before triggering automatic window reloads
+
+#### setuptools.config.remotePasteUrl
+`[default: string|https://paste.jakcodex.io/api/create]`
+
+URL for remote Paste service API.
 
 #### setuptools.config.timesyncTtl
 `[default: number|2500]`
@@ -367,6 +417,11 @@ The Github API URL for accessing Muledump repo tags.
 `[default: string|https://jakcodex.github.io/muledump]`
 
 URL for Muledump Online
+
+#### setuptools.config.vaultbuilderMinimumId
+`[default: number|1000]`
+
+Minimum ID for user-created vaults.
 
 #### setuptools.config.vstIndex
 `[default: number|10]`
@@ -601,6 +656,11 @@ Maximum number of MuleQueue history records to keep.
 
 Whether or not one-click login is enabled
 
+#### setuptools.data.config.muleloginCopyLinks
+`[default: number|0]`
+
+Enable copying Mule link source from the launch button.
+
 #### setuptools.data.config.muleMenu
 `[default: boolean|true]`
 
@@ -616,10 +676,25 @@ Whether or not to disable Masonry page layout
 
 Whether or not to display the full Page Search bar (2), expanding bar (1), or no bar (0).
 
+#### setuptools.data.config.pagesearchMode
+`[default: number|0]`
+
+*Not released yet*
+
 #### setuptools.data.config.preventAutoDownload
 `[default: boolean|true]`
 
 Whether or not to prevent browser automatic, no-confirm downloads (dangerous given our usage; sensitive files don't belong in Downloads)
+
+#### setuptools.data.config.recordConsole
+`[default: number|2000]`
+
+Number of console entries to keep in the history console. 
+
+#### setuptools.data.config.recordConsoleTtl
+`[default: number|10000]`
+
+Interval of time in milliseconds to store new records to the history console.
 
 #### setuptools.data.config.rowlength
 `[default: number|7]`
@@ -636,6 +711,21 @@ Whether or not to use the Time Sync feature to check the correctness of the syst
 
 Time to wait in milliseconds before displaying a tooltip on hover.
 
+#### setuptools.data.config.tooltipClothing
+`[default: number|1]`
+
+Enable the clothing tooltip.
+
+#### setuptools.data.config.tooltipItems
+`[default: number|1]`
+
+Enable the items tooltip.
+
+#### setuptools.data.config.tooltipXPBoost
+`[default: number|1]`
+
+Enable the XPBoost tooltip.
+
 #### setuptools.data.config.totalsExportWidth
 `[default: number|0]`
 
@@ -651,6 +741,11 @@ Whole screen width
 `[default: number|0]`
 
 Number of items to display per row in totals. A value of 0 will default to whole screen usable width.
+
+#### setuptools.data.config.vaultbuilderAccountViewLimit
+`[default: number|10]`
+
+Number of accounts to show in vault builder account view menu before scrolling.
 
 #### setuptools.data.config.wbTotals
 `[default: boolean|true]`
@@ -843,7 +938,7 @@ Adds the provided html to the page being built. Build data is stored in an array
 
 Processes and removes all special build data for the specified page (settitle, goback, etc), builds the HTML response data, and sends it to setuptools.lightbox.create().
 
-#### setuptools.lightbox.ajax(object e, object drawhelpData, object self [, boolean net=false])
+#### setuptools.lightbox.drawHelp(object e, object drawhelpData, object self [, boolean net=false])
 
 This method is intended to be bound to a link to the Github Pages hostname. It is primarily bound thru the drawhelp button, but it can be used on custom links as well.
  
@@ -857,7 +952,7 @@ setuptools.lightbox.build('myspace-method', ' \
 ');
 setuptools.lightbox.settitle('myspace-method', 'My Method Title');
 setuptools.lightbox.display('myspace-method');
-$('.setuptools.link.somehelpdoc').click(function(e) { setuptools.lightbox.ajax(e, {title: 'My help title'}, this); });
+$('.setuptools.link.somehelpdoc').click(function(e) { setuptools.lightbox.drawHelp(e, {title: 'My help title'}, this); });
 ```
 
 This creates a lightbox with a link in its message. When the link is clicked the Ajax response data is processed for links and displayed in a lightbox. The class noclose prevents SetupTools from erasing the previous page so when the user closes the help doc they are returned to the original page. 

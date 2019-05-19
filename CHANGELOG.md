@@ -1,3 +1,11 @@
+**2019-05-19** version 9.6.1
+
+- Bug Fixes
+  * Muledump Local failing to load for accounts.js users (#280)
+  * Settings from accounts.js not importing in bypass mode (#281)
+  * OCL not working for accounts.js users (#282)
+  * Usage Analytics not working for accounts.js users (#283)
+
 **2019-05-17** version 9.6.0
 
 - Bug Fixes
@@ -24,7 +32,7 @@
   * Added new Dev Tool: Console Viewer (#272)
   * Usage Analytics enabled in Muledump Local (#276)
 
-- Added Secluded Thicken and Cursed Library to dungeon portal list
+- Added Secluded Thicket and Cursed Library to dungeon portal list
 - Timestamps added to console logs
 - Clipboard.js updated to 2.0.4
 - Html2Canvas updated to 1.0.0-rc1

@@ -9,15 +9,6 @@
 
 Global $config = ObjCreate("Scripting.Dictionary")
 
-;;  run in admin mode
-$config.Add("admin", "false");
-
-;;  enable runtime parameter support
-$config.Add("params", "true")
-
-;;  enable setting admin permissions via runtime params
-$config.Add("adminparams", "false")
-
 ;;  select mode (accepts: browser, flash)
 $config.Add("mode", "browser");
 
@@ -30,11 +21,20 @@ $config.Add("path", "https://www.realmofthemadgod.com");
 ;;  path to the game client
 $config.Add("client", "https://www.realmofthemadgod.com/client");
 
-;;  output debugging information
-$config.Add("debug", "false")
+;;  run in admin mode
+$config.Add("admin", "false");
+
+;;  enable runtime parameter support
+$config.Add("params", "true")
+
+;;  enable setting admin permissions via runtime params
+$config.Add("adminparams", "false")
 
 ;;  enforce parameter security
 $config.Add("paramsecurity", "true")
+
+;;  output debugging information
+$config.Add("debug", "false")
 
 ;;  search paths
 $config.Add("paths", "localhost,www.realmofthemadgod.com,test.realmofthemadgod.com,#localWithNet")

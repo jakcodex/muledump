@@ -1,3 +1,7 @@
+**2019-07-11** version 9.6.2
+
+- Vault layouts updated for X31.8.0 (140 vaults)
+
 **2019-05-19** version 9.6.1
 
 - Bug Fixes

@@ -1,3 +1,8 @@
+**2019-08-11** version 9.6.3
+
+- Google Chrome v76 breaking changes addressed 
+- For more info see: https://github.com/jakcodex/muledump/wiki/Chrome-v76-Breaking-Changes
+
 **2019-07-11** version 9.6.2
 
 - Vault layouts updated for X31.8.0 (140 vaults)

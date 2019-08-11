@@ -2,14 +2,14 @@
 
 ### CORS Browser Extension
 
-In order to get around browser restrictions when attempting to contact Deca servers, Muledump presently needs a browser extension to make its requests work.
+In order to get around browser restrictions when attempting to contact Deca servers, Muledump presently needs a browser extension to make ROTMG account requests work.
 
-#### Google Chrome (recommended)
+#### Opera (recommended)
 - Requires the extension **[Jakcodex/Muledump CORS Adapter for Chrome](https://chrome.google.com/webstore/detail/jakcodexmuledump-cors-ada/iimhkldbldnmapepklmeeinclchfkddd)**
 
-#### Opera
-- Requires the Opera extension **[Download Chrome Extension](https://addons.opera.com/en/extensions/details/download-chrome-extension-9/?display=en)**
+#### Google Chrome
 - Requires the Chrome extension **[Jakcodex/Muledump CORS Adapter for Chrome](https://chrome.google.com/webstore/detail/jakcodexmuledump-cors-ada/iimhkldbldnmapepklmeeinclchfkddd)**
+- Requires settings changes (not recommended): see [Chrome v76 Breaking Changes](https://github.com/jakcodex/muledump/wiki/Chrome-v76-Breaking-Changes) for more info
 
 #### Firefox
 - Requires the extension **[Jakcodex/Muledump CORS Adapter for Firefox](https://addons.mozilla.org/en-US/firefox/addon/muledump-cors-adapter/)**

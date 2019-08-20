@@ -1,3 +1,10 @@
+**2019-08-20** version 9.6.4
+
+- Bug Fixes
+  * OCL breaks when using Firefox v68
+  
+- Notice: All Firefox OCL users must reinstall lib/mulelogin.au3
+
 **2019-08-11** version 9.6.3
 
 - Google Chrome v76 breaking changes addressed 

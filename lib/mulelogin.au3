@@ -33,6 +33,9 @@ $config.Add("adminparams", "false")
 ;;  enforce parameter security
 $config.Add("paramsecurity", "true")
 
+;;  parameter separator
+$config.Add("paramseparator", "++++")
+
 ;;  output debugging information
 $config.Add("debug", "false")
 
@@ -213,7 +216,7 @@ $password = $data[2]
 ;; if parameters were passed we will parse them into the runtime config
 If UBound($data) == 4 and $config.Item("params") == "true" Then
 
-    $params = StringSplit($data[3], "#")
+    $params = StringSplit($data[3], $config.Item("paramseparator"))
     If IsArray($params) Then
 
         Local Const $paramsLength = UBound($params)
@@ -304,7 +307,7 @@ ElseIf $config.Item("mode") == "flash" Then
 
     If $config.Item("params") == "true" and $config.Item("paramsecurity") == "true" Then
         Local $result
-        $result = StringRegExp($config.Item("path"), "^[a-zA-Z]:\\[a-zA-Z0-9-_\\]*?flashplayer_[a-zA-Z0-9-_\.]*?\.exe$");
+        $result = StringRegExp($config.Item("path"), "^[a-zA-Z]:\\[a-zA-Z0-9-_\\]*?(flashplayer|flash|flashprojector|flashplayer_[a-zA-Z0-9-_\.]*?)\.exe$");
         If @error or $result == 0 Then _error("Invalid path provided: " & $config.Item("path") & @CRLF & @CRLF & "If the value is correct then try disabling param security in the au3 file config.")
 
         $result = StringRegExp($config.Item("client"), "^(https://([a-zA-Z0-9]*)\.(realmofthemadgod\.com)(\/?|\/.*)|[a-zA-Z]:\\.*?AssembleeGameClient[0-9]*\.swf)$");

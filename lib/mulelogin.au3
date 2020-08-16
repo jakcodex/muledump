@@ -13,7 +13,7 @@ Global $config = ObjCreate("Scripting.Dictionary")
 $config.Add("mode", "browser");
 
 ;;  path to use for browser
-$config.Add("path", "https://www.realmofthemadgod.com");
+$config.Add("path", "https://www.realmofthemadgod.com/legacy");
 
 ;;  path to use for flash projector
 ;;  $config.Add("path", "c:\users\me\Downloads\flashplayer_18.exe");

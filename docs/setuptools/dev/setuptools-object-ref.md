@@ -162,6 +162,11 @@ The function name to assign Google Analytics.
 
 The analytics background ping rate in milliseconds.
 
+#### setuptools.config.gaOptions
+`[default: object|...]`
+
+The default options for Google Analytics
+
 #### setuptools.config.giftsWarningThreshold
 `[default: number|6500]`
 

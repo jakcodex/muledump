@@ -53,7 +53,7 @@ All released versions are available for download [here](https://github.com/jakco
 - [SetupTools](docs/setuptools/index.md) - An easy to use, browser-based user interface for managing Muledump
 - [Groups Manager](docs/setuptools/help/groups-manager/manager.md) - Account grouping and ordering utility to customize the Muledump accounts list
 - [Muledump Online](https://jakcodex.github.io/muledump/muledump.html) - Load Muledump directly from Github using SetupTools
-- [One Click Login](https://github.com/jakcodex/muledump/wiki/One-Click-Login) - Login to your accounts via the browser or Flash Projector with one click
+- [One Click Login](https://github.com/jakcodex/muledump/wiki/One-Click-Login) - Login to your accounts via Exalt, the browser or Flash Projector with one click
 - [Storage Compression](https://github.com/jakcodex/muledump/wiki/Storage-Compression) - Store more data in the browser than previously possible
 - [Muledump Totals](https://github.com/jakcodex/muledump/wiki/Totals) - Filtering on fame bonus, feed power, soulbound, tradeable, ut, and st, and specified accounts, and easy switching between pre-defined totals configs
 - [White Bag Tracker](docs/muledump/whitebags.md) - Track your white bag collection the way you want to
@@ -129,16 +129,13 @@ If you are so inclined, you can donate to one of these locations:
 ##### Paypal
 paypal@jakcodex.io
 
-##### Bitcoin
-bitcoin:1FfFBFNcWuvZMFRvZ7K9byh341h7yJte2P
-
 ## Privacy Policy
 
 Click to read more about our [Privacy Policy](privacy-policy.md).
 
 ## Jakcodex/Muledump License
 
-Copyright 2018 [Jakcodex](https://github.com/jakcodex)
+Copyright 2020 [Jakcodex](https://github.com/jakcodex)
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 

@@ -1,3 +1,19 @@
+**2020-09-19** version 9.6.5
+
+- Improvements
+  * OCL Exalt support added (see wiki for upgrade instructions) (#304)
+  
+- Bug Fixes
+  * Account in Use detection broken for Exalt (#305)
+  
+- TOS and Age Verification assistants send requests in background now
+- Usage Analytics updated for SameSite cookie change
+- JQuery updated to 3.5.1
+- Clipboard.js updated to 2.0.6
+- Html2canvas updated to 1.0.0-rc7
+- Libsodium updated to 0.7.8
+- JSZip updated to 3.5.0
+
 **2019-08-20** version 9.6.4
 
 - Bug Fixes

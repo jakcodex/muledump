@@ -206,6 +206,7 @@
     "pcstats": true,
     "goals": true,
     "backpack": false,
+    "potions": true,
     "gifts": false,
     "wawawa": false,
     "shrink": false,

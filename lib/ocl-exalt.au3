@@ -68,21 +68,28 @@ Func _error($msg='There was an error')
     Exit
 EndFunc
 
-Func _write()
+Func _write($update = False)
+	$clientToken = _ComputeClientToken()
 	RegWrite($root,"","REG_SZ","URL: muledump Protocol")
 	RegWrite($root,"URL Protocol","REG_SZ","")
 	RegWrite($root & "\shell")
 	RegWrite($root & "\shell\open")
-	RegWrite($root & "\shell\open\command","","REG_SZ", @AutoItExe & ' "' & @ScriptFullPath & '" %1')
+	RegWrite($root & "\shell\open\command","","REG_SZ", @AutoItExe & ' "' & @ScriptFullPath & '" %1 ' & $clientToken)
 	If RegRead("HKEY_CLASSES_ROOT\muledump","") Then
-		MsgBox(64,$title,"One Click Login Exalt: installed" & @CRLF & @CRLF & "Now go to Muledump and click Setup > Settings > One Click Login to finish setup")
+		If $update Then
+			MsgBox(64,$title,"One Click Login Exalt successfully updated")
+			ShellExecute(@AutoItExe, $CmdLineRaw & " " & $clientToken)
+			ProcessClose(@AutoItPID)
+		Else
+			MsgBox(64,$title,"One Click Login Exalt: installed" & @CRLF & @CRLF & "Now go to Muledump and click Setup > Settings > One Click Login to finish setup")
+		EndIf
 	Else
 		MsgBox(16,$title,$adminRightsError)
 	EndIf
 	Exit
 EndFunc
 
-Func _install()
+Func _install($update = False)
     $config.Item('admin') = 'true';
     _GetAdminRights()
 	Local $k
@@ -91,7 +98,7 @@ Func _install()
 		MsgBox(16,$title,$adminRightsError)
 		Exit
 	EndIf
-	If @error == 1 Then _write()
+	If @error == 1 Or $update Then _write($update)
 	$k = MsgBox(6 + 32, $title, _
 		'One Click Login is already installed.' & @CRLF & @CRLF & 'What would you like to do?' & @CRLF & @CRLF & _
 		'"Cancel" to do nothing' & @CRLF & _
@@ -174,7 +181,84 @@ Func _Base64Encode($sData)
     Return $sReturn
 EndFunc   ;==>_Base64Encode
 
+Func _POST($url, $data)
+    Local $req := ObjCreate("WinHttp.WinHttpRequest.5.1")
+    ; $req.SetProxy(2, "http://localhost:8866") ; fiddler
+    $req.Open("POST", $url, False)
+    $req.SetRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+    $req.Send($data)
+    Return $req.ResponseText
+EndFunc   ;==>_POST
+
+; https://www.autoitscript.com/forum/topic/95850-url-encoding/?tab=comments#comment-689045
+Func _URLEncode($urlText)
+    $url = ""
+    For $i = 1 To StringLen($urlText)
+        $acode = Asc(StringMid($urlText, $i, 1))
+        Select
+            Case ($acode >= 48 And $acode <= 57) Or _
+                    ($acode >= 65 And $acode <= 90) Or _
+                    ($acode >= 97 And $acode <= 122)
+                $url = $url & StringMid($urlText, $i, 1)
+            Case $acode = 32
+                $url = $url & "+"
+            Case Else
+                $url = $url & "%" & Hex($acode, 2)
+        EndSelect
+    Next
+    Return $url
+EndFunc   ;==>_URLEncode
+
+Func _ComputeClientToken()
+    $ps1 = _TempFile(@TempDir, "~", ".ps1")
+    $txt = _TempFile(@TempDir, "~", ".txt")
+    FileWrite($ps1, _
+        '$stringAsStream = [System.IO.MemoryStream]`:`:new()' & @CRLF & _
+        '$writer = [System.IO.StreamWriter]`:`:new($stringAsStream)' & @CRLF & _
+        '$writer.write("$(Get-CimInstance -ClassName Win32_BaseBoard | foreach {$_.SerialNumber})$(Get-CimInstance -ClassName Win32_BIOS | foreach {$_.SerialNumber})$(Get-CimInstance -ClassName Win32_OperatingSystem | foreach {$_.SerialNumber})")' & @CRLF & _
+        '$writer.Flush()' & @CRLF & _
+        '$stringAsStream.Position = 0' & @CRLF & _
+        'echo "$(Get-FileHash -InputStream $stringAsStream -Algorithm SHA1 | foreach {$_.Hash})".ToLower() > ' & $txt & @CRLF & _
+        )
+    RunWait('PowerShell.exe -ExecutionPolicy Bypass -Command "' & $ps1 & '"', "", @SW_HIDE)
+    $clientToken = FileRead($txt)
+    FileDelete($ps1)
+    FileDelete($txt)
+    Return $clientToken
+EndFunc   ;==>_ComputeClientToken
+
+Func _GetLoginData($guid, $password, $clientToken)
+    $verify_url = "https://www.realmofthemadgod.com/account/verify"
+    $verify_data = _
+        "guid=" & _URLEncode($guid) & _
+        "&password=" & _URLEncode($password) & _
+        "&clientToken=" & $clientToken
+    $verify_resp = _POST($verify_url, $verify_data)
+
+    $accessToken = StringRegExp($verify_resp, "<AccessToken>(.+)</AccessToken>", $STR_REGEXPARRAYMATCH)
+    $tokenTimestamp = StringRegExp($verify_resp, "<AccessTokenTimestamp>(.+)</AccessTokenTimestamp>", $STR_REGEXPARRAYMATCH)
+    $tokenExpiration = StringRegExp($verify_resp, "<AccessTokenExpiration>(.+)</AccessTokenExpiration>", $STR_REGEXPARRAYMATCH)
+
+    $vATC_url = "https://www.realmofthemadgod.com/account/verifyAccessTokenClient"
+    $vATC_data = _
+        "clientToken=" & $clientToken & _
+        "&accessToken=" & urlEncode($accessToken[0])
+    $vATC_resp = _POST($vATC_url, $vATC_data)
+
+    $login_data = "data:{platform:Deca" & _
+        ",guid:" & _Base64Encode($guid) & _
+        ",token:" & _Base64Encode($accessToken[0]) & _
+        ",tokenTimestamp:" & _Base64Encode($tokenTimestamp[0]) & _
+        ",tokenExpiration:" & _Base64Encode($tokenExpiration[0]) & _
+        ",env:4}"
+    Return $login_data
+EndFunc   ;==>_GetLoginData
+
 If $CmdLine[0] = 0 Then _install()
+If $CmdLine[0] = 1 Then
+    $k = MsgBox(1, $title, "Due to an update to Exalt, OCL must reinstall itself.")
+    If $k == 1 Then _install(True)
+EndIf
 
 ;;  process the command input
 $data = StringReplace($CmdLine[1],"muledump:","")
@@ -245,7 +329,7 @@ If $config.Item("mode") == "exalt" Then
 
     EndIf
 
-    $args = "data:{platform:Deca,password:" & $password & ",guid:" & $username & ",env:4}"
+    $args = _GetLoginData($username, $password, $CmdLine[2])
     $pid = ShellExecute($config.Item("path"), $args)
 
     If $pid > 0 And Not($config.Item("title") == "" Or $config.Item("title") == "false") Then

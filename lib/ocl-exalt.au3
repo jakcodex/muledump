@@ -182,7 +182,7 @@ Func _Base64Encode($sData)
 EndFunc   ;==>_Base64Encode
 
 Func _POST($url, $data)
-    Local $req := ObjCreate("WinHttp.WinHttpRequest.5.1")
+    Local $req = ObjCreate("WinHttp.WinHttpRequest.5.1")
     ; $req.SetProxy(2, "http://localhost:8866") ; fiddler
     $req.Open("POST", $url, False)
     $req.SetRequestHeader("Content-Type", "application/x-www-form-urlencoded")
@@ -212,19 +212,18 @@ EndFunc   ;==>_URLEncode
 Func _ComputeClientToken()
     $ps1 = _TempFile(@TempDir, "~", ".ps1")
     $txt = _TempFile(@TempDir, "~", ".txt")
-    FileWrite($ps1, _
-        '$stringAsStream = [System.IO.MemoryStream]`:`:new()' & @CRLF & _
-        '$writer = [System.IO.StreamWriter]`:`:new($stringAsStream)' & @CRLF & _
+    FileWrite($ps1, '' & _
+        '$stringAsStream = [System.IO.MemoryStream]::new()' & @CRLF & _
+        '$writer = [System.IO.StreamWriter]::new($stringAsStream)' & @CRLF & _
         '$writer.write("$(Get-CimInstance -ClassName Win32_BaseBoard | foreach {$_.SerialNumber})$(Get-CimInstance -ClassName Win32_BIOS | foreach {$_.SerialNumber})$(Get-CimInstance -ClassName Win32_OperatingSystem | foreach {$_.SerialNumber})")' & @CRLF & _
         '$writer.Flush()' & @CRLF & _
         '$stringAsStream.Position = 0' & @CRLF & _
-        'echo "$(Get-FileHash -InputStream $stringAsStream -Algorithm SHA1 | foreach {$_.Hash})".ToLower() > ' & $txt & @CRLF & _
-        )
+        'echo "$(Get-FileHash -InputStream $stringAsStream -Algorithm SHA1 | foreach {$_.Hash})".ToLower() > ' & $txt & @CRLF)
     RunWait('PowerShell.exe -ExecutionPolicy Bypass -Command "' & $ps1 & '"', "", @SW_HIDE)
     $clientToken = FileRead($txt)
     FileDelete($ps1)
     FileDelete($txt)
-    Return $clientToken
+    Return StringStripWS($clientToken, $STR_STRIPALL)
 EndFunc   ;==>_ComputeClientToken
 
 Func _GetLoginData($guid, $password, $clientToken)
@@ -236,13 +235,25 @@ Func _GetLoginData($guid, $password, $clientToken)
     $verify_resp = _POST($verify_url, $verify_data)
 
     $accessToken = StringRegExp($verify_resp, "<AccessToken>(.+)</AccessToken>", $STR_REGEXPARRAYMATCH)
+    If @error Then
+        MsgBox(0, "Muledump", "Error while logging in:" & @CRLF & $verify_resp)
+        Exit
+    EndIf
     $tokenTimestamp = StringRegExp($verify_resp, "<AccessTokenTimestamp>(.+)</AccessTokenTimestamp>", $STR_REGEXPARRAYMATCH)
+    If @error Then
+        MsgBox(0, "Muledump", "Error while logging in:" & @CRLF & $verify_resp)
+        Exit
+    EndIf
     $tokenExpiration = StringRegExp($verify_resp, "<AccessTokenExpiration>(.+)</AccessTokenExpiration>", $STR_REGEXPARRAYMATCH)
+    If @error Then
+        MsgBox(0, "Muledump", "Error while logging in:" & @CRLF & $verify_resp)
+        Exit
+    EndIf
 
     $vATC_url = "https://www.realmofthemadgod.com/account/verifyAccessTokenClient"
     $vATC_data = _
         "clientToken=" & $clientToken & _
-        "&accessToken=" & urlEncode($accessToken[0])
+        "&accessToken=" & _URLEncode($accessToken[0])
     $vATC_resp = _POST($vATC_url, $vATC_data)
 
     $login_data = "data:{platform:Deca" & _
@@ -251,7 +262,7 @@ Func _GetLoginData($guid, $password, $clientToken)
         ",tokenTimestamp:" & _Base64Encode($tokenTimestamp[0]) & _
         ",tokenExpiration:" & _Base64Encode($tokenExpiration[0]) & _
         ",env:4}"
-    Return $login_data
+    Return StringStripWS($login_data, $STR_STRIPALL)
 EndFunc   ;==>_GetLoginData
 
 If $CmdLine[0] = 0 Then _install()
@@ -263,8 +274,8 @@ EndIf
 ;;  process the command input
 $data = StringReplace($CmdLine[1],"muledump:","")
 $data = StringSplit($data,"-")
-$username = _Base64Encode(_HexToString($data[1]))
-$password = _Base64Encode(_HexToString($data[2]))
+$username = _HexToString($data[1])
+$password = _HexToString($data[2])
 
 ;; if parameters were passed we will parse them into the runtime config
 If UBound($data) == 4 and $config.Item("params") == "true" Then
@@ -320,12 +331,12 @@ If $config.Item("mode") == "exalt" Then
         If @error or $result == 0 Then _error("Invalid path provided: " & $config.Item("path") & @CRLF & @CRLF & "If the value is correct then try disabling param security in the au3 file config.")
 
         ;;  username should be valid base64
-        $result = StringRegExp($username, "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$");
-        If @error or $result == 0 Then _error("Invalid username provided. " & @CRLF & @CRLF & "If the value is correct then try disabling param security in the au3 file config.")
+;;        $result = StringRegExp($username, "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$");
+;;        If @error or $result == 0 Then _error("Invalid username provided. " & @CRLF & @CRLF & "If the value is correct then try disabling param security in the au3 file config.")
 
         ;;  password should be valid base64
-        $result = StringRegExp($password, "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$");
-        If @error or $result == 0 Then _error("Invalid password provided. " & @CRLF & @CRLF & "If the value is correct then try disabling param security in the au3 file config.")
+;;        $result = StringRegExp($password, "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$");
+;;        If @error or $result == 0 Then _error("Invalid password provided. " & @CRLF & @CRLF & "If the value is correct then try disabling param security in the au3 file config.")
 
     EndIf
 

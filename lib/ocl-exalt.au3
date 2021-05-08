@@ -48,6 +48,7 @@ $config.Add("ign", "");
 #include <String.au3>
 #include <File.au3>
 #include <Array.au3>
+#include <Crypt.au3>
 
 Global $string, $password, $username, $data, $path, $search, $file, $root
 $root = "HKEY_CLASSES_ROOT\muledump"
@@ -210,6 +211,41 @@ Func _URLEncode($urlText)
 EndFunc   ;==>_URLEncode
 
 Func _ComputeClientToken()
+    $hash = _ComputeClientTokenNew()
+    If $hash = "" Then
+        $hash = _ComputeClientTokenOld()
+        If $hash = "" Then
+            MsgBox(16,$title,"Installation failed." & @CRLF & "Could not calculate HWID." & @CRLF & "Ask Altafen for assistance.")
+            Exit
+        EndIf
+    EndIf
+    Return $hash
+EndFunc   ;==>_ComputeClientToken
+
+Func _ComputeClientTokenNew()
+    $wmi = ObjGet("winmgmts:{impersonationLevel=Impersonate}!\\.\root\cimv2")
+    If IsObj($wmi) Then
+        $serials = ""
+        $result = $wmi.ExecQuery("SELECT SerialNumber FROM Win32_BaseBoard", "WQL")
+        For $item In $result
+            $serials = $serials & $item.SerialNumber
+        Next
+        $result = $wmi.ExecQuery("SELECT SerialNumber FROM Win32_BIOS", "WQL")
+        For $item In $result
+            $serials = $serials & $item.SerialNumber
+        Next
+        $result = $wmi.ExecQuery("SELECT SerialNumber FROM Win32_OperatingSystem", "WQL")
+        For $item In $result
+            $serials = $serials & $item.SerialNumber
+        Next
+        $hash = _Crypt_HashData($serials, $CALG_SHA1)
+        Return StringLower(StringMid($hash, 3))
+    Else
+        Return ""
+    EndIf
+EndFunc   ;==>_ComputeClientTokenNew
+
+Func _ComputeClientTokenOld()
     $ps1 = _TempFile(@TempDir, "~", ".ps1")
     $txt = _TempFile(@TempDir, "~", ".txt")
     FileWrite($ps1, '' & _
@@ -224,7 +260,7 @@ Func _ComputeClientToken()
     FileDelete($ps1)
     FileDelete($txt)
     Return StringStripWS($clientToken, $STR_STRIPALL)
-EndFunc   ;==>_ComputeClientToken
+EndFunc   ;==>_ComputeClientTokenOld
 
 Func _GetLoginData($guid, $password, $clientToken)
     $verify_url = "https://www.realmofthemadgod.com/account/verify"

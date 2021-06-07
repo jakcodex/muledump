@@ -46,6 +46,7 @@ $config.Add("title", "Muledump One Click Login")
 $config.Add("ign", "");
 
 #include <String.au3>
+#include <StringConstants.au3>
 #include <File.au3>
 #include <Array.au3>
 #include <Crypt.au3>
@@ -228,15 +229,15 @@ Func _ComputeClientTokenNew()
         $serials = ""
         $result = $wmi.ExecQuery("SELECT SerialNumber FROM Win32_BaseBoard", "WQL")
         For $item In $result
-            $serials = $serials & $item.SerialNumber
+            $serials = $serials & StringStripWS($item.SerialNumber, $STR_STRIPLEADING + $STR_STRIPTRAILING)
         Next
         $result = $wmi.ExecQuery("SELECT SerialNumber FROM Win32_BIOS", "WQL")
         For $item In $result
-            $serials = $serials & $item.SerialNumber
+            $serials = $serials & StringStripWS($item.SerialNumber, $STR_STRIPLEADING + $STR_STRIPTRAILING)
         Next
         $result = $wmi.ExecQuery("SELECT SerialNumber FROM Win32_OperatingSystem", "WQL")
         For $item In $result
-            $serials = $serials & $item.SerialNumber
+            $serials = $serials & StringStripWS($item.SerialNumber, $STR_STRIPLEADING + $STR_STRIPTRAILING)
         Next
         $hash = _Crypt_HashData($serials, $CALG_SHA1)
         Return StringLower(StringMid($hash, 3))
@@ -251,7 +252,7 @@ Func _ComputeClientTokenOld()
     FileWrite($ps1, '' & _
         '$stringAsStream = [System.IO.MemoryStream]::new()' & @CRLF & _
         '$writer = [System.IO.StreamWriter]::new($stringAsStream)' & @CRLF & _
-        '$writer.write("$(Get-CimInstance -ClassName Win32_BaseBoard | foreach {$_.SerialNumber})$(Get-CimInstance -ClassName Win32_BIOS | foreach {$_.SerialNumber})$(Get-CimInstance -ClassName Win32_OperatingSystem | foreach {$_.SerialNumber})")' & @CRLF & _
+        '$writer.write("$(Get-CimInstance -ClassName Win32_BaseBoard | foreach {$_.SerialNumber.Trim()})$(Get-CimInstance -ClassName Win32_BIOS | foreach {$_.SerialNumber.Trim()})$(Get-CimInstance -ClassName Win32_OperatingSystem | foreach {$_.SerialNumber.Trim()})")' & @CRLF & _
         '$writer.Flush()' & @CRLF & _
         '$stringAsStream.Position = 0' & @CRLF & _
         'echo "$(Get-FileHash -InputStream $stringAsStream -Algorithm SHA1 | foreach {$_.Hash})".ToLower() > ' & $txt & @CRLF)

@@ -378,7 +378,7 @@ If $config.Item("mode") == "exalt" Then
     EndIf
 
     $args = _GetLoginData($username, $password, $CmdLine[2])
-    $pid = ShellExecute($config.Item("path"), $args)
+    $pid = ShellExecute($config.Item("path"), $args, "c:\")
 
     If $pid > 0 And Not($config.Item("title") == "" Or $config.Item("title") == "false") Then
         Local $name = $config.Item("title")

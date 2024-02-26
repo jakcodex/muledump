@@ -154,6 +154,10 @@ div#export div { padding: 0 5px; }
     width: 100%;
 }
 
+.seasonal {
+    color: #2e862e;
+}   
+
 .name, .error:not(.setuptools), .reload, #counter { font-weight: bold; }
 
 .name {

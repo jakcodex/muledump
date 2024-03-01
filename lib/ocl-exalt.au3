@@ -265,10 +265,23 @@ EndFunc   ;==>_ComputeClientTokenOld
 
 Func _GetLoginData($guid, $password, $clientToken)
     $verify_url = "https://www.realmofthemadgod.com/account/verify"
-    $verify_data = _
+    ;if guid contains : and no @ steam check 
+    If StringInStr($guid, ":") > 0 And StringInStr($guid, "@") == 0 Then
+        $verify_data = _
+        "guid=" & $guid & _
+        "&secret=" & $password & _
+        "&clientToken=" & $clientToken & _
+        "&game_net=" & "Unity_steam" & _
+        "&play_platform=" & "Unity_steam" 
+        ;"&steamid=" & StringSplit($guid, ":")[2] & _
+        ;"&game_net_user_id=" & StringSplit($guid, ":")[2]
+    Else
+        $verify_data = _
         "guid=" & _URLEncode($guid) & _
         "&password=" & _URLEncode($password) & _
         "&clientToken=" & $clientToken
+    EndIf
+
     $verify_resp = _POST($verify_url, $verify_data)
 
     $accessToken = StringRegExp($verify_resp, "<AccessToken>(.+)</AccessToken>", $STR_REGEXPARRAYMATCH)
@@ -368,12 +381,12 @@ If $config.Item("mode") == "exalt" Then
         If @error or $result == 0 Then _error("Invalid path provided: " & $config.Item("path") & @CRLF & @CRLF & "If the value is correct then try disabling param security in the au3 file config.")
 
         ;;  username should be valid base64
-;;        $result = StringRegExp($username, "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$");
-;;        If @error or $result == 0 Then _error("Invalid username provided. " & @CRLF & @CRLF & "If the value is correct then try disabling param security in the au3 file config.")
+        ;; $result = StringRegExp($username, "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$");
+        ;; If @error or $result == 0 Then _error("Invalid username provided. " & @CRLF & @CRLF & "If the value is correct then try disabling param security in the au3 file config.")
 
         ;;  password should be valid base64
-;;        $result = StringRegExp($password, "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$");
-;;        If @error or $result == 0 Then _error("Invalid password provided. " & @CRLF & @CRLF & "If the value is correct then try disabling param security in the au3 file config.")
+        ;; $result = StringRegExp($password, "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$");
+        ;; If @error or $result == 0 Then _error("Invalid password provided. " & @CRLF & @CRLF & "If the value is correct then try disabling param security in the au3 file config.")
 
     EndIf
 

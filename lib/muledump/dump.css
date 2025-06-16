@@ -154,6 +154,10 @@ div#export div { padding: 0 5px; }
     width: 100%;
 }
 
+.seasonal {
+    color: #2e862e;
+}   
+
 .name, .error:not(.setuptools), .reload, #counter { font-weight: bold; }
 
 .name {
@@ -224,6 +228,7 @@ hr {
 .stat.bad { color: #ff9090; }
 .stat.bad.very { color: #ff0000; }
 .stat.small { font-size: 11px; }
+.exalt { color: #0f6bb1; }
 
 .items:not(.pagesearch):not(.vaultbuilder) {
     line-height: 0;
